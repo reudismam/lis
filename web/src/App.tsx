@@ -23,7 +23,7 @@ function App() {  /*faltando onClick*/
             </ul>
             <ul className = "itens-final">
               <li><a className = "list-item">Sair</a></li>
-              <li><a className = "list-item"><span>Criar uma conta</span></a></li>
+              <li><a className = "list-item"><span>Criar sua conta</span></a></li>
             </ul>
           </nav>
         </div>
