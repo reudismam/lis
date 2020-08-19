@@ -1,11 +1,11 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Importando fonte ARCHIVO */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap');
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,26 +13,72 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#control-nav{
+  display: none;
+}
+
+header {
+  position: relative;
+  font-family: 'Archivo', sans-serif;
+  background-color: #0C3197;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-width: 280px;
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding: 0px 100px;
+  color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.nav-menu .nav-menu-list{
+  width: 80%;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+.nav-menu .list-item{
+  opacity: 0.9;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #ffffff;
+}
+
+.nav-menu .list-item:hover{
+  opacity: 1;
+}
+
+.nav-menu .itens-final{
+  width: 15%;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  transition: 0.2s;
+}
+
+.nav-menu .itens-final span:hover{
+  text-decoration: underline;
+}
+
+
+/*TESTE - RESPONSIVIDADE MENU */
+@media (max-width: 768px){
+  .menu-toggle{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    float: right;
   }
 }
+
+/*COmpletar amanhã*/
