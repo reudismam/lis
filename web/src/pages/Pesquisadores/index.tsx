@@ -2,10 +2,10 @@ import React from 'react';
 import PageDefault from '../DefaultPage';
 import './styles.css';
 
-export default function Home() {
+export default function Pesquisadores() {
     return (
         <PageDefault> 
-            <div>Home Page</div>
+            <div>Pesquisadores</div>
          </PageDefault>
     );
 }

@@ -2,10 +2,10 @@ import React from 'react';
 import PageDefault from '../DefaultPage';
 import './styles.css';
 
-export default function Home() {
+export default function Discentes() {
     return (
         <PageDefault> 
-            <div>Home Page</div>
+            <div>Discentes</div>
          </PageDefault>
     );
 }
