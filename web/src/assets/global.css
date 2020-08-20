@@ -1,22 +1,56 @@
+/*Fontes: Archivo e Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins:wght@100;300;400;700;900&display=swap');
+/*font-family: 'Archivo', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
 :root {
-    --color-background: #F0F0F7;
-    --color-primary-lighter: #9871F5;
-    --color-primary-light: #916BEA;
-    --color-primary: #8257E5;
-    --color-primary-dark: #774DD6;
-    --color-primary-darker: #6842C2;
-    --color-secundary: #04D361;
-    --color-secundary-dark: #04BF58;
-    --color-title-in-primary: #FFFFFF;
-    --color-text-in-primary: #D4C2FF;
-    --color-text-title: #32264D;
-    --color-text-complement: #9C98A6;
-    --color-text-base: #6A6180;
-    --color-line-in-white: #E6E6F0;
-    --color-input-background: #F8F8FC;
-    --color-button-text: #FFFFFF;
-    --color-box-base: #FFFFFF;
-    --color-box-footer: #FAFAFC;
+
+    /*Cor do container padrão azul*/
+    --color-container: #2B4CB8;
+    /*Cor dos textos nos containers*/
+    --color-cotainer-texto: #FFFFFF
+    /*Cor dos textos secundárias no container*/
+    --color-container-textosec: #FFFFFF;
+    /*Cor do navibar padrão azul*/
+    --color-navibar: #0C3197;
+    /*Cor das páginas brancas*/
+    --color-pagina: #F0F0F7;
+    /*Cor das palavras nas paginas brancas*/
+    --color-pagina-texto: #9C98A6;
+    /*Cor dos botões padrões nas paginas brancas*/
+    --color-pagina-botao: #2B4CB8;
+    /*Cor dos textos nas paginas em azul ex.:nas páginas portifólio"Semana passa"*/
+    --color-pagina-textoazul: #2B4CB8;
+    /*Cor dos textos nas paginas em azul escuro ex.:nas páginas de publicações"2020(Anos)"*/
+    --color-pagina-textoazulescuro: #12005E; 
+    /*Cor dos textos nas páginas em azul claro ex.:página de contatos"Entre e fale conosco!"*/
+    --color-pagina-textoazulclaro: #2F80ED;
+    /*Cor dos textos nos botões*/
+    --color-botao-texto: #FFFFFF;
+    /*Cards*/
+    /*Cor dos textos nos cards*/
+    --color-cards-titulo: #12005E;
+    /*Cor dos textos nos cards*/
+    --color-cards-textos: #9C98A6;
+    /*Cor dos textos nas datas nos cards*/
+    --color-cards-data: #6A6180;
+    /*Cor do rodapé: OPACITY 0.61*/
+    --color-rodape: #000000;
+    /*Cor dos textos nos rodapés*/
+    --color-rodape-texto: #FFFFFF;
+    /*A cor da barra de carregar mais histórico ex.: página de projetos*/
+    --color-barra-carregarmais: #2B44FF;
+    /*Botões de páginas ex.: página de portifólio*/
+    --color-botaodepagina: #FFFFFF;
+    /*Cor dos textos dos botões selecionados*/
+    --color-botaodepagina-texto: #999999;
+    /*Botão selecionado*/
+    --color-botaodepagina-selecionado: #2B44FF;
+    /*Cor dos textos dos botões selecionados*/
+    --color-botaodepagina-texto-selecionado: #FFFFFF;
+    /*Cor das bordas dos botões de páginas:*/
+    --color-botaodepagina-borda: #CCCCCC;
+
   
     font-size: 60%;
   }
