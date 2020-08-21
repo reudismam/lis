@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './styles.css';
 
-export default function Footer() {
+export default function Header() {
     return (
         <div className="teste">
             <header>

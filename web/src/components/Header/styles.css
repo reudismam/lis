@@ -1,11 +1,20 @@
-header{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.teste{
     width: 100%;
+}
+
+header{
     min-height: 60px;
     background-color: #0C3197;
     color: #ffffff;
     overflow: hidden;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }

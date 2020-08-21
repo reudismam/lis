@@ -38,7 +38,7 @@ function App() {  /*faltando onClick*/
         <Route path='/sobre' component={Sobre}/>
         <Route path='/criarconta' component={Criarconta}/>
 
-        <Route component={Erro404} />
+        <Route path='*' component={Erro404} />
       </Switch>
     </BrowserRouter>
   );

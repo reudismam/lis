@@ -3,6 +3,7 @@
 /*font-family: 'Archivo', sans-serif;
 font-family: 'Poppins', sans-serif;
 */
+
 :root {
     /*Cor do container padrão azul*/
     --color-container: #2B4CB8;
@@ -49,8 +50,6 @@ font-family: 'Poppins', sans-serif;
     --color-botaodepagina-texto-selecionado: #FFFFFF;
     /*Cor das bordas dos botões de páginas:*/
     --color-botaodepagina-borda: #CCCCCC;
-
-    font-size: 62.5%;
 }
 
 * {
@@ -63,23 +62,11 @@ html, body, #root {
     height: 100vh;
 }
 
-body {
-    background-color: var(--color-background);
-}
 
 #root {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1;
 }
 
-<<<<<<< HEAD
-=======
-  /*commit teste*/
-  #root {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
->>>>>>> 8930a1aefe3219bd9b0a1478d11870c73a722943
