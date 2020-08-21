@@ -18,7 +18,7 @@ import Sobre from './pages/Sobre';
 import Criarconta from './pages/Criarconta';
 import './App.css';
 
-function App() {  /*faltando onClick*/
+function App() { 
   return (
     <BrowserRouter>
       <Switch>
@@ -37,7 +37,6 @@ function App() {  /*faltando onClick*/
         <Route path='/publicacoes' component={Publicacoes}/>
         <Route path='/sobre' component={Sobre}/>
         <Route path='/criarconta' component={Criarconta}/>
-
         <Route path='*' component={Erro404} />
       </Switch>
     </BrowserRouter>

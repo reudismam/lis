@@ -13,7 +13,7 @@ export default function Erro() {
                     <h3>Página não encontrada!</h3>
                 </div>
                 <div className="right404">
-                    <DevImg />
+                    <img src ={DevImg} />
                 </div>
             </div>
             <div className="bottom404">
