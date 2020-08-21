@@ -4,11 +4,10 @@
 font-family: 'Poppins', sans-serif;
 */
 :root {
-
     /*Cor do container padrão azul*/
     --color-container: #2B4CB8;
     /*Cor dos textos nos containers*/
-    --color-cotainer-texto: #FFFFFF
+    --color-cotainer-texto: #FFFFFF;
     /*Cor dos textos secundárias no container*/
     --color-container-textosec: #FFFFFF;
     /*Cor do navibar padrão azul*/
@@ -51,26 +50,27 @@ font-family: 'Poppins', sans-serif;
     /*Cor das bordas dos botões de páginas:*/
     --color-botaodepagina-borda: #CCCCCC;
 
-  
-    font-size: 60%;
-  }
+    font-size: 62.5%;
+}
 
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-  html, body, #root {
-      height: 100vh;
-  }
+html, body, #root {
+    height: 100vh;
+}
 
-  body {
-      background-color: var(--color-background);
-  }
+body {
+    background-color: var(--color-background);
+}
 
-  #root {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+

@@ -9,9 +9,9 @@ const DefaultPage : React.FC = (props) => {
     return (
         <>
             <Header />
-            <main>
-                {props.children}
-            </main>
+                <main>
+                    {props.children}
+                </main>
             <Footer />
 
         </>
