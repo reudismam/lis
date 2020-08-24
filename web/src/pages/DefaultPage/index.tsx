@@ -13,7 +13,6 @@ const DefaultPage : React.FC = (props) => {
                     {props.children}
                 </main>
             <Footer />
-
         </>
     );
 }

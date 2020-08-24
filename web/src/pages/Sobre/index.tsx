@@ -5,7 +5,7 @@ import './styles.css';
 export default function Sobre() {
     return (
         <PageDefault> 
-            <div>Sobre</div>
+            <div className="about"></div>
          </PageDefault>
     );
 }

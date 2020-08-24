@@ -1,7 +1,7 @@
 import React from 'react';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import DevImg from './dev.svg';
+//import DevImg from './dev.svg';
 
 export default function Erro() {
     return (
@@ -13,7 +13,7 @@ export default function Erro() {
                     <h3>Página não encontrada!</h3>
                 </div>
                 <div className="right404">
-                    <img src ={DevImg} />
+                   
                 </div>
             </div>
             <div className="bottom404">
