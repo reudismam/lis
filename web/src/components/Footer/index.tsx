@@ -28,23 +28,23 @@ export default function Footer() {
                     <br/>
                     <div className="footer-info-img">
                         <img alt="localização" src={mapImg} className="img"/>
-                        <a href="#" className="footer-info-text">Pau dos Ferros-RN, 59900-000</a>
+                     {/*   <a href="#" className="footer-info-text">Pau dos Ferros-RN, 59900-000</a>*/}
                     </div>
                     <div className="footer-info-img">
                         <img alt="e-mail" src={emailImg} className="img"/>
-                        <a href="#" className="footer-info-text">lis.ufersa@gmail.com</a>
+                    {/*    <a href="#" className="footer-info-text">lis.ufersa@gmail.com</a>*/}
                     </div>
                     <div className="footer-info-img">
                         <img alt="instagram" src={instaImg} className="img"/>
-                        <a href="#" className="footer-info-text">lis.ufersa</a>
+                     {/*   <a href="#" className="footer-info-text">lis.ufersa</a>*/}
                     </div>
                     <div className="footer-info-img">
                         <img alt="twitter" src={twittImg} className="img"/>
-                        <a href="#" className="footer-info-text">lis_ufersa</a>
+                      {/*   <a href="#" className="footer-info-text">lis_ufersa</a>*/}
                     </div>
                     <div className="footer-info-img">
                         <img alt="facebook" src={faceImg} className="img"/>
-                        <a href="#" className="footer-info-text">/lis.ufersa</a>
+                    {/*    <a href="#" className="footer-info-text">/lis.ufersa</a>*/}
                     </div>
                 </div>
             </div>
