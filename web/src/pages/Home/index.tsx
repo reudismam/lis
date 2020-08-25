@@ -29,7 +29,7 @@ export default function Home() {
     return (
         <PageDefault> 
             <div className="home">
-            <div className="home-top">
+                <div className="home-top">
                     <div className="home-text" ref={Animation}>
                         <h1>Somos apaixonados por inovação e <br/>fazemos disso nosso trabalho</h1><br/>
                         <button className="projetos-btn">Projetos</button>
