@@ -19,6 +19,10 @@ header{
     flex-wrap: wrap;
 }
 
+.logo-lis{
+    width: 50px;
+}
+
 header .logo{
     font-size: 16px;
     font-weight: 500;
@@ -67,6 +71,12 @@ header .close{
 
 /*TESTE RESPONSIVIDADE */
 @media (max-width: 850px){
+
+    .logo-lis{
+        margin: 10px;
+        width: 60px;
+    }
+
     header .logo,
     header ul{
         margin: 0;
