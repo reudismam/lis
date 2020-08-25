@@ -1,6 +1,7 @@
 import React from 'react';
 import PageDefault from '../DefaultPage';
 import './styles.css';
+import imgdev from './dev.svg';
 //import DevImg from './dev.svg';
 
 export default function Erro() {
@@ -10,11 +11,14 @@ export default function Erro() {
             <div className="top404">
                 <div className="left404">
                     <h1>ERRO 404</h1>
-                    <h3>Página não encontrada!</h3>
+                    <h3>Página não encontrada!</h3>                  
                 </div>
+                
                 <div className="right404">
                    
                 </div>
+                <img alt="img dev" src={imgdev} className="dev-svg"/>
+
             </div>
             <div className="bottom404">
                 <p id="ops" className="animate__animated animate__bounce">Ops!</p>

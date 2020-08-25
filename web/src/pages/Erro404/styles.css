@@ -37,17 +37,19 @@
     width: 70%;
     background: #F0F0F7;
 }
-
+.dev-svg{
+  margin-right: 50px;
+}
 .bottom404 #ops{
-    background: linear-gradient(to left, #5C258D, #4389A2);
-    
+    background: linear-gradient(to right, #5C258D, #4389A2);
+    background-clip: text;
     color: transparent;
     text-align: center;
     font-weight: bolder;
     font-size: 6.5em;
     animation-name: pular;
     animation-iteration-count: 1;
-    animation-duration: 3s;
+    animation-duration: 1s;
 }
 
 @keyframes pular {
