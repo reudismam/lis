@@ -40,7 +40,26 @@ export default function Parceiros() {
                 </div>
                 <div className="parceiros-middle">
                     <div className="parceiros-middle-content">
-                        
+                        <div className="parceiros-content-item">
+                            <img alt="" src="" className="parceiros-img-item" /><br/>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        </div>
+                        <div className="parceiros-content-item">
+                            <img alt="" src="" className="parceiros-img-item" /><br/>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        </div>
+                        <div className="parceiros-content-item">
+                            <img alt="" src="" className="parceiros-img-item" /><br/>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        </div>
+                        <div className="parceiros-content-item">
+                            <img alt="" src="" className="parceiros-img-item" /><br/>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        </div>
+                        <div className="parceiros-content-item">
+                            <img alt="" src="" className="parceiros-img-item" /><br/>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        </div>
                     </div>
                 </div>
 
