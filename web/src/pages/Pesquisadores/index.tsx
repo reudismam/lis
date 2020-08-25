@@ -36,6 +36,22 @@ export default function Pesquisadores() {
                     </div><br/>
                     <img alt="pesquisadores imagem" className="img-pesquisadores" src={PesquisadoresImg} ref={Animation2}/>
                 </div>
+                <br/>
+                <div className="pesquisadores-center">
+                    <div className="pesquisadores-docentes">
+                        <img alt="docentes" className="docentes" />
+                        <br/>
+                        <h2>Docentes</h2><br/>
+                        <p>Listas dos pesquisadores do LIS e um resumão de suas principais funções no grupo, trabalhos e projetos. </p>
+                    </div>
+                    <br/>
+                    <div className="pesquisadores-discentes">
+                        <img alt="discentes" className="discentes" />
+                        <br/>
+                        <h2>Discentes</h2><br/>
+                        <p>Listas dos pesquisadores do LIS e um resumão de suas principais funções no grupo, trabalhos e projetos. </p>
+                    </div>
+                </div>
             </div>
          </PageDefault>
     );

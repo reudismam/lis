@@ -1,0 +1,39 @@
+.edital{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.edital-top{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-container);
+    padding: 20px 50px;
+}
+
+.edital .edital-text {
+    text-rendering: optimizeLegibility;
+    color: var(--color-container-textosec);
+}
+
+
+.img-edital{
+    width: 460px;
+    padding: 13px;
+}
+
+
+
+@media (max-width: 450px){
+    .edital-top{
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+    .edital-top .img-edital{
+        padding-top: 50px;
+        width: 280px;
+    }
+}

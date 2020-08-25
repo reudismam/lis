@@ -25,6 +25,28 @@
     padding-bottom: 22px;
 }
 
+.pesquisadores-center{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 50px 50px;
+}
+
+.pesquisadores-docentes, .pesquisadores-discentes{
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 10px;
+    height: 100%;
+    min-width: 270px;
+    width: 100%;
+    margin: 10px 20px;
+}
+
+
+
+
+
 
 
 

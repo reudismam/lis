@@ -1,0 +1,39 @@
+.criar-conta{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.criar-conta-top{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-container);
+    padding: 20px 50px;
+}
+
+.criar-conta .criar-conta-text {
+    text-rendering: optimizeLegibility;
+    color: var(--color-container-textosec);
+}
+
+
+.img-criar-conta{
+    width: 447px;
+    padding: 14px;
+}
+
+
+
+@media (max-width: 450px){
+    .criar-conta-top{
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+    .criar-conta-top .img-criar-conta{
+        padding-top: 50px;
+        width: 280px;
+    }
+}
