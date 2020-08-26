@@ -25,10 +25,20 @@
     padding-bottom: 22px;
 }
 
+.box{
+    margin: 20px 292px 15px 199px;
+    align-items: center;
+    height: 163px;
+    width: 980px;
+}
+.data{
+    color: var(--color-navibar) ;
+}
 
-
-
-
+.conteudo{
+    font-size: 16px;
+    color:#828282;
+}
 @media (max-width: 450px){
     .publicacoes-top{
         flex-direction: column;
