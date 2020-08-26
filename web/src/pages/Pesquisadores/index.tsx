@@ -4,7 +4,7 @@ import PageDefault from '../DefaultPage';
 import './styles.css';
 import PesquisadoresImg from './img/pesquisadores.png'
 
-export default function Pesquisadores() {
+function Pesquisadores() {
 
     const Animation = useRef(null)
     useEffect(() => {
@@ -56,3 +56,5 @@ export default function Pesquisadores() {
          </PageDefault>
     );
 }
+
+export default Pesquisadores

@@ -31,10 +31,48 @@ export default function Criarconta() {
             <div className="criar-conta">
                 <div className="criar-conta-top">
                     <div className="criar-conta-text" ref={Animation}>
-                        <h1>Vamos nos conhecer um pouco mais</h1><br/>
-                        <p>Deixe seu feedback para melhorarmos cada vez mais!</p>
+                        <h1>Quase tudo pronto para se tornar <br/>um membro do grupo</h1><br/>
+                        <p>Insira seus dados cadastrais nos campos abaixo.</p>
                     </div><br/>
                     <img alt="criar-conta imagem" className="img-criar-conta" src={CriarContaImg} ref={Animation2}/>
+                </div>
+
+                <div className="criar-conta-cad">
+                    <div className="criar-conta-content">
+                        <h3>Seus dados</h3><br/>
+                        <div className="row-one">
+                            <div className="row-one-left">
+                                <p>Nome</p>
+                                <input type="text" className="input-left"/>
+                            </div>
+                            <br/>
+                            <div className="row-one-right">
+                                <p>Sobrenome</p>
+                                <input type="text" className="input-left"/>
+                            </div>
+                            <br/>
+                        </div>
+
+                        <div className="row-two">
+                            <div className="row-two-left">
+                                <p>E-mail</p>
+                                <input type="text" className="input-left" placeholder="example@hotmail.com"/>
+                            </div>
+                            <br/>
+                            <div className="row-two-right">
+                                <p>Whatsapp</p>
+                                <input type="text" className="input-left" placeholder="_______-"/>
+                            </div>
+                            <br/>
+                        </div>
+
+                        <div className="row-three">
+                            <p>Bio (max 300 caracteres)</p><br/>
+                            <textarea></textarea>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
          </PageDefault>

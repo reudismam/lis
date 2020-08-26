@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Concluido from './pages/Concluido';
 import Contato from './pages/Contato';
@@ -18,9 +18,12 @@ import Sobre from './pages/Sobre';
 import Criarconta from './pages/Criarconta';
 import './App.css';
 
+
+
 function App() { 
   return (
     <BrowserRouter>
+      <Suspense fallback = {<div> <h1>Ola</h1>{/*Aqui vai o efeito de Carregando */} </div>}> 
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path='/concluido' component={Concluido}/>
@@ -39,6 +42,7 @@ function App() {
         <Route path='/criarconta' component={Criarconta}/>
         <Route path='*' component={Erro404} />
       </Switch>
+      </Suspense>
     </BrowserRouter>
   );
 }
