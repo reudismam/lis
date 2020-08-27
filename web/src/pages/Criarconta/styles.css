@@ -1,5 +1,5 @@
 .criar-conta{
-    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -25,22 +25,47 @@
     padding: 14px;
 }
 
+.criar-conta-cad{
+    background: #9C98A6;
+}
 
+p{
+
+    font: roboto;
+    font-size: 20px;
+}
 .criar-conta-content{
-    width: 100%;
+    margin: 41px 175px;
+    background: #ffffff;
+    width: 999px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    
+    border-radius: 8px;
+    border: 1px #EBEBF5;
+    box-shadow: 25%;
+    /*
+    border: 30px solid #9C98A6;
+    border: 2px solid #424242;
+*/
 }
-
+.img-input{
+    border-radius: 360px;
+    background: #C4C4C4;
+}
 .row-one{
+   
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+       
+}
+.row-one-input{
+   width: 60%;
 }
 
 .row-two{
@@ -50,27 +75,75 @@
     flex-direction: row;
     justify-content: space-around;
 }
+.input-left-one{
+    
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    color: #424242;
+    font-weight: roboto;
+    font-size: 18px;
+    padding: 6px 16px;
+    width: 290px;
+    height: 56px;
+}
+.input-right-one{
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    color: #424242;
+    font-weight: roboto;
+    font-size: 18px;
+    padding: 6px 16px;
+    width: 290px;
+    height: 56px;
+}
+.input-left-two{
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    color: #424242;
+    font-weight: roboto;
+    font-size: 18px;
+    padding: 6px 16px;
+    width: 533px;
+    height: 53px;
+}
+.input-right-two{
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    color: #424242;
+    font-weight: roboto;
+    font-size: 18px;
+    padding: 6px 16px;
+    width: 299px;
+    height: 53px;
+}
 
+.row-three{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tInicial{
+    font-size: 24px;
+    margin: 20px 40px;
+    color: #0C3197;
+}
 textarea{
     position: relative;
     width: 100px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 450px){
+    .row-one{
+        flex-direction: column;
+        align-items: center;
+    }
+    .row-two{
+        flex-direction: column;
+        align-items: center;
+    }
     .criar-conta-top{
         flex-direction: column;
         padding: 20px 20px;
@@ -79,5 +152,6 @@ textarea{
         padding-top: 50px;
         width: 280px;
     }
-
+    
 }
+

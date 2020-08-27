@@ -36,19 +36,23 @@ export default function Criarconta() {
                     </div><br/>
                     <img alt="criar-conta imagem" className="img-criar-conta" src={CriarContaImg} ref={Animation2}/>
                 </div>
-
+                
                 <div className="criar-conta-cad">
                     <div className="criar-conta-content">
-                        <h3>Seus dados</h3><br/>
+                        <h3 className="tInicial">Seus dados</h3><br/>
+                        
                         <div className="row-one">
+                        <input type="image" src="" alt="Submit" width="178" height="171"className="img-input"></input>
+                            <div className="row-one-input">
                             <div className="row-one-left">
                                 <p>Nome</p>
-                                <input type="text" className="input-left"/>
+                                <input type="text" className="input-left-one"/>
                             </div>
                             <br/>
                             <div className="row-one-right">
                                 <p>Sobrenome</p>
-                                <input type="text" className="input-left"/>
+                                <input type="text" className="input-right-one"/>
+                            </div>
                             </div>
                             <br/>
                         </div>
@@ -56,12 +60,12 @@ export default function Criarconta() {
                         <div className="row-two">
                             <div className="row-two-left">
                                 <p>E-mail</p>
-                                <input type="text" className="input-left" placeholder="example@hotmail.com"/>
+                                <input type="text" className="input-left-two" placeholder="example@hotmail.com"/>
                             </div>
                             <br/>
                             <div className="row-two-right">
                                 <p>Whatsapp</p>
-                                <input type="text" className="input-left" placeholder="_______-"/>
+                                <input type="text" className="input-right-two" placeholder="_______-"/>
                             </div>
                             <br/>
                         </div>
