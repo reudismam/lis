@@ -43,7 +43,7 @@ export default function Portifolio() {
                 </div>
                 <div className="boxL">
                     <div className="img">
-                        <img src={imgItem} alt='some value'/>z
+                        <img src={imgItem} alt='some value'/>
                     </div>
                     <div className="item">
                         <div className="boxtop">
