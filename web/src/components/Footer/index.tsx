@@ -10,44 +10,53 @@ export default function Footer() {
     return (
         <div className="footer">
             <div className="footer-top">
-                <div className="footer-column">
-                    <p className="footer-column-title">Apoio</p>
-                    <br/>
-                    <p className="footer-column-text">Ufersa</p>
-                </div>
-                <div className="footer-column">
-                    <p className="footer-column-title">Desenvolvedores</p>
-                    <br/>
-                    <p className="footer-column-text">Renan Santana</p>
-                    <p className="footer-column-text">Fernando Dutra</p>
-                    <p className="footer-column-text">Emanuel Bruno</p>
-                    <p className="footer-column-text">Reudisman Rolim</p>
-                </div>
-                <div className="footer-column">
-                    <p className="footer-column-title">Informações</p>
-                    <br/>
-                    <div className="footer-info-img">
-                        <img alt="localização" src={mapImg} className="img"/>
-                     {/*   <a href="#" className="footer-info-text">Pau dos Ferros-RN, 59900-000</a>*/}
+                    <div className="footer-column">
+                        <p className="footer-column-title">Apoio</p>
+                        <br/>
+                        <p className="footer-column-text">Ufersa</p>
                     </div>
-                    <div className="footer-info-img">
-                        <img alt="e-mail" src={emailImg} className="img"/>
-                    {/*    <a href="#" className="footer-info-text">lis.ufersa@gmail.com</a>*/}
+                    <div className="footer-column">
+                        <p className="footer-column-title">Desenvolvedores</p>
+                        <br/>
+                        <p className="footer-column-text">Renan Santana</p>
+                        <p className="footer-column-text">Fernando Dutra</p>
+                        <p className="footer-column-text">Emanuel Bruno</p>
+                        <p className="footer-column-text">Reudisman Rolim</p>
                     </div>
+                    <div className="footer-column">
+                        <p className="footer-column-title">Informações</p>
+                        <br/>
+                        <div className="footer-info-img">
+                            <img alt="localização" src={mapImg} className="img"/>
+                            <p>
+                                Rodovia BR-226, s/n, Pau dos <br/>
+                                Ferros-RN, 59900-000
+                            </p>
+                        </div>
+                        <div className="footer-info-img">
+                            <img alt="e-mail" src={emailImg} className="img"/>
+                            <p>lis.ufersa@gmail.com</p> 
+                        </div>
+                </div>
+            </div>
+            <div className="footer-social">
                     <div className="footer-info-img">
                         <img alt="instagram" src={instaImg} className="img"/>
-                     {/*   <a href="#" className="footer-info-text">lis.ufersa</a>*/}
+                        <a href="#" className="footer-info-text">
+                            lis.ufersa
+                        </a>
                     </div>
                     <div className="footer-info-img">
-                        <img alt="twitter" src={twittImg} className="img"/>
-                      {/*   <a href="#" className="footer-info-text">lis_ufersa</a>*/}
+                        <img alt="instagram" src={twittImg} className="img"/>
+                        <a href="#" className="footer-info-text">
+                            lis_ufersa
+                        </a>
                     </div>
                     <div className="footer-info-img">
                         <img alt="facebook" src={faceImg} className="img"/>
-                    {/*    <a href="#" className="footer-info-text">/lis.ufersa</a>*/}
+                        <a href="#" className="footer-info-text">/lis.ufersa</a>
                     </div>
                 </div>
-            </div>
             <br/>
             <hr/>
             <br/>
