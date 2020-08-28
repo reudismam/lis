@@ -3,6 +3,7 @@ import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
 import CriarContaImg from './img/criar-conta.png'
+import User from './img/user.png';
 
 export default function Criarconta() {
 
@@ -42,40 +43,83 @@ export default function Criarconta() {
                         <h3 className="tInicial">Seus dados</h3><br/>
                         
                         <div className="row-one">
-                        <input type="image" src="" alt="Submit" width="178" height="171"className="img-input"></input>
+                            <input type="image" src={User} alt="Submit" width="171" height="171"className="img-input"></input>
                             <div className="row-one-input">
-                            <div className="row-one-left">
-                                <p>Nome</p>
-                                <input type="text" className="input-left-one"/>
-                            </div>
-                            <br/>
-                            <div className="row-one-right">
-                                <p>Sobrenome</p>
-                                <input type="text" className="input-right-one"/>
-                            </div>
+                                <div className="row-one-left">
+                                    <p>Nome</p>
+                                    <input type="text" className="input-left-one"/>
+                                </div>
+                                <br/>
+                                <div className="row-one-right">
+                                    <p>Sobrenome</p>
+                                    <input type="text" className="input-right-one"/>
+                                </div>
                             </div>
                             <br/>
                         </div>
-
                         <div className="row-two">
                             <div className="row-two-left">
-                                <p>E-mail</p>
+                                <p className="title-area" >E-mail</p>
                                 <input type="text" className="input-left-two" placeholder="example@hotmail.com"/>
                             </div>
                             <br/>
                             <div className="row-two-right">
-                                <p>Whatsapp</p>
-                                <input type="text" className="input-right-two" placeholder="_______-"/>
+                                <p className="title-area" >Whatsapp</p>
+                                <input type="text" className="input-right-two" placeholder="(__)_____-____"/>
                             </div>
                             <br/>
                         </div>
-
                         <div className="row-three">
-                            <p>Bio (max 300 caracteres)</p><br/>
+                            <p className="title-area" >Bio (max 300 caracteres)</p><br/>
                             <textarea></textarea>
                         </div>
-
-
+                        <div className="row-four">
+                            <div className="row-four-title">
+                                <p className="rt-left">Áreas de interesse</p>
+                                <p className="rt-right">+Área de interesse</p>
+                            </div>
+                            <hr className="line"/>
+                            <p className="title-area">Área de interesse</p><br/>
+                            <input type="text"/>
+                        </div>
+                        <div className="row-five">
+                            <div className="row-five-title">
+                                <p className="rt-left">Publicações</p>
+                                <p className="rt-right">+Publicação</p>
+                            </div>
+                            <br/>
+                            <hr />
+                            <br/>
+                            <div className="row-five-title">
+                                <p className="title-area">No formato ABNT</p><br/>
+                                <p className="title-area">Ano</p><br/>
+                            </div>
+                            <div className="row-five-input">
+                                <textarea></textarea>
+                                <input type="text"/>
+                            </div>
+                        </div>
+                        <div className="row-six">
+                            <div className="row-six-title">
+                                <p className="rt-left">Projetos</p>
+                                <p className="rt-right">+Projeto</p>
+                            </div>
+                            <br/>
+                            <hr />
+                            <br/>
+                            <div className="row-six-title">
+                                <p className="title-area">Titulo</p><br/>
+                                <p className="title-area">Ano</p><br/>
+                            </div>
+                            <div className="row-six-input">
+                                <input type="text" className="rsi-left" />
+                                <input type="text" className="rsi-right" />
+                            </div>
+                            <br/>
+                            <p className="title-area" >Descrição (max. 300 caracteres</p>
+                            <br/>
+                            <textarea className="row-six-textarea"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
