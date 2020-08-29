@@ -41,6 +41,10 @@ export default function Portifolio() {
                         <img alt="portfolio imagem" className="img-portfolio" src={PortfolioImg} ref={Animation2}/>
                     </div>
                 </div>
+                <div className="line-topo">
+                    <hr/>
+                    <input type="text" placeholder="pesquisar"/>
+                </div>
                 <div className="boxL">
                     <div className="img">
                         <img src={imgItem} alt='some value'/>
@@ -57,52 +61,53 @@ export default function Portifolio() {
                         <button className="button">Acesse</button>
                     </div>
                 </div>
-                <div className="line">
+                <div className="line-center">
                     <hr/>
                     <p>Semana passada</p>
                 </div>
-                <div className="grid">
-                    <div className="grid-item">
-                        <img src={imgItem} alt='some value'/>
-                        <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4> 
-                        <div className="grid-post">
-                            <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
+                <div className="grid-container">
+                    <div className="grid">
+                        <div className="grid-item">
+                            <img src={imgItem} alt='some value'/>
+                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4> 
+                            <div className="grid-post">
+                                <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
+                            </div>
+                            <div className="grid-bottom">
+                                <button className="button-grid">Acesse</button><p className="grid-epoch">00/00/2020 - 3 semanas atrás</p>
+                            </div>
                         </div>
-                        <div className="grid-bottom">
-                            <button className="button-grid">Acesse</button><p className="grid-epoch">00/00/2020 - 3 semanas atrás</p>
+                        <div className="grid-item">
+                            <img src={imgItem} alt='some value'/>
+                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4> 
+                            <div className="grid-post">
+                                <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
+                            </div>
+                            <div className="grid-bottom">
+                                <button className="button-grid">Acesse</button><p className="grid-epoch">00/00/2020 - 3 semanas atrás</p>
+                            </div>
+                        </div>
+                        <div className="grid-item">
+                            <img src={imgItem} alt='some value'/>
+                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4> 
+                            <div className="grid-post">
+                                <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
+                            </div>
+                            <div className="grid-bottom">
+                                <button className="button-grid">Acesse</button><p className="grid-epoch">00/00/2020 - 3 semanas atrás</p>
+                            </div>
+                        </div>
+                        <div className="grid-item">
+                            <img src={imgItem} alt='some value'/>
+                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4> 
+                            <div className="grid-post">
+                                <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
+                            </div>
+                            <div className="grid-bottom">
+                                <button className="button-grid">Acesse</button><p className="grid-epoch">00/00/2020 - 3 semanas atrás</p>
+                            </div>
                         </div>
                     </div>
-                    <div className="grid-item">
-                        <img src={imgItem} alt='some value'/>
-                        <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4> 
-                        <div className="grid-post">
-                            <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
-                        </div>
-                        <div className="grid-bottom">
-                            <button className="button-grid">Acesse</button><p className="grid-epoch">00/00/2020 - 3 semanas atrás</p>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <img src={imgItem} alt='some value'/>
-                        <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4> 
-                        <div className="grid-post">
-                            <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
-                        </div>
-                        <div className="grid-bottom">
-                            <button className="button-grid">Acesse</button><p className="grid-epoch">00/00/2020 - 3 semanas atrás</p>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <img src={imgItem} alt='some value'/>
-                        <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4> 
-                        <div className="grid-post">
-                            <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
-                        </div>
-                        <div className="grid-bottom">
-                            <button className="button-grid">Acesse</button><p className="grid-epoch">00/00/2020 - 3 semanas atrás</p>
-                        </div>
-                    </div>
-
                 </div>
                 <div className="btn-navigation">
                     <button className="btn-page btn-selected">1</button>
