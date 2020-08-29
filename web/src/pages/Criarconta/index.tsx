@@ -26,7 +26,6 @@ export default function Criarconta() {
             ease: "none",
         })
     },)
-
     return (
         <PageDefault> 
             <div className="criar-conta">
@@ -43,15 +42,22 @@ export default function Criarconta() {
                         <h3 className="tInicial">Seus dados</h3><br/>
                         
                         <div className="row-one">
-                            <input type="image" src={User} alt="Submit" width="171" height="171"className="img-input"></input>
+                            <label htmlFor="uploadImage">
+                                <input id="uploadImage" type="file" alt="Submit" 
+                                    className="img-input" name="foto"
+                                    accept="image/*"
+                                ></input>
+                            </label>
+                            
+                            
                             <div className="row-one-input">
                                 <div className="row-one-left">
-                                    <p>Nome</p>
+                                    <p className="title-area">Nome</p>
                                     <input type="text" className="input-left-one"/>
                                 </div>
                                 <br/>
                                 <div className="row-one-right">
-                                    <p>Sobrenome</p>
+                                    <p className="title-area">Sobrenome</p>
                                     <input type="text" className="input-right-one"/>
                                 </div>
                             </div>
@@ -71,7 +77,7 @@ export default function Criarconta() {
                         </div>
                         <div className="row-three">
                             <p className="title-area" >Bio (max 300 caracteres)</p><br/>
-                            <textarea></textarea>
+                            <textarea maxLength={300}></textarea>
                         </div>
                         <div className="row-four">
                             <div className="row-four-title">
@@ -88,14 +94,16 @@ export default function Criarconta() {
                                 <p className="rt-right">+Publicação</p>
                             </div>
                             <br/>
-                            <hr />
+                            <hr className="line"/>
                             <br/>
                             <div className="row-five-title">
+                                <p className="title-area-new">No formato ABNT</p><br/>
                                 <p className="title-area">No formato ABNT</p><br/>
-                                <p className="title-area">Ano</p><br/>
+                                <p className="title-area ta-new">Ano</p><br/>
                             </div>
                             <div className="row-five-input">
                                 <textarea></textarea>
+                                <p className="title-area-new">Ano</p>
                                 <input type="text"/>
                             </div>
                         </div>
@@ -105,7 +113,7 @@ export default function Criarconta() {
                                 <p className="rt-right">+Projeto</p>
                             </div>
                             <br/>
-                            <hr />
+                            <hr className="line"/>
                             <br/>
                             <div className="row-six-title">
                                 <p className="title-area">Titulo</p><br/>
@@ -118,8 +126,10 @@ export default function Criarconta() {
                             <br/>
                             <p className="title-area" >Descrição (max. 300 caracteres</p>
                             <br/>
-                            <textarea className="row-six-textarea"></textarea>
+                            <textarea className="row-six-textarea" maxLength={300}></textarea>
                         </div>
+                        <button className="row-six-btn">Enviar</button>
+
                     </div>
                 </div>
             </div>

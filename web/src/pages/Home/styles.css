@@ -170,9 +170,10 @@
         margin-right: 0;
         margin-left: 20px;
         height: 180px;
+        width: 345px;
     }
     .notes p{
-        max-width: 320px;
+        max-width: 330px;
         font-size: 14px;
         text-align: initial;
     }
@@ -208,7 +209,6 @@
     }
     .notes-last{
         overflow-y: scroll;
-        margin-left: 180px;
     }
     .btn-last{
         width: 108px;
@@ -245,10 +245,11 @@
         overflow-y: scroll;
         margin-right: 0;
         margin-left: 20px;
+        width: 285px;
         height: 150px;
     }
     .notes p{
-        max-width: 300px;
+        max-width: 280px;
         font-size: 12px;
         text-align: initial;
     }
