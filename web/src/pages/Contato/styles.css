@@ -2,6 +2,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 
 .contato-top{
@@ -27,6 +28,132 @@
 
 
 
+.div-1{
+    background: #F0F0F7;
+}
+.div-2{
+    border-radius: 8pt;
+    box-shadow: 0px 7px 4px rgba(0,0,0,0.2);
+    margin: 30px 40px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    font: roboto;
+    padding: 30px 40px;
+
+}
+
+.subdiv-left{
+    width: 50%;
+    color: #2F80ED;
+    padding: 30px 50px;
+}
+#tittle-1l{
+    font-weight: bold;
+    font-size: 30pt;
+
+}
+
+#corpo-1l{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 14pt;
+    color: #9C98A6;
+    text-align: justify;
+    
+}
+#tittle-2l{
+    font-size: 15pt;
+}
+#corpo-2l{
+    text-align: justify;
+    font-size: 10pt;
+    padding-top: 30px;
+    padding-right: 50%;
+    padding-bottom: 30px;
+    color: #9C98A6;
+}
+
+.sociale{
+    width: 315px;
+    height: 30;
+    margin: 0 237px 0 84px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contatos{
+    margin: 0 0px 50px 0px;
+}
+
+.contatos-item{
+    display: flex;
+}
+
+.contatos-item img{
+    margin-right: 19px;
+    margin-bottom: 8px;
+}
+
+.contatos-item p{
+    font-weight: bold;
+    color: var(--color-pagina-textoazul);
+}
+
+
+.lmid{
+    margin: auto;
+    width: 1px;
+    height: 600px;
+    border: 1px solid #2BB3EB;
+}
+
+.subdiv-right{
+    width: 50%;
+    color: #828282;
+    padding: 40px 50px;
+}
+#tittle-1r{
+    font-size: 18pt;
+    padding-bottom: 50px;
+}
+
+.input-ne{
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid #E6E6F0;
+    padding: auto;
+    font-size: 20px;
+    color: #424242;
+    background-color: #E6E6F0;
+}
+.texto-t{
+    font-size: 18px;
+    color: #424242;
+    font: roboto;
+    width: 100%;
+    height: 300px;
+    border-radius: 8x;
+    border: 1px solid #E6E6F0;
+    background-color: #E6E6F0;
+}
+
+.get-contatos{
+    padding-bottom: 30px;
+}
+
+.btn-e{
+    width: 120px;
+    height: 46px;
+    border-radius: 8px;
+    margin-left: 372px;
+    margin-top: 20px;
+    border: none;
+    font-weight: bold;
+    color: var(--color-botao-texto);
+    background-color: var(--color-pagina-botao);
+}
 @media (max-width: 450px){
     .contato-top{
         flex-direction: column;
