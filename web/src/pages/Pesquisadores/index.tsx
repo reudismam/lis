@@ -1,8 +1,11 @@
 import React, {useRef, useEffect} from 'react';
 import {gsap} from 'gsap';
+import { Link } from "react-router-dom";
 import PageDefault from '../DefaultPage';
 import './styles.css';
 import PesquisadoresImg from './img/pesquisadores.png'
+import Docentes from './img/docente.png';
+import Discentes from './img/discente.png';
 
 function Pesquisadores() {
 
@@ -37,20 +40,31 @@ function Pesquisadores() {
                     <img alt="pesquisadores imagem" className="img-pesquisadores" src={PesquisadoresImg} ref={Animation2}/>
                 </div>
                 <br/>
-                <div className="pesquisadores-center">
-                    <div className="pesquisadores-docentes">
-                        <img alt="docentes" className="docentes" />
-                        <br/>
-                        <h2>Docentes</h2><br/>
-                        <p>Listas dos pesquisadores do LIS e um resumão de suas principais funções no grupo, trabalhos e projetos. </p>
-                    </div>
+                <div className="pesquisadores-container">
+                    <Link to="/docentes">
+                        <div className="pesquisadores-card">
+                            <img src={Docentes} alt="docentes" className="imgPesquisador" />
+                            <br/>
+                            <div>
+                                <h3>Docentes</h3><br/>
+                                <p>Listas dos pesquisadores do LIS e um resumão de suas principais funções no grupo, trabalhos e projetos. </p>
+                            </div>
+                        </div>
+                    </Link>
                     <br/>
-                    <div className="pesquisadores-discentes">
-                        <img alt="discentes" className="discentes" />
-                        <br/>
-                        <h2>Discentes</h2><br/>
-                        <p>Listas dos pesquisadores do LIS e um resumão de suas principais funções no grupo, trabalhos e projetos. </p>
-                    </div>
+                    <Link to="/discentes">
+                        <div className="pesquisadores-card">
+                            <img src={Discentes} alt="discentes" className="imgPesquisador" />
+                            <br/>
+                            <div>
+                                <h3>Discentes</h3><br/>
+                                <p>Listas dos pesquisadores do LIS e um resumão de suas principais funções no grupo, trabalhos e projetos. </p>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+                <div className="pesquisadores-btn">
+                    <button>Faça parte do nosso time</button>
                 </div>
             </div>
          </PageDefault>
