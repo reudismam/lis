@@ -3,7 +3,6 @@ import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
 import CriarContaImg from './img/criar-conta.png'
-import User from './img/user.png';
 
 export default function Criarconta() {
 

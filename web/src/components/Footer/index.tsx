@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import mapImg from './imgs/map.png'
 import emailImg from './imgs/email.png'
 import instaImg from './imgs/insta.png'
@@ -42,19 +43,19 @@ export default function Footer() {
             <div className="footer-social">
                     <div className="footer-info-img">
                         <img alt="instagram" src={instaImg} className="img"/>
-                        <a href="#" className="footer-info-text">
+                        <Link to="" className="footer-info-text">
                             lis.ufersa
-                        </a>
+                        </Link>
                     </div>
                     <div className="footer-info-img">
                         <img alt="instagram" src={twittImg} className="img"/>
-                        <a href="#" className="footer-info-text">
+                        <Link to="" className="footer-info-text">
                             lis_ufersa
-                        </a>
+                        </Link>
                     </div>
                     <div className="footer-info-img">
                         <img alt="facebook" src={faceImg} className="img"/>
-                        <a href="#" className="footer-info-text">/lis.ufersa</a>
+                        <Link to="" className="footer-info-text">/lis.ufersa</Link>
                     </div>
                 </div>
             <br/>

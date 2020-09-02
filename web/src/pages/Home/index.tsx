@@ -1,5 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import {gsap} from 'gsap';
+import { Link } from "react-router-dom";
 import PageDefault from '../DefaultPage';
 import './styles.css';
 import HomeImg from './img/inicio.png';
@@ -55,7 +56,7 @@ export default function Home() {
                                 Descrição: As olimpíadas de programação são ferramentas importantes para 
                                 motivação dos alunos para o aprendizado de programação. Isso pode ser 
                                 explicado pelo fato dessas competições serem, frequentemente, monitoradas 
-                                por grandes empresas, voltadas para o desenvolvimento <a>Ler mais</a> 
+                                por grandes empresas, voltadas para o desenvolvimento <Link to="">Ler mais</Link> 
                             </p>
                         </div>
                     </div>
@@ -67,7 +68,7 @@ export default function Home() {
                                 Descrição: As olimpíadas de programação são ferramentas importantes para 
                                 motivação dos alunos para o aprendizado de programação. Isso pode ser 
                                 explicado pelo fato dessas competições serem, frequentemente, monitoradas 
-                                por grandes empresas, voltadas para o desenvolvimento <a>Ler mais</a> 
+                                por grandes empresas, voltadas para o desenvolvimento <Link to="">Ler mais</Link> 
                             </p>
                         </div>
                     </div>
@@ -79,7 +80,7 @@ export default function Home() {
                                 Descrição: As olimpíadas de programação são ferramentas importantes para 
                                 motivação dos alunos para o aprendizado de programação. Isso pode ser 
                                 explicado pelo fato dessas competições serem, frequentemente, monitoradas 
-                                por grandes empresas, voltadas para o desenvolvimento <a>Ler mais</a> 
+                                por grandes empresas, voltadas para o desenvolvimento <Link to="">Ler mais</Link> 
                             </p>
                         </div>
                     </div>
@@ -89,7 +90,7 @@ export default function Home() {
                 <div className="last">
                     <div className="post-last">
                         <div className="video-last">
-                            <iframe 
+                            <iframe title="video"
                                 src="https://www.youtube.com/embed/tgbNymZ7vqY">
                             </iframe>
                         </div>
@@ -100,7 +101,7 @@ export default function Home() {
                                 importantes para motivação dos alunos para o aprendizado de 
                                 programação. Isso pode ser explicado pelo fato dessas 
                                 competições serem, frequentemente, monitoradas por grandes 
-                                empresas, voltadas para o desenvolvimento <a>Ler mais</a>
+                                empresas, voltadas para o desenvolvimento <Link to="">Ler mais</Link>
                             </p>
                         </div>
                     </div>
