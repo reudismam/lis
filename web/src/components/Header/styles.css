@@ -21,6 +21,7 @@ header{
 
 .logo-lis{
     width: 50px;
+    
 }
 
 header .logo{
@@ -44,12 +45,17 @@ header ul li a{
     text-decoration: none;
     color: #ffffff;
     opacity: 0.8;
-    padding: 0 15px;
+    padding: 18px 15px;
     transition: 0.2s;
 }
 
 header ul li a:hover{
     opacity: 1;
+    border-bottom: 5px ridge #fff;
+}
+
+.sa{
+    margin-left: 50px;
 }
 
 header .menu,
@@ -76,7 +82,7 @@ header .close{
         margin: 10px;
         width: 60px;
     }
-
+    
     header .logo,
     header ul{
         margin: 0;

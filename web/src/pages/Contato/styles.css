@@ -132,11 +132,14 @@
     font-size: 18px;
     color: #424242;
     font: roboto;
-    width: 100%;
-    height: 300px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 300px;
+    max-height: 300px;
     border-radius: 8x;
     border: 1px solid #E6E6F0;
     background-color: #E6E6F0;
+    
 }
 
 .get-contatos{
@@ -147,12 +150,13 @@
     width: 120px;
     height: 46px;
     border-radius: 8px;
-    margin-left: 372px;
+    float: right;
     margin-top: 20px;
     border: none;
     font-weight: bold;
     color: var(--color-botao-texto);
     background-color: var(--color-pagina-botao);
+
 }
 @media (max-width: 450px){
     .contato-top{

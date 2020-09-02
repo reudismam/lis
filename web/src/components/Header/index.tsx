@@ -31,7 +31,7 @@ export class Nav extends Component {
                         <li><Link to="/editais">Editais</Link></li>
                         <li><Link to="/parceiros">Parceiros</Link></li>
                         <li><Link to="/contato">Contato</Link></li>
-                        <li><Link to="/login">Sair</Link></li>
+                        <li className="sa"><Link to="/login">Sair</Link></li>
                         <li><Link to="/criarconta">Criar uma conta</Link></li>
                         <li className="close" onClick={this.menuToggle} >X</li>
                     </ul>
