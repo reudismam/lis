@@ -65,7 +65,9 @@
     background-color: var(--color-pagina-botao);
     float: right;
 }
-
+.pesquisadores-container .link{
+  text-decoration: none;
+}
 @media (max-width: 400px){
     .pesquisadores-top{
         flex-direction: column;

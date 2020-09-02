@@ -41,7 +41,7 @@ function Pesquisadores() {
                 </div>
                 <br/>
                 <div className="pesquisadores-container">
-                    <Link to="/docentes">
+                    <Link to="/docentes" className="link">
                         <div className="pesquisadores-card">
                             <img src={Docentes} alt="docentes" className="imgPesquisador" />
                             <br/>
@@ -52,7 +52,7 @@ function Pesquisadores() {
                         </div>
                     </Link>
                     <br/>
-                    <Link to="/discentes">
+                    <Link to="/discentes" className="link">
                         <div className="pesquisadores-card">
                             <img src={Discentes} alt="discentes" className="imgPesquisador" />
                             <br/>
