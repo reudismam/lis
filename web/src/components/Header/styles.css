@@ -51,7 +51,7 @@ header ul li a{
 
 header ul li a:hover{
     opacity: 1;
-    border-bottom: 5px ridge #fff;
+    border-bottom: 3px ridge #fff;
 }
 
 .sa{

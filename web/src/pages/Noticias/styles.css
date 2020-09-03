@@ -164,12 +164,14 @@
     
 }
 .cardnc-1{
+    min-height: 140px;
     max-height: 140px;
     font: roboto;
     text-align: justify;
     padding: 10px 10px;
     font-size: 12pt;
     color: #9C98A6;
+    overflow-y: auto;
 }
 @media (max-width: 450px){
     .noticia-top{
