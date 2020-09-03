@@ -3,6 +3,11 @@ import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
 import ParceirosImg from './img/parceiros.png'
+import UFERSA from './img/ufersa.png';
+import PROEC from './img/proec.png';
+import SEBRAE from './img/sebrae.png';
+import ME from './img/me.png';
+import RNgov from './img/rngov.png';
 
 export default function Parceiros() {
 
@@ -41,24 +46,24 @@ export default function Parceiros() {
                 <div className="parceiros-middle">
                     <div className="parceiros-middle-content">
                         <div className="parceiros-content-item">
-                            <img alt="" src="" className="parceiros-img-item" /><br/>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                            <img alt="" src={UFERSA} className="parceiros-img-item" /><br/>
+                            <p>Universidade Federal Rural do Semi-árido</p>
                         </div>
                         <div className="parceiros-content-item">
-                            <img alt="" src="" className="parceiros-img-item" /><br/>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                            <img alt="" src={PROEC} className="parceiros-img-item" /><br/>
+                            <p>Pró-reitoria de Extensão e Cultura</p>
                         </div>
                         <div className="parceiros-content-item">
-                            <img alt="" src="" className="parceiros-img-item" /><br/>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                            <img alt="" src={SEBRAE} className="parceiros-img-item" /><br/>
+                            <p>Serviço Brasileiro de Apoio às Micro e Pequenas Empresas</p>
                         </div>
                         <div className="parceiros-content-item">
-                            <img alt="" src="" className="parceiros-img-item" /><br/>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                            <img alt="" src={ME} className="parceiros-img-item" /><br/>
+                            <p>Ministério da Educação - BRASIL</p>
                         </div>
                         <div className="parceiros-content-item">
-                            <img alt="" src="" className="parceiros-img-item" /><br/>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                            <img alt="" src={RNgov} className="parceiros-img-item" /><br/>
+                            <p>Governo do Rio Grande do Norte</p>
                         </div>
                     </div>
                 </div>

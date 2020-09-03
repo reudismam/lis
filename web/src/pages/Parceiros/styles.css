@@ -52,21 +52,28 @@
 }
 
 .parceiros-content-item{
-    padding: 20px;
-    border: 1px solid rgb(243, 243, 243);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 400px;
     min-width: 270px;
     height: 300px;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
 }
 
+.parceiros-content-item p{
+    font-size: 19px;
+    color: var(--color-descriptoins);
+}
+.parceiros-img-item{
+    max-width: 374px;
+    max-height: 120px;
+}
 
-
-
-
-
+@media (max-width: 400px){
+    .parceiros-img-item{
+        max-width: 270px
+    }
+}
 
 
 

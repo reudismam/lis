@@ -85,7 +85,7 @@ export default function Sobre() {
                         </div>
                         <br/>
                         <div className="history-lis">
-                            <h2>LIS</h2><br/>
+                            <h2>História</h2><br/>
                             <p>Neque gravida in fermentum et sollicitudin. Molestie at elementum eu facilisis sed. 
                             Viverra nam libero justo laoreet. Scelerisque eu ultrices vitae auctor eu augue ut 
                             lectus arcu. Leo integer malesuada nunc vel. Sed cras ornare arcu dui vivamus arcu felis. 
