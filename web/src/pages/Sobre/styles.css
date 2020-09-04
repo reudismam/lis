@@ -3,13 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .about{
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-
 .about-top{
     height: 100%;
     display: flex;
@@ -19,12 +17,10 @@
     background: var(--color-container);
     padding: 20px 50px;
 }
-
 .about .about-text {
     text-rendering: optimizeLegibility;
     color: var(--color-container-textosec);
 }
-
 .about .about-text span{
     font-weight: bolder;
     font-size: 25px;
@@ -33,43 +29,34 @@
     background-clip: text;
     color: transparent;
 }
-
 .img-about{
     width: 400px;
 }
-
-
 .about-middle{
     height: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
-
 .about-middle .aboutOne{
     display: flex;
     flex-direction: column;
     padding: 50px 100px;
     flex-wrap: wrap;
 }
-
 .about-middle .aboutOne .aboutOne-item{
     padding-bottom: 60px;
 }
-
 .about-middle .aboutOne .aboutOne-item h2{
     color: var(--color-pagina-textoazulclaro);
 }
-
 .about-middle .aboutOne .aboutOne-item p{
     color: var(--color-pagina-texto);
     text-align: justify;
 }
-
 .two h2{
     text-align: right;
 }
-
 .about-history{
     position: relative;
     display: flex;
@@ -78,7 +65,6 @@
     flex-wrap: wrap;
     width: 100%;
 }
-
 .history-lis{
     transition: 0.2s;
     padding: 40px;
@@ -89,16 +75,13 @@
     height: 100%;
     border-radius: 13px;
 }
-
 .history-lis h2{
     color: var(--color-pagina-textoazulclaro);
 }
-
 .history-lis p{
     color: var(--color-cards-textos);
     text-align: justify;
 }
-
 .history-lis .acess{
     opacity: 0;
     float: right;
@@ -109,7 +92,6 @@
     padding: 7px 30px;
     color: #ffffff;
 }
-
 .history-lis:hover{
     background: #2B4CB8;
 }
@@ -124,10 +106,6 @@
     background: #fff;
     color: #2B4CB8;
 }
-
-
-
-
 .about-values{
     display: flex;
     padding: 100px 100px;
@@ -160,15 +138,6 @@
 .values-column:hover{
     background: #F0F0F7;
 }
-
-
-
-
-
-
-
-
-
 @media (max-width: 450px){
     .about-top{
         padding: 20px 20px;
@@ -200,5 +169,18 @@
     .values-column{
         padding: 30px 20px;
     }
-  
+}
+
+@media (min-width: 451px) and (max-width: 900px){
+    .about-history{
+        flex-direction: column;
+        align-items: center;
+    }
+    .history-lis{
+        height: 450px;
+        margin-bottom: 40px;
+    }
+    .about-values{
+        flex-direction: column;
+    }
 }
