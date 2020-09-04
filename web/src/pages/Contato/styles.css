@@ -4,7 +4,6 @@
     flex-direction: column;
     
 }
-
 .contato-top{
     height: 100%;
     display: flex;
@@ -14,24 +13,18 @@
     background: var(--color-container);
     padding: 20px 50px;
 }
-
 .contato .contato-text {
     text-rendering: optimizeLegibility;
     color: var(--color-container-textosec);
 }
-
-
 .img-contato{
     width: 550px;
     padding: 14px;
 }
-
-
-
-.div-1{
+.contato-page{
     background: #F0F0F7;
 }
-.div-2{
+.contato-container{
     border-radius: 8pt;
     box-shadow: 0px 7px 4px rgba(0,0,0,0.2);
     margin: 30px 40px;
@@ -40,40 +33,27 @@
     flex-direction: row;
     font: roboto;
     padding: 30px 40px;
-
 }
-
-.subdiv-left{
+.contato-left{
     width: 50%;
-    color: #2F80ED;
+    color: var(--color-pagina-textoazulclaro);
     padding: 30px 50px;
+    flex-direction: column;
 }
-#tittle-1l{
-    font-weight: bold;
-    font-size: 30pt;
-
+.contato-container p{
+    color: var(--color-pagina-texto);
 }
-
-#corpo-1l{
+.contato-infoTop p{
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 14pt;
-    color: #9C98A6;
     text-align: justify;
-    
 }
-#tittle-2l{
-    font-size: 15pt;
-}
-#corpo-2l{
+.contato-lis p{
     text-align: justify;
     font-size: 10pt;
-    padding-top: 30px;
-    padding-right: 50%;
-    padding-bottom: 30px;
-    color: #9C98A6;
+    padding: 30px 50% 30px 0;
 }
-
 .sociale{
     width: 315px;
     height: 30;
@@ -81,44 +61,47 @@
     display: flex;
     justify-content: space-between;
 }
-
 .contatos{
     margin: 0 0px 50px 0px;
+    flex-direction: column;
 }
-
 .contatos-item{
     display: flex;
+    align-items: center;
 }
-
 .contatos-item img{
+    max-height: 30px;
+    
+}
+.contatos-item div{
     margin-right: 19px;
     margin-bottom: 8px;
 }
-
 .contatos-item p{
     font-weight: bold;
     color: var(--color-pagina-textoazul);
 }
-
-
-.lmid{
-    margin: auto;
+.contato-line{
     width: 1px;
-    height: 600px;
+}
+.lmid{
+    margin-top: 40px;
+    width: 1px;
+    height: 75%;
     border: 1px solid #2BB3EB;
 }
-
-.subdiv-right{
+.contato-right{
     width: 50%;
-    color: #828282;
     padding: 40px 50px;
 }
-#tittle-1r{
-    font-size: 18pt;
-    padding-bottom: 50px;
+.contato-msg{
+    color: var(--color-pagina-texto);
+    margin-bottom: 50px;
 }
-
-.input-ne{
+.get-contatos{
+    padding-bottom: 30px;
+}
+.get-contatos input{
     width: 100%;
     height: 56px;
     border-radius: 8px;
@@ -128,7 +111,7 @@
     color: #424242;
     background-color: #E6E6F0;
 }
-.texto-t{
+.get-contatos textarea{
     font-size: 18px;
     color: #424242;
     font: roboto;
@@ -139,13 +122,7 @@
     border-radius: 8x;
     border: 1px solid #E6E6F0;
     background-color: #E6E6F0;
-    
 }
-
-.get-contatos{
-    padding-bottom: 30px;
-}
-
 .btn-e{
     width: 120px;
     height: 46px;
@@ -156,9 +133,9 @@
     font-weight: bold;
     color: var(--color-botao-texto);
     background-color: var(--color-pagina-botao);
-
 }
-@media (max-width: 450px){
+
+@media (max-width: 400px){
     .contato-top{
         flex-direction: column;
         padding: 20px 20px;
@@ -166,5 +143,93 @@
     .contato-top .img-contato{
         padding-top: 50px;
         width: 280px;
+    }
+    .contato-container{
+        margin: 30px 10px;
+        padding: 10px;
+        flex-direction: column;
+    }
+    .contato-left{
+        width: 100%;
+        padding: 10px;
+    }
+    .contato-title{
+        text-align: center;
+        font-size: 22px;
+    }
+    .contato-lis{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .contato-lis p{
+        padding: 10px 20px;
+    }
+    
+    .contatos{
+        margin-bottom: 30px;
+    }
+    .contatos-item{
+        margin-bottom: 10px;
+    }
+    .sociale{
+        width: 100%;
+        margin: 0;
+        padding: 0 40px;
+    }
+    .contato-line{
+        width: 100%;
+    }
+    .lmid{
+        margin-top: 20px;
+        margin-left: 30px;
+        width: 80%;
+        height: 1px;
+    }
+    .contato-right{
+        width: 100%;
+        padding: 30px 20px;
+    }
+    .get-contatos input{
+        height: 50px;
+    }
+}
+
+@media (min-width:401px) and (max-width:900px){
+    .contato-container{
+        margin: 30px 10px;
+        padding: 10px;
+    }
+    .contato-container h2{
+        font-size: 22px;
+    }
+    .contato-container p{
+        font-size: 16px;
+    }
+    .contato-left{
+        padding: 10px;
+    }
+    .contato-left h1{
+        font-size: 24px;
+    }
+    .contato-lis p{
+        padding: 30px 10% 30px 0;
+    }
+    .contatos{
+        margin-bottom: 20px;
+    }
+    .sociale{    
+        margin: 0;
+        padding: 0 40px;
+    }
+    .contato-right{
+        width: 100%;
+        padding: 10px 20px;
+    }
+    .get-contatos input{
+        height: 50px;
+    }
+    .get-contatos textarea{
+        min-width: 350px;
+        max-width: 350px;
     }
 }

@@ -1,9 +1,9 @@
-import React, {useRef, useEffect} from 'react';
-import {gsap} from 'gsap';
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { Link } from 'react-router-dom';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import ContatoImg from './img/contato.png'
-
+import ContatoImg from './img/contato.png';
 import group from './img/Group.png';
 import mail from './img/mail.png';
 import local from './img/local.png';
@@ -21,7 +21,7 @@ export default function Contato() {
             opacity: 0,
             ease: "none",
         })
-    },)
+    })
 
     const Animation2 = useRef(null)
     useEffect(() => {
@@ -31,76 +31,102 @@ export default function Contato() {
             opacity: 0,
             ease: "none",
         })
-    },)
+    })
 
     return (
-        <PageDefault> 
+        <PageDefault>
             <div className="contato">
                 <div className="contato-top">
                     <div className="contato-text" ref={Animation}>
-                        <h1>Vamos nos conhecer um pouco mais</h1><br/>
+                        <h1>Vamos nos conhecer um pouco mais</h1><br />
                         <p>Deixe seu feedback para melhorarmos cada vez mais!</p>
-                    </div><br/>
-                    <img alt="contato imagem" className="img-contato" src={ContatoImg} ref={Animation2}/>
+                    </div><br />
+                    <img alt="contato imagem" className="img-contato" src={ContatoImg} ref={Animation2} />
                 </div>
-                <div className="div-1">
-                    <div className="div-2">
-                        <div className="subdiv-left">
-                         <p id= "tittle-1l">Entre em contato conosco!</p>
-                          <p id="corpo-1l">
-                            Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra  sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque adipiscing commodo  elit at imperdiet. Orci sagittis eu volutpat odio facilisis mauris sit amet massa.</p>
-                          <p id="tittle-2l">LIS</p>
-                          <p id="corpo-2l">
-                            Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque 
-                           </p>
-                           <div className="contatos">
-                            <div className="contatos-item">
-                                <div>
-                                    <img src={group} alt=""/>
+                <div className="contato-page">
+                    <div className="contato-container">
+                        <div className="contato-left">
+                            <div className="contato-infoTop">
+                                <h1 className="contato-title">Entre em contato conosco!</h1>
+                                <p>
+                                    Id cursus metus aliquam eleifend mi in nulla posuere
+                                    sollicitudin. Ut pharetra  sit amet aliquam id diam maecenas
+                                    ultricies. Euismod quis viverra nibh cras pulvinar mattis.
+                                    Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis
+                                    ullamcorentesque adipiscing commodo  elit at imperdiet.
+                                    Orci sagittis eu volutpat odio facilisis mauris sit amet
+                                    massa.
+                                </p>
+                            </div>
+                            <div className="contato-lis">
+                                <h3>LIS</h3>
+                                <p>
+                                    Id cursus metus aliquam eleifend mi in
+                                    nulla posuere sollicitudin. Ut pharetra sit
+                                    amet aliquam id diam maecenas ultricies.
+                                    Euismod quis viverra nibh cras pulvinar
+                                    mattis. Amet nulla facilisi morbi tempus
+                                    iaculis. Vestibulum mattis ullamcorentesque
+                                </p>
+                            </div>
+                            <div className="contatos">
+                                <div className="contatos-item">
+                                    <div>
+                                        <img src={group} alt="" />
+                                    </div>
+                                    <div>
+                                        <p>sitelisexample.com.br</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p>sitelisexample.com.br</p>
+                                <div className="contatos-item">
+                                    <div>
+                                        <img src={mail} alt="" />
+                                    </div>
+                                    <div>
+                                        <p>sitelisexample@.com.br</p>
+                                    </div>
+                                </div>
+                                <div className="contatos-item">
+                                    <div>
+                                        <img src={local} alt="" />
+                                    </div>
+                                    <div>
+                                        <p>Endereço: xxxxxx-xxxxx, 00000000</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="contatos-item">
-                                <img src={mail} alt=""/>
-                                <p>sitelisexample@.com.br</p>
-                            </div>
-                            <div className="contatos-item">
-                                <img src={local} alt=""/>
-                                <p>Endereço: xxxxxx-xxxxx, 00000000</p>
+                            <div className="sociale">
+                                <Link to=""><img src={ig} alt="" /></Link>
+                                <Link to=""><img src={tt} alt="" /></Link>
+                                <Link to=""><img src={fb} alt="" /></Link>
+                                <Link to=""><img src={ln} alt="" /></Link>
                             </div>
                         </div>
-                          <div className="sociale">
-                            <img src={ig} alt=""/>
-                            <img src={tt} alt=""/>
-                            <img src={fb} alt=""/>
-                            <img src={ln} alt=""/>
-                            </div> 
-                          </div>
-                        
-                          <hr className="lmid"/>
-                        <div className="subdiv-right">
-                        <div id="tittle-1r">Ou envie uma mensagem</div>
-                        <div className="get-contatos">
-                            <p>Nome</p>
-                            <input className="input-ne"type="text"/>
+                        <div className="contato-line">
+                            <hr className="lmid" />
                         </div>
-                        <div className="get-contatos">
-                            <p>Email</p>
-                            <input className="input-ne" type="text"/>
-                        </div>
-                        <div className="get-contatos">
-                            <p>Bio (max. 300 caracteres)</p>
-                            <textarea className="texto-t" maxLength={300}></textarea>
-                            <button className="btn-e">Enviar</button>
-                        </div>
-                        
+                        <div className="contato-right">
+                            <div className="contato-msg">
+                                <h2>Ou envie uma mensagem</h2>    
+                            </div>
+                            <div className="get-contatos">
+                                <p>Nome</p>
+                                <input type="text" />
+                            </div>
+                            <div className="get-contatos">
+                                <p>Email</p>
+                                <input type="text" />
+                            </div>
+                            <div className="get-contatos">
+                                <p>Bio (max. 300 caracteres)</p>
+                                <textarea maxLength={300}></textarea>
+                                <button className="btn-e">Enviar</button>
+                            </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
-         </PageDefault>
+        </PageDefault>
     );
 }
