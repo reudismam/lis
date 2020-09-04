@@ -1,10 +1,9 @@
-.doscentes{
+.docentes{
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-
-.doscentes-top{
+.docentes-top{
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -13,33 +12,127 @@
     background: var(--color-container);
     padding: 20px 50px;
 }
-
-.doscentes .doscentes-text {
+.docentes .docentes-text {
     text-rendering: optimizeLegibility;
     color: var(--color-container-textosec);
 }
-
-.img-doscentes{
+.img-docentes{
     width: 500px;
     padding: 15px;
 }
-
-@media (max-width: 450px){
-    .doscentes-top{
+.docentes-container{
+    width: 100%;
+    height: 100%;
+    padding: 30px 120px;
+    flex-direction: column;
+    align-items: center;
+}
+.docentes-container h3{
+    color: var(--color-h3);
+}
+.docentes-container p{
+    font-size: 16px;
+    color: var(--color-descriptoins);
+}
+.docentes-link{
+    text-decoration: none;
+    color: var(--color-h3);
+}
+.docentes-perfil{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    margin-bottom: 50px;
+    border: 1px solid #ddd;
+    flex-direction: column;
+    align-items: center;
+}
+.docentes-infoTop{
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+}
+.docentes-infoTop img{
+    width: 140px;
+    height: 140px;
+    margin-right: 20px;
+    border-radius: 360px;
+}
+.docentes-descricao{
+    padding: 0 50px;    
+}
+.docentes-descricao h3{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.docentes-descricao p{
+    margin-bottom: 5px;
+}
+.docentes-sobre{
+    max-height: 200px;
+    overflow-y: auto;
+}
+.docentes-areas div{
+    max-height: 150px;
+    overflow-y: auto;
+}
+.docentes-btn button{
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    margin-left:75%;
+    color: var(--color-botao-texto);
+    background-color: var(--color-pagina-botao);
+}
+@media (max-width: 400px){
+    .docentes-top{
         flex-direction: column;
         padding: 20px 20px;
     }
-    .doscentes-top .img-doscentes{
+    .docentes-top .img-docentes{
         padding-top: 50px;
         width: 280px;
     }
+    .docentes-container{
+        padding: 0;
+    }
+    .docentes-infoTop{
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .docentes-descricao{
+        padding: 30px 0;
+    }
+    .docentes-sobre{
+        max-height: 200px;
+        overflow-y: scroll;
+    }
+    .docentes-areas div{
+        max-height: 150px;
+        overflow-y: scroll;
+    }
+    .docentes-btn button{
+        margin-left: 12%;
+    }
 }
-@media (max-width: 900px){
-    .doscentes-top{
+@media (min-width:401px) and (max-width: 900px){
+    .docentes-top{
         padding: 20px 20px;
     }
-    .doscentes-top .img-doscentes{
-        padding-top: 20px;
-        width: 280px;
+    .docentes-container{
+        padding: 30px 40px;
+    }
+    .docentes-sobre{
+        max-height: 200px;
+        overflow-y: scroll;
+    }
+    .docentes-areas div{
+        max-height: 150px;
+        overflow-y: scroll;
+    }
+    .docentes-btn button{
+        margin-left: 70%;
     }
 }
