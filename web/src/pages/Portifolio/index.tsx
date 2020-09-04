@@ -1,5 +1,5 @@
-import React, {useRef, useEffect} from 'react';
-import {gsap} from 'gsap';
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
 import PortfolioImg from './img/portfolio.png'
@@ -17,7 +17,7 @@ export default function Portifolio() {
             opacity: 0,
             ease: "none",
         })
-    },)
+    })
 
     const Animation2 = useRef(null)
     useEffect(() => {
@@ -27,27 +27,27 @@ export default function Portifolio() {
             opacity: 0,
             ease: "none",
         })
-    },)
+    })
 
     return (
         <PageDefault>
-            <div> 
+            <div>
                 <div className="portfolio">
                     <div className="portfolio-top">
                         <div className="portfolio-text" ref={Animation}>
-                            <h1>Veja alguns portfólios</h1><br/>
+                            <h1>Veja alguns portfólios</h1><br />
                             <p>Essas são algumas criações que nos orgulham!</p>
-                        </div><br/>
-                        <img alt="portfolio imagem" className="img-portfolio" src={PortfolioImg} ref={Animation2}/>
+                        </div><br />
+                        <img alt="portfolio imagem" className="img-portfolio" src={PortfolioImg} ref={Animation2} />
                     </div>
                 </div>
                 <div className="line-topo">
-                    <hr/>
-                    <input type="text" placeholder="pesquisar"/>
+                    <hr />
+                    <input type="text" placeholder="pesquisar" />
                 </div>
                 <div className="boxL">
                     <div className="img">
-                        <img src={imgItem} alt='some value'/>
+                        <img src={imgItem} alt='some value' />
                     </div>
                     <div className="item">
                         <div className="boxtop">
@@ -55,21 +55,21 @@ export default function Portifolio() {
                         </div>
                         <div className="conteudo">
                             <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
-                            <br/>
+                            <br />
                             <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
                         </div>
                         <button className="button">Acesse</button>
                     </div>
                 </div>
                 <div className="line-center">
-                    <hr/>
+                    <hr />
                     <p>Semana passada</p>
                 </div>
                 <div className="grid-container">
                     <div className="grid">
                         <div className="grid-item">
-                            <img src={imgItem} alt='some value'/>
-                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4> 
+                            <img src={imgItem} alt='some value' />
+                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4>
                             <div className="grid-post">
                                 <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
                             </div>
@@ -78,8 +78,8 @@ export default function Portifolio() {
                             </div>
                         </div>
                         <div className="grid-item">
-                            <img src={imgItem} alt='some value'/>
-                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4> 
+                            <img src={imgItem} alt='some value' />
+                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4>
                             <div className="grid-post">
                                 <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
                             </div>
@@ -88,8 +88,8 @@ export default function Portifolio() {
                             </div>
                         </div>
                         <div className="grid-item">
-                            <img src={imgItem} alt='some value'/>
-                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4> 
+                            <img src={imgItem} alt='some value' />
+                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4>
                             <div className="grid-post">
                                 <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
                             </div>
@@ -98,8 +98,8 @@ export default function Portifolio() {
                             </div>
                         </div>
                         <div className="grid-item">
-                            <img src={imgItem} alt='some value'/>
-                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4> 
+                            <img src={imgItem} alt='some value' />
+                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4>
                             <div className="grid-post">
                                 <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
                             </div>
@@ -113,10 +113,10 @@ export default function Portifolio() {
                     <button className="btn-page btn-selected">1</button>
                     <button className="btn-page">2</button>
                     <button className="btn-page">3</button>
-                    <button className="btn-page" ><img src={btn1} alt='some value'/></button>
-                    <button className="btn-page"><img src={btn2} alt='some value'/></button>
+                    <button className="btn-page" ><img src={btn1} alt='some value' /></button>
+                    <button className="btn-page"><img src={btn2} alt='some value' /></button>
                 </div>
             </div>
-         </PageDefault>
+        </PageDefault>
     );
 }
