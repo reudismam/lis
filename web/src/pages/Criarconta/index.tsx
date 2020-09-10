@@ -3,6 +3,7 @@ import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
 import CriarContaImg from './img/criar-conta.png'
+import Sucess from '../Concluido/index'
 
 export default function Criarconta() {
 
@@ -127,11 +128,12 @@ export default function Criarconta() {
                             <br/>
                             <textarea className="row-six-textarea" maxLength={300}></textarea>
                         </div>
-                        <button className="row-six-btn">Enviar</button>
-
+                            <button className="row-six-btn">Enviar</button>    
                     </div>
                 </div>
             </div>
+          
          </PageDefault>
+         
     );
 }
