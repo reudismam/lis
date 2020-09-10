@@ -1,87 +1,133 @@
-import React, {useRef, useEffect} from 'react';
-import {gsap} from 'gsap';
+import React, {useState, useEffect, useRef} from 'react';
+import { useHistory} from 'react-router-dom';
+import axios from 'axios';
 import PageDefault from '../DefaultPage';
 import './styles.css';
 import CriarContaImg from './img/criar-conta.png'
 
+
+
+const initialValue = {
+    nome: '',
+    sobrenome: '',
+    uploadImage: '',
+    email: '',
+    telefone: '',
+    biografia: '',
+    posicao: ''
+}
+
 export default function Criarconta() {
 
-    const Animation = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation.current, {
-            x: -30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    },)
+    const WrapperRef = useRef(null);
 
-    const Animation2 = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation2.current, {
-            x: 30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    },)
+    const [values, setValues] = useState(initialValue)
+    const history = useHistory();
+
+    function onChange(ev: any){
+        const {name, value} = ev.target
+        setValues({ ...values, [name]: value })
+    }
+    
+
+    function onSubmit(ev: any){
+        ev.preventDefault();
+        
+        if(values.posicao == "discente"){
+        axios.post('http://localhost:5000/discentes', values)
+            .then((response) => {
+                history.push('/discentes')
+            })
+        }
+
+        if(values.posicao == "docente"){
+            axios.post('http://localhost:5000/docentes', values)
+                .then((response) => {
+                    history.push('/docentes')
+                })
+            }
+        }
+
+        
+        
     return (
-        <PageDefault> 
+        
+    <PageDefault>
+            <form onSubmit = {onSubmit} encType="multipart/form-data">
             <div className="criar-conta">
                 <div className="criar-conta-top">
-                    <div className="criar-conta-text" ref={Animation}>
+                    <div className="criar-conta-text" >
                         <h1>Quase tudo pronto para se tornar <br/>um membro do grupo</h1><br/>
                         <p>Insira seus dados cadastrais nos campos abaixo.</p>
                     </div><br/>
-                    <img alt="criar-conta imagem" className="img-criar-conta" src={CriarContaImg} ref={Animation2}/>
+                    <img alt="criar-conta imagem" className="img-criar-conta" src={CriarContaImg} />
                 </div>
                 
                 <div className="criar-conta-cad">
                     <div className="criar-conta-content">
                         <h3 className="tInicial">Seus dados</h3><br/>
-                        
                         <div className="row-one">
-                            <label htmlFor="uploadImage">
-                                <input id="uploadImage" type="file" alt="Submit" 
-                                    className="img-input" name="foto"
-                                    accept="image/*"
-                                ></input>
+                            <label htmlFor="uploadImage" >
+                                <input id="uploadImage" type="file" className="img-input" name="uploadImage" accept="image/jpg, image/png, image/jpeg, image/gif" onChange={onChange} />
                             </label>
-                            
+                            <div id="img-container">
+                                <img id="preview" src={values.uploadImage} ref={WrapperRef}/>
+                            </div>
                             
                             <div className="row-one-input">
                                 <div className="row-one-left">
-                                    <p className="title-area">Nome</p>
-                                    <input type="text" className="input-left-one"/>
+                                    <label htmlFor="nome" className="title-area">Nome</label>
+                                    <input id="nome" type="text" className="input-left-one" name="nome" onChange={onChange} required />
                                 </div>
                                 <br/>
                                 <div className="row-one-right">
-                                    <p className="title-area">Sobrenome</p>
-                                    <input type="text" className="input-right-one"/>
+                                    <label htmlFor="sobrenome" className="title-area">Sobrenome</label>
+                                    <input type="text" id="sobrenome" className="input-right-one" name="sobrenome" onChange={onChange} required/>
                                 </div>
                             </div>
                             <br/>
                         </div>
                         <div className="row-two">
                             <div className="row-two-left">
-                                <p className="title-area" >E-mail</p>
-                                <input type="text" className="input-left-two" placeholder="example@hotmail.com"/>
+                                <label className="title-area" htmlFor="email">E-mail</label>
+                                <input type="text" id="email" name="email" className="input-left-two" placeholder="example@hotmail.com" onChange={onChange} required/>
                             </div>
                             <br/>
                             <div className="row-two-right">
-                                <p className="title-area" >Whatsapp</p>
-                                <input type="text" className="input-right-two" placeholder="(__)_____-____"/>
+                                <label htmlFor="whatsapp" className="title-area" >Whatsapp</label>
+                                <input type="number" id="whatsapp" name="whatsapp" className="input-right-two" placeholder="(__)_____-____" onChange={onChange} required/>
                             </div>
                             <br/>
                         </div>
                         <div className="row-three">
-                            <p className="title-area" >Bio (max 300 caracteres)</p><br/>
-                            <textarea maxLength={300}></textarea>
+                            <label className="title-area" htmlFor="bio" >Bio (max 300 caracteres)</label><br/>
+                            <textarea maxLength={300} name="bio" id="bio" onChange={onChange}></textarea>
                         </div>
+                        <br/><br/><br/>
+                        <div className="align-selected">
+                        <p className="rt-left">Selecione a opção para descrever sua posição atual</p>
+
+                        
+                            <h1>Você escolheu: {values.posicao}</h1>
+                            <br/>
+                        <div className="div-input-class">
+                            <label className="input-class"><p>discente</p>
+                                <input type="radio" id="discente" value="discente" name="posicao" onChange = {onChange}  />
+                            </label>
+                            <label className="input-class"><p>docente</p>
+                                <input type="radio" id="docente" value="docente" name="posicao" onChange = {onChange}  />
+                            </label>
+                            </div>
+                        </div>
+
+
                         <div className="row-four">
                             <div className="row-four-title">
                                 <p className="rt-left">Áreas de interesse</p>
-                                <p className="rt-right">+Área de interesse</p>
+
+                                
+
+
                             </div>
                             <hr className="line"/>
                             <p className="title-area">Área de interesse</p><br/>
@@ -127,11 +173,12 @@ export default function Criarconta() {
                             <br/>
                             <textarea className="row-six-textarea" maxLength={300}></textarea>
                         </div>
-                        <button className="row-six-btn">Enviar</button>
+                        <button className="row-six-btn" type="submit">Enviar</button>
 
                     </div>
                 </div>
             </div>
+            </form>
          </PageDefault>
     );
 }

@@ -16,11 +16,11 @@ import Projeto from './pages/Projeto';
 import Publicacoes from './pages/Publicacoes';
 import Sobre from './pages/Sobre';
 import Criarconta from './pages/Criarconta';
-import './App.css';
 
 
 
 function App() { 
+
   return (
     <BrowserRouter>
       <Suspense fallback = {<div> <h1>Ola</h1>{/*Aqui vai o efeito de Carregando */} </div>}> 
