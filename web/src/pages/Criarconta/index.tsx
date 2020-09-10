@@ -4,6 +4,7 @@ import axios from 'axios';
 import PageDefault from '../DefaultPage';
 import './styles.css';
 import CriarContaImg from './img/criar-conta.png'
+import Sucess from '../Concluido/index'
 
 
 
@@ -180,5 +181,6 @@ export default function Criarconta() {
             </div>
             </form>
          </PageDefault>
+         
     );
 }

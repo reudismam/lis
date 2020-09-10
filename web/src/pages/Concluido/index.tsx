@@ -1,11 +1,27 @@
 import React from 'react';
-import PageDefault from '../DefaultPage';
-import './styles.css';
+import './style.css';
+import imgSucess from './img/imgSucess.png';
+import {Link} from 'react-router-dom';
 
-export default function Contato() {
-    return (
-        <PageDefault> 
-            <div>Contato</div>
-         </PageDefault>
-    );
+
+class Sucess extends React.Component{
+    render(){
+        return (
+            <div> 
+                <div className= "panel-azul">
+                    <div className= "left">
+                    <p id="p1"><strong>Seja bem vindo á nossa equipe!</strong></p>
+                    <p id="p2">Parabéns, agora você faz parte do nosso time</p>
+                    <Link to="/"><button className="bAvançar">Avançar</button></Link>
+                    </div>
+                    <div className="right">
+                        <img alt="p" src={imgSucess} className="img"/>
+                        </div>
+                </div>
+                
+            </div>
+        )
+    }
 }
+
+export default Sucess 
