@@ -1,4 +1,5 @@
 import React, {useRef, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
@@ -128,7 +129,7 @@ export default function Criarconta() {
                             <br/>
                             <textarea className="row-six-textarea" maxLength={300}></textarea>
                         </div>
-                            <button className="row-six-btn">Enviar</button>    
+                        <Link to="/Concluido"><button className="row-six-btn">Enviar</button></Link>    
                     </div>
                 </div>
             </div>

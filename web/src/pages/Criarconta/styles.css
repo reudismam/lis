@@ -288,6 +288,13 @@ textarea{
     color: var(--color-botao-texto);
     background-color: var(--color-pagina-botao);
 }
+
+#enviar{
+    font-weight: bold;
+    color: var(--color-botao-texto);
+    text-decoration-line: none;
+}
+
 @media (max-width: 360px){
     .criar-conta-content{
         width: 100%;
