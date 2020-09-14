@@ -25,9 +25,18 @@ export default function Criarconta() {
     const [values, setValues] = useState(initialValue)
     const history = useHistory();
 
+    const [imagePreviewUrl, setImagePreviewUrl] = useState<any>();
+
     function onChange(ev: any){
-        const {name, value} = ev.target
-        setValues({ ...values, [name]: value })
+        ev.preventDefault();
+        const {name, value} = ev.target;
+        setValues({ ...values, [name]: value });
+        let reader = new FileReader();
+        let file = ev.target.files[0];
+        reader.onloadend = () => {
+            setValues({...values, [name]: reader.result});
+        }
+        reader.readAsDataURL(file);
     }
     
 
@@ -72,7 +81,9 @@ export default function Criarconta() {
                                 <input id="uploadImage" type="file" className="img-input" name="uploadImage" accept="image/jpg, image/png, image/jpeg, image/gif" onChange={onChange} />
                             </label>
                             <div id="img-container">
-                                <img id="preview" src={values.uploadImage} ref={WrapperRef}/>
+                                {values.uploadImage &&
+                                <img id="preview" style={{width: '50px', height: '50px'}} src={values.uploadImage} ref={WrapperRef}/>
+                                }
                             </div>
                             
                             <div className="row-one-input">
