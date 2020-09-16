@@ -13,7 +13,7 @@ function ListItems(props){
        
         <button onClick={() => {
             props.deleteItem(item.key)
-        }} icon="trash">Excluir</button>
+        }}>Excluir</button>
         </span>
      </p>
      

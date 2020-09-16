@@ -4,7 +4,9 @@ import axios from 'axios';
 import PageDefault from '../DefaultPage';
 import './styles.css';
 import CriarContaImg from './img/criar-conta.png';
-import NewInteresse from './newInteresse.js'
+import NewInteresse from './newInteresse.js';
+import NewPublicacoes from './newPublicacoes.js';
+import NewProjetos from './newProjetos.js'
 
 
 const initialValue = {
@@ -22,9 +24,19 @@ export default function Criarconta() {
     const [values, setValues] = useState(initialValue)
     const history = useHistory();
 
+    const [imagePreviewUrl, setImagePreviewUrl] = useState<any>();
+
     function onChange(ev: any){
-        const {name, value} = ev.target
-        setValues({ ...values, [name]: value })
+        ev.preventDefault();
+        const {name, value} = ev.target;
+        setValues({ ...values, [name]: value });
+        
+        let reader = new FileReader();
+        let file = ev.target.files[0];
+        reader.onloadend = () => {
+            setValues({...values, [name]: reader.result});
+        }
+        reader.readAsDataURL(file);
     }
     
     function onSubmit(ev: any){
@@ -64,12 +76,15 @@ export default function Criarconta() {
                     <div className="criar-conta-content">
                         <h3 className="tInicial">Seus dados</h3><br/>
                         <div className="row-one">
+                            <div id="img-container">
+                                {values.uploadImage &&
+                                <img id="preview" style={{width: '100px', height: '100px'}} src={values.uploadImage}/>
+                                }
+                            </div>
                             <label htmlFor="uploadImage" >
                                 <input id="uploadImage" type="file" className="img-input" name="uploadImage" accept="image/jpg, image/png, image/jpeg, image/gif" onChange={onChange} />
                             </label>
-                            <div id="img-container">
-                                <img id="preview" src={values.uploadImage}/>
-                            </div>
+                            
                             
                             <div className="row-one-input">
                                 <div className="row-one-left">
@@ -117,6 +132,7 @@ export default function Criarconta() {
 
                         <div className="row-four">
                             <div className="row-four-title">
+
                                 <p className="rt-left">Áreas de interesse</p>
                             </div>
                             <hr className="line"/>
@@ -131,37 +147,12 @@ export default function Criarconta() {
                             <br/>
                             <hr className="line"/>
                             <br/>
-                            <div className="row-five-title">
-                                <p className="title-area-new">No formato ABNT</p><br/>
-                                <p className="title-area">No formato ABNT</p><br/>
-                                <p className="title-area ta-new">Ano</p><br/>
-                            </div>
-                            <div className="row-five-input">
-                                <textarea></textarea>
-                                <p className="title-area-new">Ano</p>
-                                <input type="text"/>
-                            </div>
+                            <NewPublicacoes onChange = {onChange}/>
+                            
                         </div>
                         <div className="row-six">
-                            <div className="row-six-title">
-                                <p className="rt-left">Projetos</p>
-                                <p className="rt-right">+Projeto</p>
-                            </div>
-                            <br/>
-                            <hr className="line"/>
-                            <br/>
-                            <div className="row-six-title">
-                                <p className="title-area">Titulo</p><br/>
-                                <p className="title-area">Ano</p><br/>
-                            </div>
-                            <div className="row-six-input">
-                                <input type="text" className="rsi-left" />
-                                <input type="text" className="rsi-right" />
-                            </div>
-                            <br/>
-                            <p className="title-area" >Descrição (max. 300 caracteres</p>
-                            <br/>
-                            <textarea className="row-six-textarea" maxLength={300}></textarea>
+                            <h1>Projetos</h1>
+                            <NewProjetos />
                         </div>
                         <button className="row-six-btn" type="submit">Enviar</button>
 
