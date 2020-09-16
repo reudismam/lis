@@ -10,7 +10,7 @@ export default function Discente() {
 
     const [discent, setDiscent] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:5000/discentes')
+        axios.get('http://localhost:5000/discentes?_limit=6') //Limitando quantidade de itens ta tela ?_limit=5'
         .then((response) => {
             setDiscent(response.data)
         });

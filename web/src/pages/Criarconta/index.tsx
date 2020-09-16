@@ -3,9 +3,8 @@ import { useHistory} from 'react-router-dom';
 import axios from 'axios';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import CriarContaImg from './img/criar-conta.png'
-import Sucess from '../Concluido/index'
-
+import CriarContaImg from './img/criar-conta.png';
+import NewInteresse from './newInteresse.js'
 
 
 const initialValue = {
@@ -15,13 +14,11 @@ const initialValue = {
     email: '',
     telefone: '',
     biografia: '',
-    posicao: ''
+    posicao: '',
+    areaInteresse: ''
 }
 
 export default function Criarconta() {
-
-    const WrapperRef = useRef(null);
-
     const [values, setValues] = useState(initialValue)
     const history = useHistory();
 
@@ -30,18 +27,17 @@ export default function Criarconta() {
         setValues({ ...values, [name]: value })
     }
     
-
     function onSubmit(ev: any){
         ev.preventDefault();
         
-        if(values.posicao == "discente"){
+        if(values.posicao === "discente"){
         axios.post('http://localhost:5000/discentes', values)
             .then((response) => {
                 history.push('/discentes')
             })
         }
 
-        if(values.posicao == "docente"){
+        if(values.posicao === "docente"){
             axios.post('http://localhost:5000/docentes', values)
                 .then((response) => {
                     history.push('/docentes')
@@ -72,7 +68,7 @@ export default function Criarconta() {
                                 <input id="uploadImage" type="file" className="img-input" name="uploadImage" accept="image/jpg, image/png, image/jpeg, image/gif" onChange={onChange} />
                             </label>
                             <div id="img-container">
-                                <img id="preview" src={values.uploadImage} ref={WrapperRef}/>
+                                <img id="preview" src={values.uploadImage}/>
                             </div>
                             
                             <div className="row-one-input">
@@ -96,7 +92,7 @@ export default function Criarconta() {
                             <br/>
                             <div className="row-two-right">
                                 <label htmlFor="whatsapp" className="title-area" >Whatsapp</label>
-                                <input type="number" id="whatsapp" name="whatsapp" className="input-right-two" placeholder="(__)_____-____" onChange={onChange} required/>
+                                <input  type="number" id="whatsapp" name="whatsapp" className="input-right-two" placeholder="(__)_____-____" onChange={onChange} required />
                             </div>
                             <br/>
                         </div>
@@ -107,8 +103,6 @@ export default function Criarconta() {
                         <br/><br/><br/>
                         <div className="align-selected">
                         <p className="rt-left">Selecione a opção para descrever sua posição atual</p>
-
-                        
                             <h1>Você escolheu: {values.posicao}</h1>
                             <br/>
                         <div className="div-input-class">
@@ -121,19 +115,14 @@ export default function Criarconta() {
                             </div>
                         </div>
 
-
                         <div className="row-four">
                             <div className="row-four-title">
                                 <p className="rt-left">Áreas de interesse</p>
-
-                                
-
-
                             </div>
                             <hr className="line"/>
-                            <p className="title-area">Área de interesse</p><br/>
-                            <input type="text"/>
+                            <NewInteresse name="areaInteresse" value="areaInteresse" onChange = {onChange}/>
                         </div>
+
                         <div className="row-five">
                             <div className="row-five-title">
                                 <p className="rt-left">Publicações</p>

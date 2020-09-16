@@ -9,18 +9,6 @@
       "whatsapp": 11947064498,
       "bio": "teste comentario",
       "posicao": "docente"
-    },
-    {
-      "nome": "Reudisman",
-      "sobrenome": "Rolim",
-      "uploadImage": "C:\\fakepath\\Captura de Tela (57).png",
-      "email": "reudismanr@hotmail.com",
-      "telefone": "",
-      "biografia": "",
-      "posicao": "docente",
-      "whatsapp": "20526396",
-      "bio": "professor docente",
-      "id": 1
     }
   ],
   "discentes": [
@@ -32,31 +20,15 @@
       "email": "aluno@gmail.com",
       "whatsapp": 11947064498,
       "bio": "teste comentario",
-      "posicao": "discente"
-    },
-    {
-      "nome": "Renan Nascimetno",
-      "sobrenome": "Nascimento",
-      "uploadImage": "",
-      "email": "Renan.nascimento.santana@hotmail.com",
-      "telefone": "",
-      "biografia": "",
       "posicao": "discente",
-      "whatsapp": "11485659652",
-      "bio": "asdasff",
-      "id": 1
-    },
-    {
-      "nome": "Renan Santana",
-      "sobrenome": "Nascimento",
-      "uploadImage": "",
-      "email": "Renan.nascimento.santana@hotmail.com",
-      "telefone": "",
-      "biografia": "",
-      "posicao": "discente",
-      "whatsapp": "124141412421",
-      "bio": "cafawgw",
-      "id": 2
+      "interesse": [
+        {
+          "areaInteresse": "Engenharia de Software"
+        },
+        {
+          "areaInteresse": "Engenharia da Computação"
+        }
+      ]
     }
   ]
 }
