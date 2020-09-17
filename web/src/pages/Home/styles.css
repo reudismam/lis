@@ -53,25 +53,26 @@
 .home-grid{
     width: 100%;
     height: 100%;
-    padding: 0 90px;
+    padding: 0 150px;
     margin-bottom: 30px;
-    align-items: center;
     display: grid;
-    grid-column-gap: 92px;
+    grid-column-gap: 30px;
     grid-row-gap: 58px;
     grid-template-columns: auto auto;
+    justify-content: space-between;
 }
 .grid-item{
-    width: 554px;
+    width: 530px;
     height: 542px;
     border-radius: 8px;
     align-items: center;
     text-align: center;
 }
 .grid-item img{
-    width: 100%;
-    height: 344px;
-    margin-bottom:20px;
+    padding: 2%;
+    width: 90%;
+    height: 300px;
+    margin-bottom:10px;
     border-radius: 8px 8px 0px 0px;
 }
 
@@ -102,14 +103,20 @@
     border: none;
 }
 .notes{
-    width: 478px;
-    height: 168px;
+    width: 468px;
+    height: 198px;
     margin-left: 50px;
-    overflow-y: scroll;
+    overflow-y: auto;
     text-align: initial;
-    color: var(--color-descriptoins);
+    justify-content: space-between;
+}
+.notes-last{
+    margin-left: 0;
+    height: 400px;
 }
 .notes p{
+    margin-left: 0;
+    color: var(--color-descriptoins);
     font-size: 16px;
 }
 .notes a{
@@ -142,34 +149,32 @@
     }
 }
 
-@media (max-width: 449px){
+@media (max-width: 360px){
     .home-grid{
-        padding: 0;
-        margin:0;
-        max-width: 360px;
         height: 100%;
-        display:table-cell;
-        align-items: center;
+        padding: 3%;
+        display: table-cell;
         flex-direction: column;
+        align-items: center;
     }
     .text-home{
         font-size: 18px;
     }
     .grid-item{
-        width: 360px;
-        height: 360px;
-        flex-direction: column;
-        margin-bottom: 20px;
+        width: 300px;
+        height: auto;
+        padding-bottom: 10px;
+        margin-bottom: 40px;
     }
     .grid-item img{
-        width: 80%;
+        width: 200px;
         height: 150px;
     }
     .notes{
         overflow-y: scroll;
-        margin-right: 0;
-        margin-left: 20px;
-        height: 180px;
+        margin: 0 0 0 10px;
+        padding-bottom: 10px;
+        height: 220px;
         width: 345px;
     }
     .notes p{
@@ -219,7 +224,7 @@
    
 }
 
-@media (min-width: 450px) and (max-width: 768px){
+@media (min-width: 361px) and (max-width: 768px){
     .home-grid{
         padding: 0 20px;
         margin:0;
@@ -233,13 +238,13 @@
     }
     .grid-item{
         width: 300px;
-        height: 350px;
+        height: 360px;
         margin-bottom: 20px;
         flex-direction: column;
     }
     .grid-item img{
         width: 80%;
-        height: 150px;
+        height: 180px;
     }
     .notes{
         overflow-y: scroll;
@@ -270,11 +275,8 @@
     }
     .post-last{
         width: 768px;
-        height: 100%;
+        height: 220px;
         padding: 0 5%;
-        margin-bottom: 0px;
-    }
-    .video-last{
         margin-bottom: 20px;
     }
     .video-last iframe{
@@ -283,7 +285,7 @@
         border: none;
     }
     .notes-last{
-        max-height: 300px;
+        height: 200px;
         overflow-y: scroll;
     }
     .btn-last{

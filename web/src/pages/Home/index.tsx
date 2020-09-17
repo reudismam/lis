@@ -47,7 +47,7 @@ export default function Home() {
                     <div className="grid-item">
                         <img src={img1} alt=""/>
                         <div className="notes">
-                            <p>Pré-Algoritmos</p><br/><br/>
+                            <p>Pré-Algoritmos</p>
                             <p>
                                 Descrição: As olimpíadas de programação são ferramentas importantes para 
                                 motivação dos alunos para o aprendizado de programação. Isso pode ser 
@@ -63,7 +63,7 @@ export default function Home() {
                     <div className="grid-item">
                         <img src={img2} alt=""/>
                         <div className="notes">
-                            <p>Imersão Python</p><br/><br/>
+                            <p>Imersão Python</p>
                             <p>
                                 Descrição: As olimpíadas de programação são ferramentas importantes para 
                                 motivação dos alunos para o aprendizado de programação. Isso pode ser 
@@ -75,7 +75,7 @@ export default function Home() {
                     <div className="grid-item">
                         <img src={img2} alt=""/>
                         <div className="notes">
-                            <p>Imersão Python</p><br/><br/>
+                            <p>Imersão Python</p>
                             <p>
                                 Descrição: As olimpíadas de programação são ferramentas importantes para 
                                 motivação dos alunos para o aprendizado de programação. Isso pode ser 
@@ -95,7 +95,7 @@ export default function Home() {
                             </iframe>
                         </div>
                         <div className="notes notes-last">  
-                            <p>Pré-Algoritmos</p><br/><br/>
+                            <p>Pré-Algoritmos</p>
                             <p>
                                 Descrição: As olimpíadas de programação são ferramentas 
                                 importantes para motivação dos alunos para o aprendizado de 
