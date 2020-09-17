@@ -26,12 +26,13 @@ const Menus = styled.nav`
     width: 200px;
     height: 100vh;
     position: fixed;
+    z-index: 1;
     right: 0px;
     top: 0;
     transform: ${(props: MenusProps) => props.open ? 'translateX(0)' : 'translateX(100%)'};
     transition: 0.3s;
 
-    @media(min-width: 989px){
+    @media(min-width: 1200px){
         transform: none;
         background-color: transparent;
         display: flex;

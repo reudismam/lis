@@ -6,15 +6,16 @@ const MenuList = styled.ul`
     margin-top: 3rem;
 
     li{
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        color: var( --color-descriptoins);
     }
     .MenuLink{
         color: var( --color-descriptoins);
         text-decoration: none;
     }
 
-    @media(min-width: 989px){
+    @media(min-width: 1200px){
         display: flex;
         margin: 0;
         li {

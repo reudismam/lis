@@ -8,9 +8,9 @@ interface MenuIconProps {
 const MenuIcon = styled.div`
     font-size: 2.5rem;
     color: ${(props: MenuIconProps) => props.open ?  'var(--color-pagina-texto)' : 'var(--color-cotainer-texto)'};
-    z-index: 1;
+    z-index: 2;
 
-    @media(min-width: 768px){
+    @media(min-width: 1200px){
         display: none;
     }
 `
