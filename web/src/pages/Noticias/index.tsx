@@ -30,7 +30,12 @@ export default function Noticias() {
     })
 
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={NoticiaImg}
+            imageAlt="Imagem Noticias"
+            title="Acompanhe notícias da Universidade mais recentes"
+            description="Buscamos de deixar bem informado com as notícias mais importantes atualizadas!"
+        >
             <div>
                 <div className="noticias">
                     <div className="noticias-top">
@@ -44,7 +49,7 @@ export default function Noticias() {
             </div>
             <div className="noticias-container">
                 <div className="noticias-lineTop">
-                    <hr/>
+                    <hr />
                     <input type="text" placeholder="pesquisar" />
                 </div>
                 <div className="noticias-post">
@@ -67,7 +72,7 @@ export default function Noticias() {
                 </div>
                 <div className="noticias-centerInfo">
                     <p><strong>Semana passada</strong></p>
-                    <hr/>
+                    <hr />
                 </div>
                 <div className="noticias-grid">
                     <div className="grid-item-note">

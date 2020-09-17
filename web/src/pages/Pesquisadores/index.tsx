@@ -33,6 +33,8 @@ function Pesquisadores() {
         <PageDefault
             imageSrc={PesquisadoresImg}
             imageAlt="Imagem Pesquisadores"
+            title="Muitas pessoas tornam o nosso projeto possível"
+            description="Sabemos que o trabalho em grupo é algo essencial para qualquer time, e conosco não seria diferente"
         > 
             <div className="pesquisadores">
                 <div className="pesquisadores-top">

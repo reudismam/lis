@@ -36,6 +36,8 @@ export default function Login() {
         <PageDefault
             imageSrc={LoginImg}
             imageAlt="Imagem Login"
+            title="Faça login"
+            description="Deixe seu feedback para melhorarmos cada vez mais!"
         >
             <div>
                 <div className="projeto">

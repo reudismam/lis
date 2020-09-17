@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { BannerProps } from '../Banner';
 
 export const MessageContainer = styled.div`
     width: 70%;
@@ -48,18 +49,24 @@ const Button = styled(Link)`
     }
 `
 
-export default function Message(){
+const Message: React.FC<BannerProps> = (props) => {
     return(
         <MessageContainer>
             <Title>
-                Somos apaixonados por inovação e fazemos disso nosso trabalho
+                {props.title} 
             </Title>
+            {props.description &&
             <Description>
-                Sabemos que o trabalho em grupo é algo essencial para qualquer time, e conosco não seria diferente
+                {props.description}
             </Description>
-            <Button to="/projetos">
-                Projetos
+            }
+            {props.buttonLink &&
+            <Button to={props.buttonLink}>
+                {props.buttonText}
             </Button>
+            }
         </MessageContainer>
     );
 }
+
+export default Message;

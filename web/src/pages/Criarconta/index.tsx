@@ -61,7 +61,12 @@ export default function Criarconta() {
         
     return (
         
-    <PageDefault>
+    <PageDefault
+        imageSrc={CriarContaImg}
+        imageAlt="Imagem Criar Conta"
+        title="Quase tudo pronto para se tornar um membro do grupo"
+        description="Insira seus dados cadastrais nos campos abaixo"
+    >
             <form onSubmit = {onSubmit} encType="multipart/form-data">
             <div className="criar-conta">
                 <div className="criar-conta-top">

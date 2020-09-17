@@ -30,6 +30,8 @@ export default function Publicacoes() {
         <PageDefault
             imageSrc={PublicacoesImg}
             imageAlt="Imagem Publicacoes"
+            title="Publicações"
+            description="Veja suas atribuições no momento, deixe seus dados sempre atualizados!"
         >
             <div>
                 <div className="publicacoes">

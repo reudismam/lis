@@ -37,6 +37,8 @@ export default function Contato() {
         <PageDefault
             imageSrc={ContatoImg}
             imageAlt="Imagem Contato"
+            title="Vamos nos conhecer um pouco mais"
+            description="Deixe seu feedback para melhorarmos cada vez mais!"
         >
             <div className="contato">
                 <div className="contato-top">

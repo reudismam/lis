@@ -33,6 +33,8 @@ export default function Portifolio() {
         <PageDefault
             imageSrc={PortfolioImg}
             imageAlt="Imagem Portifolio"
+            title="Portifólio"
+            description="Criações que nos orgulham"
         >
             <div>
                 <div className="portfolio">

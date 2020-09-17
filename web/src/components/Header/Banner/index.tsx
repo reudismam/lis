@@ -30,7 +30,10 @@ const BannerContainer = styled.div`
 export interface BannerProps{
     imageSrc?: string;
     imageAlt?: string;
-
+    title: string;
+    description?: string;
+    buttonLink?: string;
+    buttonText?: string; 
 }
 
 const Banner: React.FC<BannerProps> = (props) => {
@@ -40,7 +43,7 @@ const Banner: React.FC<BannerProps> = (props) => {
                 src={props.imageSrc}
                 alt={props.imageAlt}
             />
-            <BannerMessage />
+            <BannerMessage {...props} />
 
         </BannerContainer>
     );

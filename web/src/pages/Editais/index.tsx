@@ -33,6 +33,9 @@ export default function Editais() {
         <PageDefault
             imageSrc={EditaisImg}
             imageAlt="Imagem de Editais"
+            title="Editais"
+            description="Acompanhe nossa postagens e fique por dentro do que
+            rola aqui no LIS, e claro que tem aquele toque de aprendizagem!"
         >
             <div>
                 <div className="edital">

@@ -33,6 +33,8 @@ export default function Sobre() {
         <PageDefault
             imageSrc={SobreImg}
             imageAlt="Imagem Sobre"
+            title="Eai! Venha conhecer um pouco mais sobre nós"
+            description="Nossa equipe é formada por discentes, docentes, parceiros e muito mais... Todos com o mesmo propósito! INOVAR"
         > 
             <div className="about">
                 <div className="about-top">

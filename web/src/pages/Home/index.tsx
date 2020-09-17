@@ -13,6 +13,9 @@ export default function Home() {
         <PageDefault
             imageSrc={HomeImg}
             imageAlt="Imagem da Home"
+            title="Somos apaixonados por inovação e fazemos disso nosso trabalho"
+            buttonLink="/projetos"
+            buttonText="Projetos"
         >
             <div>            
                 <p className="text-home">Confira nossas últimas notícias</p>

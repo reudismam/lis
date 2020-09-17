@@ -35,6 +35,10 @@ export default function Parceiros() {
         <PageDefault
             imageSrc={ParceirosImg}
             imageAlt="Imagem Parceiros"
+            title="Veja só alguns de nossos parceiros!"
+            description="Temos o orgulho de ter esses patrocinadores e parceiros
+            que ajudam constantemente no crescimento da educação
+            e das inovações"
         > 
             <div className="parceiros">
                 <div className="parceiros-top">

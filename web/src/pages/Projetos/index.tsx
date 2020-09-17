@@ -34,6 +34,8 @@ export default function Projeto() {
         <PageDefault
             imageSrc={ProjetoImg}
             imageAlt="Imagem Projeto"
+            title="Veja alguns de nossos projetos!"
+            description="Buscamos te deixar bem interado sobre o assunto, aqui você pode acompanhar o que estamos fazendo ..."
         >
             <div>        
                 <div className="projeto" >

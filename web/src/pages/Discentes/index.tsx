@@ -40,6 +40,8 @@ export default function Discente() {
         <PageDefault
             imageSrc={DiscentesImg}
             imageAlt="Imagem Discentes"
+            title="Aqui estão os discentes"
+            description="Nossa lista de discentes comprometidos com a inovação"
         >
             <h1 >Página de Discentes</h1>
             {discent.map(( discente, index) => (

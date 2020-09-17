@@ -8,6 +8,8 @@ export default function Erro() {
         <PageDefault
             imageSrc={ErrorImg}
             imageAlt="Imagem Error"
+            title="Erro 404"
+            description="Página não encontrada!"
         >
             <div className="principal404">
             <div className="top404">
