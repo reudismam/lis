@@ -31,12 +31,12 @@ export default function Criarconta() {
         const {name, value} = ev.target;
         setValues({ ...values, [name]: value });
         
-        let reader = new FileReader();
+        /*let reader = new FileReader();
         let file = ev.target.files[0];
         reader.onloadend = () => {
             setValues({...values, [name]: reader.result});
         }
-        reader.readAsDataURL(file);
+        reader.readAsDataURL(file);*/
     }
     
     function onSubmit(ev: any){
