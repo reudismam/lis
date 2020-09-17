@@ -1,13 +1,13 @@
 import React, {useRef, useEffect} from 'react';
 import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
-import './styles.css';
-import ParceirosImg from './img/parceiros.png'
+import ParceirosImg from '../../assets/images/Parceiros/parceiros.svg';
 import UFERSA from './img/ufersa.png';
 import PROEC from './img/proec.png';
 import SEBRAE from './img/sebrae.png';
 import ME from './img/me.png';
 import RNgov from './img/rngov.png';
+import './styles.css';
 
 export default function Parceiros() {
 
@@ -32,17 +32,15 @@ export default function Parceiros() {
     },)
 
     return (
-        <PageDefault> 
+        <PageDefault
+            imageSrc={ParceirosImg}
+            imageAlt="Imagem Parceiros"
+            title="Veja só alguns de nossos parceiros!"
+            description="Temos o orgulho de ter esses patrocinadores e parceiros
+            que ajudam constantemente no crescimento da educação
+            e das inovações"
+        > 
             <div className="parceiros">
-                <div className="parceiros-top">
-                    <div className="parceiros-text" ref={Animation}>
-                        <h1>Veja só alguns de nossos parceiros!</h1><br/>
-                        <p>Temos o orgulho de ter esses patrocinadores e parceiros
-                        que ajudam constantemente<br/> no crescimento da educação
-                        e das <span>inovações</span></p>
-                    </div><br/>
-                    <img alt="parceiros imagem" className="img-parceiros" src={ParceirosImg} ref={Animation2}/>
-                </div>
                 <div className="parceiros-middle">
                     <div className="parceiros-middle-content">
                         <div className="parceiros-content-item">

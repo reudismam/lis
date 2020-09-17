@@ -2,11 +2,11 @@ import React, {useState, useEffect, useRef} from 'react';
 import { useHistory} from 'react-router-dom';
 import axios from 'axios';
 import PageDefault from '../DefaultPage';
-import './styles.css';
-import CriarContaImg from './img/criar-conta.png';
+import CriarContaImg from '../../assets/images/CriarConta/criarConta.svg';
 import NewInteresse from './newInteresse.js';
 import NewPublicacoes from './newPublicacoes.js';
 import NewProjetos from './newProjetos.js'
+import './styles.css';
 
 
 const initialValue = {
@@ -61,17 +61,14 @@ export default function Criarconta() {
         
     return (
         
-    <PageDefault>
+    <PageDefault
+        imageSrc={CriarContaImg}
+        imageAlt="Imagem Criar Conta"
+        title="Quase tudo pronto para se tornar um membro do grupo"
+        description="Insira seus dados cadastrais nos campos abaixo"
+    >
             <form onSubmit = {onSubmit} encType="multipart/form-data">
             <div className="criar-conta">
-                <div className="criar-conta-top">
-                    <div className="criar-conta-text" >
-                        <h1>Quase tudo pronto para se tornar <br/>um membro do grupo</h1><br/>
-                        <p>Insira seus dados cadastrais nos campos abaixo.</p>
-                    </div><br/>
-                    <img alt="criar-conta imagem" className="img-criar-conta" src={CriarContaImg} />
-                </div>
-                
                 <div className="criar-conta-cad">
                     <div className="criar-conta-content">
                         <h3 className="tInicial">Seus dados</h3><br/>

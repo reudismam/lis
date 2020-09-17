@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import PageDefault from '../DefaultPage';
+import PublicacoesImg from '../../assets/images/Publicacoes/publicacoes.svg';
 import './styles.css';
-import PublicacoesImg from './img/publicacoes.png'
 
 export default function Publicacoes() {
 
@@ -27,17 +27,13 @@ export default function Publicacoes() {
     })
 
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={PublicacoesImg}
+            imageAlt="Imagem Publicacoes"
+            title="Publicações"
+            description="Veja suas atribuições no momento, deixe seus dados sempre atualizados!"
+        >
             <div>
-                <div className="publicacoes">
-                    <div className="publicacoes-top">
-                        <div className="publicacoes-text" ref={Animation}>
-                            <h1>Aqui estão as publicações</h1><br />
-                            <p>Veja suas atribuições no momento, deixe seus dados sempre atualizados!</p>
-                        </div><br />
-                        <img alt="publicações imagem" className="img-publicacoes" src={PublicacoesImg} ref={Animation2} />
-                    </div>
-                </div>
                 <div className="publicacoes-container">
                     <div className="box">
                         <h2 className="data">2020</h2>

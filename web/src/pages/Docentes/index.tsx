@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import PageDefault from '../DefaultPage';
 import DocenteCard from './docenteCard'
+import DocentesImg from '../../assets/images/Docentes/docentes.svg';
 import './styles.css';
 import axios from 'axios';
 
@@ -37,7 +38,12 @@ export default function Docente() {
         })
     })
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={DocentesImg}
+            imageAlt="Imagem Docentes"
+            title="Esses são os docentes"
+            description="Nossa lista de docentes comprometidos com a inovação"
+        >
             <h1 >Página de Docentes</h1>
             {docent.map(( docente, index) => (
                 <DocenteCard key={index} docente = {docente} />
