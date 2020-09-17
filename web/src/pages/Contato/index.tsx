@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { Link } from 'react-router-dom';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import ContatoImg from './img/contato.png';
+import ContatoImg from '../../assets/images/Contato/contato.svg';
 import group from './img/Group.png';
 import mail from './img/mail.png';
 import local from './img/local.png';
@@ -34,7 +34,10 @@ export default function Contato() {
     })
 
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={ContatoImg}
+            imageAlt="Imagem Contato"
+        >
             <div className="contato">
                 <div className="contato-top">
                     <div className="contato-text" ref={Animation}>

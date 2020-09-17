@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import SobreImg from './imgs/sobre.png';
+import SobreImg from '../../assets/images/Sobre/sobre.svg';
 import FlipImg from './imgs/Flipboard.png';
 import GlobeImg from './imgs/Globe.png';
 import PeopleImg from './imgs/People.png';
@@ -30,7 +30,10 @@ export default function Sobre() {
     },)
 
     return (
-        <PageDefault> 
+        <PageDefault
+            imageSrc={SobreImg}
+            imageAlt="Imagem Sobre"
+        > 
             <div className="about">
                 <div className="about-top">
                     <div className="about-text" ref={Animation}>

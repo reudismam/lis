@@ -2,11 +2,11 @@ import React, {useState, useEffect, useRef} from 'react';
 import { useHistory} from 'react-router-dom';
 import axios from 'axios';
 import PageDefault from '../DefaultPage';
-import './styles.css';
-import CriarContaImg from './img/criar-conta.png';
+import CriarContaImg from '../../assets/images/CriarConta/criarConta.svg';
 import NewInteresse from './newInteresse.js';
 import NewPublicacoes from './newPublicacoes.js';
 import NewProjetos from './newProjetos.js'
+import './styles.css';
 
 
 const initialValue = {

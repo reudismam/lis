@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import PageDefault from '../DefaultPage';
+import PublicacoesImg from '../../assets/images/Publicacoes/publicacoes.svg';
 import './styles.css';
-import PublicacoesImg from './img/publicacoes.png'
 
 export default function Publicacoes() {
 
@@ -27,7 +27,10 @@ export default function Publicacoes() {
     })
 
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={PublicacoesImg}
+            imageAlt="Imagem Publicacoes"
+        >
             <div>
                 <div className="publicacoes">
                     <div className="publicacoes-top">

@@ -1,13 +1,13 @@
 import React, {useRef, useEffect} from 'react';
 import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
-import './styles.css';
-import ParceirosImg from './img/parceiros.png'
+import ParceirosImg from '../../assets/images/Parceiros/parceiros.svg';
 import UFERSA from './img/ufersa.png';
 import PROEC from './img/proec.png';
 import SEBRAE from './img/sebrae.png';
 import ME from './img/me.png';
 import RNgov from './img/rngov.png';
+import './styles.css';
 
 export default function Parceiros() {
 
@@ -32,7 +32,10 @@ export default function Parceiros() {
     },)
 
     return (
-        <PageDefault> 
+        <PageDefault
+            imageSrc={ParceirosImg}
+            imageAlt="Imagem Parceiros"
+        > 
             <div className="parceiros">
                 <div className="parceiros-top">
                     <div className="parceiros-text" ref={Animation}>

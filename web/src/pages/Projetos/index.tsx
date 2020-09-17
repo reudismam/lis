@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import ProjetoImg from './img/projeto.png'
+import ProjetoImg from '../../assets/images/Projeto/projeto.svg';
 import imgLeft from './img/imgleft.png';
 import imgLeft1 from './img/imgright-left1.png';
 import imgLeft2 from './img/imgright-left2.png';
@@ -31,7 +31,10 @@ export default function Projeto() {
     },)
 
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={ProjetoImg}
+            imageAlt="Imagem Projeto"
+        >
             <div>        
                 <div className="projeto" >
                     <div className="projeto-top" >

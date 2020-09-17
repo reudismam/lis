@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import EditaisImg from './img/editais.png'
+import EditaisImg from '../../assets/images/Editais/editais.svg';
 import imgItem from './img/item.png';
 import btn1 from './img/btn1.png';
 import btn2 from './img/btn2.png';
@@ -30,7 +30,10 @@ export default function Editais() {
     },)
 
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={EditaisImg}
+            imageAlt="Imagem de Editais"
+        >
             <div>
                 <div className="edital">
                     <div className="edital-top">

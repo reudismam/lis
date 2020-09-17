@@ -15,7 +15,7 @@
     "axios": "^0.20.0",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
-    "gsap": "^3.5.0",
+    "gsap": "^3.5.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-flip-move": "^3.0.4",

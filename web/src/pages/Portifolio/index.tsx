@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import PortfolioImg from './img/portfolio.png'
+import PortfolioImg from '../../assets/images/Portifolio/portfolio.svg';
 import imgItem from './img/item.png';
 import btn1 from './img/btn1.png';
 import btn2 from './img/btn2.png';
@@ -30,7 +30,10 @@ export default function Portifolio() {
     })
 
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={PortfolioImg}
+            imageAlt="Imagem Portifolio"
+        >
             <div>
                 <div className="portfolio">
                     <div className="portfolio-top">

@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import PageDefault from '../DefaultPage';
 import DiscenteCard from './discenteCard'
+import DiscentesImg from '../../assets/images/Discentes/discentes.svg';
 import './styles.css';
 import axios from 'axios';
 
@@ -36,7 +37,10 @@ export default function Discente() {
         })
     })
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={DiscentesImg}
+            imageAlt="Imagem Discentes"
+        >
             <h1 >Página de Discentes</h1>
             {discent.map(( discente, index) => (
                 <DiscenteCard key={index} discente = {discente} />

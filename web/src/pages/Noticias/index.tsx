@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import NoticiaImg from './img/noticia.png'
+import NoticiaImg from '../../assets/images/Noticias/noticia.svg';
 import imgNews1 from './img/imgNews1.png';
 import imgNews2 from './img/imgNews2.png';
 import imgNews3 from './img/imgNews3.png';

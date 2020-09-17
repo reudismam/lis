@@ -1,18 +1,19 @@
-import React, { Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
-import Logo from '../../../assets/images/logo.svg';
 import TopBar from '../TopBar';
-
+import Banner, { BannerProps } from '../Banner';
 
 const MainHeader = styled.header`
     background-color: var(--color-navibar);
 `
 
-export default function Header() {
+const Header: React.FC<BannerProps> = (props) => {
     return (
         <MainHeader>
             <TopBar />
+            <Banner {...props} />
         </MainHeader>
     );
 }
+
+export default Header;

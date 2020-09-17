@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
-import './styles.css';
+import LoginImg from '../../assets/images/Login/login.svg';
 import login from './img/login.png';
 import group from './img/Group.png';
 import mail from './img/mail.png';
@@ -10,6 +10,7 @@ import ig from './img/ig.png';
 import tt from './img/tt.png';
 import fb from './img/fb.png';
 import ln from './img/ln.png';
+import './styles.css';
 
 export default function Login() {
     const Animation = useRef(null)
@@ -32,7 +33,10 @@ export default function Login() {
         })
     },)
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={LoginImg}
+            imageAlt="Imagem Login"
+        >
             <div>
                 <div className="projeto">
                     <div className="projeto-top">

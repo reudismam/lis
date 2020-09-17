@@ -1,12 +1,14 @@
 import React from 'react';
 import PageDefault from '../DefaultPage';
+import ErrorImg from '../../assets/images/Error404/error404.svg';
 import './styles.css';
-import imgdev from './dev.svg';
-//import DevImg from './dev.svg';
 
 export default function Erro() {
     return (
-        <PageDefault> 
+        <PageDefault
+            imageSrc={ErrorImg}
+            imageAlt="Imagem Error"
+        >
             <div className="principal404">
             <div className="top404">
                 <div className="left404">
@@ -17,7 +19,7 @@ export default function Erro() {
                 <div className="right404">
                    
                 </div>
-                <img alt="img dev" src={imgdev} className="dev-svg"/>
+                <img alt="img dev" src={ErrorImg} className="dev-svg"/>
 
             </div>
             <div className="bottom404">

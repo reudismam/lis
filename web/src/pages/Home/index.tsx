@@ -1,47 +1,20 @@
-import React, {useRef, useEffect} from 'react';
-import {gsap} from 'gsap';
+import React from 'react';
 import { Link } from "react-router-dom";
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import HomeImg from './img/inicio.png';
+import HomeImg from '../../assets/images/Home/home.svg';
 import btnProjeto from './img/btn-projeto.png';
 import img1 from './img/img1.png';
 import img2 from './img/img2.png';
 
 export default function Home() {
 
-    const Animation = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation.current, {
-            x: -30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    },)
-
-    const Animation2 = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation2.current, {
-            x: 30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    },)
-
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={HomeImg}
+            imageAlt="Imagem da Home"
+        >
             <div>            
-                <div className="home">
-                    <div className="home-top">
-                        <div className="home-text" ref={Animation}>
-                            <h1>Somos apaixonados por inovação e <br/>fazemos disso nosso trabalho</h1><br/>
-                            <button className="projetos-btn"><img src={btnProjeto} alt=""/> Projetos</button>
-                        </div><br/>
-                        <img alt="home imagem" className="img-home" src={HomeImg} ref={Animation2}/>
-                    </div>
-                </div>
                 <p className="text-home">Confira nossas últimas notícias</p>
                 <div className="home-grid">
                     <div className="grid-item">

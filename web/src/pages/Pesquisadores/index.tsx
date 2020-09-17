@@ -3,7 +3,7 @@ import {gsap} from 'gsap';
 import { Link } from "react-router-dom";
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import PesquisadoresImg from './img/pesquisadores.png'
+import PesquisadoresImg from '../../assets/images/Pesquisadores/pesquisadores.svg';
 import Docentes from './img/docente.png';
 import Discentes from './img/discente.png';
 
@@ -30,7 +30,10 @@ function Pesquisadores() {
     },)
 
     return (
-        <PageDefault> 
+        <PageDefault
+            imageSrc={PesquisadoresImg}
+            imageAlt="Imagem Pesquisadores"
+        > 
             <div className="pesquisadores">
                 <div className="pesquisadores-top">
                     <div className="pesquisadores-text" ref={Animation}>
