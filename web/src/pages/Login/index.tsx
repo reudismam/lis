@@ -40,15 +40,6 @@ export default function Login() {
             description="Deixe seu feedback para melhorarmos cada vez mais!"
         >
             <div>
-                <div className="projeto">
-                    <div className="projeto-top">
-                        <div className="projeto-text" ref={Animation}>
-                            <h1>Faça login</h1><br/>
-                            <p>Deixe seu feedback para melhorarmos cada vez mais!</p>
-                        </div><br/>
-                        <img alt="projeto imagem" className="img-projeto" src={login} ref={Animation2}/>
-                    </div>
-                </div> 
                 <div className="container">
                     <div className="left">
                         <h1>Seja bem vindo ao LIS</h1>

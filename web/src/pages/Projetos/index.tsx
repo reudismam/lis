@@ -38,15 +38,6 @@ export default function Projeto() {
             description="Buscamos te deixar bem interado sobre o assunto, aqui você pode acompanhar o que estamos fazendo ..."
         >
             <div>        
-                <div className="projeto" >
-                    <div className="projeto-top" >
-                        <div className="projeto-text" ref={Animation} >
-                            <h1>Veja alguns de nossos projetos!</h1><br/>
-                            <p>Buscamos te deixar bem interado sobre o assunto, aqui você pode acompanhar o que estamos fazendo ...</p>
-                        </div><br/>
-                        <img alt="projeto imagem" className="img-projeto" src={ProjetoImg} ref={Animation2}/>
-                    </div>
-                </div>
                 <div className="projetos-lineTop">
                     <hr/>
                     <input type="text" placeholder="pesquisar"/>

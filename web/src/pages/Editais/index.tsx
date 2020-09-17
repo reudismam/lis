@@ -38,16 +38,6 @@ export default function Editais() {
             rola aqui no LIS, e claro que tem aquele toque de aprendizagem!"
         >
             <div>
-                <div className="edital">
-                    <div className="edital-top">
-                        <div className="edital-text" ref={Animation}>
-                            <h1>Nossos editais</h1><br/>
-                            <p>Acompanhe nossa postagens e fique por dentro do que<br/>
-                            rola aqui no LIS, e claro que tem aquele toque de aprendizagem!!</p>
-                        </div><br/>
-                        <img alt="edital imagem" className="img-edital" src={EditaisImg} ref={Animation2}/>
-                    </div>
-                </div>
                 <div className="line-topo">
                     <hr/>
                     <input type="text" placeholder="pesquisar"/>

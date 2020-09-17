@@ -34,15 +34,6 @@ export default function Publicacoes() {
             description="Veja suas atribuições no momento, deixe seus dados sempre atualizados!"
         >
             <div>
-                <div className="publicacoes">
-                    <div className="publicacoes-top">
-                        <div className="publicacoes-text" ref={Animation}>
-                            <h1>Aqui estão as publicações</h1><br />
-                            <p>Veja suas atribuições no momento, deixe seus dados sempre atualizados!</p>
-                        </div><br />
-                        <img alt="publicações imagem" className="img-publicacoes" src={PublicacoesImg} ref={Animation2} />
-                    </div>
-                </div>
                 <div className="publicacoes-container">
                     <div className="box">
                         <h2 className="data">2020</h2>

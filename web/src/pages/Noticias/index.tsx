@@ -36,17 +36,6 @@ export default function Noticias() {
             title="Acompanhe notícias da Universidade mais recentes"
             description="Buscamos de deixar bem informado com as notícias mais importantes atualizadas!"
         >
-            <div>
-                <div className="noticias">
-                    <div className="noticias-top">
-                        <div className="noticias-text" ref={Animation}>
-                            <h1>Acompanhe notícias da Universidade<br /> mais recentes</h1><br />
-                            <p>Buscamos de deixar bem informado com as notícias<br /> mais importantes atualizadas!</p>
-                        </div><br />
-                        <img alt="noticias imagem" className="img-noticias" src={NoticiaImg} ref={Animation2} />
-                    </div>
-                </div>
-            </div>
             <div className="noticias-container">
                 <div className="noticias-lineTop">
                     <hr />

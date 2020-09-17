@@ -37,15 +37,6 @@ export default function Portifolio() {
             description="Criações que nos orgulham"
         >
             <div>
-                <div className="portfolio">
-                    <div className="portfolio-top">
-                        <div className="portfolio-text" ref={Animation}>
-                            <h1>Veja alguns portfólios</h1><br />
-                            <p>Essas são algumas criações que nos orgulham!</p>
-                        </div><br />
-                        <img alt="portfolio imagem" className="img-portfolio" src={PortfolioImg} ref={Animation2} />
-                    </div>
-                </div>
                 <div className="line-topo">
                     <hr />
                     <input type="text" placeholder="pesquisar" />

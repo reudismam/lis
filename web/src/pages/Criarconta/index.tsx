@@ -69,14 +69,6 @@ export default function Criarconta() {
     >
             <form onSubmit = {onSubmit} encType="multipart/form-data">
             <div className="criar-conta">
-                <div className="criar-conta-top">
-                    <div className="criar-conta-text" >
-                        <h1>Quase tudo pronto para se tornar <br/>um membro do grupo</h1><br/>
-                        <p>Insira seus dados cadastrais nos campos abaixo.</p>
-                    </div><br/>
-                    <img alt="criar-conta imagem" className="img-criar-conta" src={CriarContaImg} />
-                </div>
-                
                 <div className="criar-conta-cad">
                     <div className="criar-conta-content">
                         <h3 className="tInicial">Seus dados</h3><br/>

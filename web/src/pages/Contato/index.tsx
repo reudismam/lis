@@ -41,13 +41,7 @@ export default function Contato() {
             description="Deixe seu feedback para melhorarmos cada vez mais!"
         >
             <div className="contato">
-                <div className="contato-top">
-                    <div className="contato-text" ref={Animation}>
-                        <h1>Vamos nos conhecer um pouco mais</h1><br />
-                        <p>Deixe seu feedback para melhorarmos cada vez mais!</p>
-                    </div><br />
-                    <img alt="contato imagem" className="img-contato" src={ContatoImg} ref={Animation2} />
-                </div>
+                
                 <div className="contato-page">
                     <div className="contato-container">
                         <div className="contato-left">

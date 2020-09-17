@@ -39,10 +39,12 @@ export interface BannerProps{
 const Banner: React.FC<BannerProps> = (props) => {
     return(
         <BannerContainer>
+            {props.imageSrc &&
             <BannerImg 
                 src={props.imageSrc}
                 alt={props.imageAlt}
             />
+            }
             <BannerMessage {...props} />
 
         </BannerContainer>
