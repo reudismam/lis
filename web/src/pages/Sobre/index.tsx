@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import SobreImg from './imgs/sobre.png';
+import SobreImg from '../../assets/images/Sobre/sobre.svg';
 import FlipImg from './imgs/Flipboard.png';
 import GlobeImg from './imgs/Globe.png';
 import PeopleImg from './imgs/People.png';
@@ -30,18 +30,13 @@ export default function Sobre() {
     },)
 
     return (
-        <PageDefault> 
+        <PageDefault
+            imageSrc={SobreImg}
+            imageAlt="Imagem Sobre"
+            title="Eai! Venha conhecer um pouco mais sobre nós"
+            description="Nossa equipe é formada por discentes, docentes, parceiros e muito mais... Todos com o mesmo propósito! INOVAR"
+        > 
             <div className="about">
-                <div className="about-top">
-                    <div className="about-text" ref={Animation}>
-                        <h1>Venha conhecer um pouco mais sobre nós</h1>
-                        <br/>
-                        <p>Nossa equipe é formada por discentes, docentes, parceiros e muito mais...<br/> Todos com o mesmo propósito! <span>INOVAR</span></p>
-                    </div>
-                    <br/><br/>
-                    <img alt="imagem sobre" src={SobreImg} className="img-about" ref={Animation2}/>
-                    <br/>
-                </div>
                     
                 <div className="about-middle">
                     <div className="aboutOne">

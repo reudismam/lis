@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import NoticiaImg from './img/noticia.png'
+import NoticiaImg from '../../assets/images/Noticias/noticia.svg';
 import imgNews1 from './img/imgNews1.png';
 import imgNews2 from './img/imgNews2.png';
 import imgNews3 from './img/imgNews3.png';
@@ -30,21 +30,15 @@ export default function Noticias() {
     })
 
     return (
-        <PageDefault>
-            <div>
-                <div className="noticias">
-                    <div className="noticias-top">
-                        <div className="noticias-text" ref={Animation}>
-                            <h1>Acompanhe notícias da Universidade<br /> mais recentes</h1><br />
-                            <p>Buscamos de deixar bem informado com as notícias<br /> mais importantes atualizadas!</p>
-                        </div><br />
-                        <img alt="noticias imagem" className="img-noticias" src={NoticiaImg} ref={Animation2} />
-                    </div>
-                </div>
-            </div>
+        <PageDefault
+            imageSrc={NoticiaImg}
+            imageAlt="Imagem Noticias"
+            title="Acompanhe notícias da Universidade mais recentes"
+            description="Buscamos de deixar bem informado com as notícias mais importantes atualizadas!"
+        >
             <div className="noticias-container">
                 <div className="noticias-lineTop">
-                    <hr/>
+                    <hr />
                     <input type="text" placeholder="pesquisar" />
                 </div>
                 <div className="noticias-post">
@@ -67,7 +61,7 @@ export default function Noticias() {
                 </div>
                 <div className="noticias-centerInfo">
                     <p><strong>Semana passada</strong></p>
-                    <hr/>
+                    <hr />
                 </div>
                 <div className="noticias-grid">
                     <div className="grid-item-note">

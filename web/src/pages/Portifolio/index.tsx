@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import PortfolioImg from './img/portfolio.png'
+import PortfolioImg from '../../assets/images/Portifolio/portfolio.svg';
 import imgItem from './img/item.png';
 import btn1 from './img/btn1.png';
 import btn2 from './img/btn2.png';
@@ -30,17 +30,13 @@ export default function Portifolio() {
     })
 
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={PortfolioImg}
+            imageAlt="Imagem Portifolio"
+            title="Portifólio"
+            description="Criações que nos orgulham"
+        >
             <div>
-                <div className="portfolio">
-                    <div className="portfolio-top">
-                        <div className="portfolio-text" ref={Animation}>
-                            <h1>Veja alguns portfólios</h1><br />
-                            <p>Essas são algumas criações que nos orgulham!</p>
-                        </div><br />
-                        <img alt="portfolio imagem" className="img-portfolio" src={PortfolioImg} ref={Animation2} />
-                    </div>
-                </div>
                 <div className="line-topo">
                     <hr />
                     <input type="text" placeholder="pesquisar" />

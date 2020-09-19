@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import EditaisImg from './img/editais.png'
+import EditaisImg from '../../assets/images/Editais/editais.svg';
 import imgItem from './img/item.png';
 import btn1 from './img/btn1.png';
 import btn2 from './img/btn2.png';
@@ -30,18 +30,14 @@ export default function Editais() {
     },)
 
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={EditaisImg}
+            imageAlt="Imagem de Editais"
+            title="Editais"
+            description="Acompanhe nossa postagens e fique por dentro do que
+            rola aqui no LIS, e claro que tem aquele toque de aprendizagem!"
+        >
             <div>
-                <div className="edital">
-                    <div className="edital-top">
-                        <div className="edital-text" ref={Animation}>
-                            <h1>Nossos editais</h1><br/>
-                            <p>Acompanhe nossa postagens e fique por dentro do que<br/>
-                            rola aqui no LIS, e claro que tem aquele toque de aprendizagem!!</p>
-                        </div><br/>
-                        <img alt="edital imagem" className="img-edital" src={EditaisImg} ref={Animation2}/>
-                    </div>
-                </div>
                 <div className="line-topo">
                     <hr/>
                     <input type="text" placeholder="pesquisar"/>

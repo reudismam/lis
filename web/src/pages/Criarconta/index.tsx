@@ -1,11 +1,12 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, FormEvent} from 'react';
 import { useHistory} from 'react-router-dom';
 import axios from 'axios';
 import PageDefault from '../DefaultPage';
+import CriarContaImg from '../../assets/images/CriarConta/criarConta.svg';
+import NewInteresse from './newInteresse.js';
+import NewPublicacoes from './newPublicacoes.js';
+import NewProjetos from './newProjetos.js'
 import './styles.css';
-import CriarContaImg from './img/criar-conta.png'
-import Sucess from '../Concluido/index'
-
 
 
 const initialValue = {
@@ -15,18 +16,31 @@ const initialValue = {
     email: '',
     telefone: '',
     biografia: '',
-    posicao: ''
+    posicao: '',
+    areaInteresse: [
+        ''
+    ],
+    publicacao: [
+        {
+            titulo: '',
+            ano: '',
+            referencia: ''
+        }
+    ],
+    projeto: [
+        {
+            titulo: '',
+            ano: '',
+            descricao: ''
+        }
+    ]
 }
 
 export default function Criarconta() {
-
-    const WrapperRef = useRef(null);
-
     const [values, setValues] = useState(initialValue)
     const history = useHistory();
 
     function onChange(ev: any){
-        ev.preventDefault();
         const {name, value} = ev.target;
         setValues({ ...values, [name]: value });
         if (ev.target.files) {
@@ -38,19 +52,68 @@ export default function Criarconta() {
             reader.readAsDataURL(file);
         }
     }
-    
 
-    function onSubmit(ev: any){
+    function addNewInterestArea() {
+        const areas = [...values.areaInteresse, '']
+        setValues({...values, "areaInteresse": areas});
+    }
+
+    function addNewPublication() {
+        setValues({...values, "publicacao": 
+            [
+                ...values.publicacao,
+                {
+                    titulo: '',
+                    ano: '',
+                    referencia: ''
+                }
+            ]});
+    }
+
+    function addNewProject() {
+        setValues({...values, "projeto": 
+            [
+                ...values.projeto,
+                {
+                    titulo: '',
+                    ano: '',
+                    descricao: ''
+                }
+            ]});
+    }
+
+    function setAreaInteresse(position: number, field: string, value: string) {
+        const areasAtualizadas = values.areaInteresse.map((area, index) => {
+            if(index === position) {
+                return value;
+            }
+            return area;
+        });
+        setValues({...values, "areaInteresse": areasAtualizadas});
+    }
+
+    function setProperty(list: any [], property: string, position: number, field: string, value: string) {
+        const updatedList = list.map((item, index) => {
+            if(index === position) {
+                return {...item, [field]: value};
+            }
+            return item;
+        });
+        setValues({...values, [property]: updatedList});
+    }
+
+    
+    function onSubmit(ev: FormEvent){
         ev.preventDefault();
         
-        if(values.posicao == "discente"){
+        if(values.posicao === "discente"){
         axios.post('http://localhost:5000/discentes', values)
             .then((response) => {
                 history.push('/discentes')
             })
         }
 
-        if(values.posicao == "docente"){
+        if(values.posicao === "docente"){
             axios.post('http://localhost:5000/docentes', values)
                 .then((response) => {
                     history.push('/docentes')
@@ -62,39 +125,51 @@ export default function Criarconta() {
         
     return (
         
-    <PageDefault>
+    <PageDefault
+        imageSrc={CriarContaImg}
+        imageAlt="Imagem Criar Conta"
+        title="Quase tudo pronto para se tornar um membro do grupo"
+        description="Insira seus dados cadastrais nos campos abaixo"
+    >
             <form onSubmit = {onSubmit} encType="multipart/form-data">
             <div className="criar-conta">
-                <div className="criar-conta-top">
-                    <div className="criar-conta-text" >
-                        <h1>Quase tudo pronto para se tornar <br/>um membro do grupo</h1><br/>
-                        <p>Insira seus dados cadastrais nos campos abaixo.</p>
-                    </div><br/>
-                    <img alt="criar-conta imagem" className="img-criar-conta" src={CriarContaImg} />
-                </div>
-                
                 <div className="criar-conta-cad">
                     <div className="criar-conta-content">
                         <h3 className="tInicial">Seus dados</h3><br/>
                         <div className="row-one">
+                            <div id="img-container">
+                                {values.uploadImage &&
+                                <img id="preview" style={{width: '100px', height: '100px'}} src={values.uploadImage}/>
+                                }
+                            </div>
                             <label htmlFor="uploadImage" >
                                 <input id="uploadImage" type="file" className="img-input" name="uploadImage" accept="image/jpg, image/png, image/jpeg, image/gif" onChange={onChange} />
                             </label>
-                            <div id="img-container">
-                                {values.uploadImage &&
-                                <img id="preview" style={{width: '50px', height: '50px'}} src={values.uploadImage} ref={WrapperRef}/>
-                                }
-                            </div>
+                            
                             
                             <div className="row-one-input">
                                 <div className="row-one-left">
                                     <label htmlFor="nome" className="title-area">Nome</label>
-                                    <input id="nome" type="text" className="input-left-one" name="nome" onChange={onChange} required />
+                                    <input 
+                                        id="nome" 
+                                        type="text" 
+                                        className="input-left-one" 
+                                        name="nome" 
+                                        value={values.nome} 
+                                        onChange={onChange} 
+                                        required />
                                 </div>
                                 <br/>
                                 <div className="row-one-right">
                                     <label htmlFor="sobrenome" className="title-area">Sobrenome</label>
-                                    <input type="text" id="sobrenome" className="input-right-one" name="sobrenome" onChange={onChange} required/>
+                                    <input 
+                                        type="text" 
+                                        id="sobrenome" 
+                                        className="input-right-one" 
+                                        name="sobrenome" 
+                                        value={values.sobrenome}
+                                        onChange={onChange} 
+                                        required/>
                                 </div>
                             </div>
                             <br/>
@@ -102,49 +177,90 @@ export default function Criarconta() {
                         <div className="row-two">
                             <div className="row-two-left">
                                 <label className="title-area" htmlFor="email">E-mail</label>
-                                <input type="text" id="email" name="email" className="input-left-two" placeholder="example@hotmail.com" onChange={onChange} required/>
+                                <input 
+                                    type="text" 
+                                    id="email" 
+                                    name="email" 
+                                    className="input-left-two" 
+                                    placeholder="example@hotmail.com" 
+                                    value={values.email}
+                                    onChange={onChange} 
+                                    required/>
                             </div>
                             <br/>
                             <div className="row-two-right">
-                                <label htmlFor="whatsapp" className="title-area" >Whatsapp</label>
-                                <input type="number" id="whatsapp" name="whatsapp" className="input-right-two" placeholder="(__)_____-____" onChange={onChange} required/>
+                                <label htmlFor="telefone" className="title-area" >Whatsapp</label>
+                                <input  
+                                    type="number" 
+                                    id="whatsapp" 
+                                    name="telefone" 
+                                    className="input-right-two" 
+                                    placeholder="(__)_____-____" 
+                                    value={values.telefone}
+                                    onChange={onChange} 
+                                    required />
                             </div>
                             <br/>
                         </div>
                         <div className="row-three">
-                            <label className="title-area" htmlFor="bio" >Bio (max 300 caracteres)</label><br/>
-                            <textarea maxLength={300} name="bio" id="bio" onChange={onChange}></textarea>
+                            <label className="title-area" htmlFor="biografia" >Bio (max 300 caracteres)</label><br/>
+                            <textarea 
+                                maxLength={300} 
+                                name="biografia" 
+                                id="bio" 
+                                value={values.biografia}
+                                onChange={onChange}>
+                            </textarea>
                         </div>
                         <br/><br/><br/>
                         <div className="align-selected">
                         <p className="rt-left">Selecione a opção para descrever sua posição atual</p>
-
-                        
                             <h1>Você escolheu: {values.posicao}</h1>
                             <br/>
                         <div className="div-input-class">
-                            <label className="input-class"><p>discente</p>
-                                <input type="radio" id="discente" value="discente" name="posicao" onChange = {onChange}  />
+                            <label className="input-class">
+                                <input 
+                                    type="radio" 
+                                    id="discente" 
+                                    value="discente" 
+                                    name="posicao" 
+                                    checked={values.posicao === 'discente'}
+                                    onChange = {onChange}  />
                             </label>
-                            <label className="input-class"><p>docente</p>
-                                <input type="radio" id="docente" value="docente" name="posicao" onChange = {onChange}  />
+                            <span>discente</span>
+                            <label className="input-class">
+                                <input 
+                                    type="radio" 
+                                    id="docente" 
+                                    value="docente" 
+                                    name="posicao" 
+                                    checked={values.posicao === 'docente'}
+                                    onChange = {onChange}  />
                             </label>
+                            <span>docente</span>
                             </div>
                         </div>
-
 
                         <div className="row-four">
                             <div className="row-four-title">
+
                                 <p className="rt-left">Áreas de interesse</p>
-
-                                
-
-
                             </div>
                             <hr className="line"/>
-                            <p className="title-area">Área de interesse</p><br/>
-                            <input type="text"/>
+                            {
+                                values.areaInteresse.map((area, index) => {
+                                    return (
+                                        <div key={`area of interest ${index}`}>
+                                        <input type="text" placeholder="Digite uma área de interesse" value= {area} onChange={e => setAreaInteresse(index, '', e.target.value)} required ></input>
+                                        <button type="button" onClick={addNewInterestArea}>Adicionar</button>
+                                        </div>
+                                    );
+                                })
+                            
+                            }
+                            {/*<NewInteresse name="areaInteresse" value="areaInteresse" onChange = {onChange}/>*/}
                         </div>
+
                         <div className="row-five">
                             <div className="row-five-title">
                                 <p className="rt-left">Publicações</p>
@@ -153,37 +269,44 @@ export default function Criarconta() {
                             <br/>
                             <hr className="line"/>
                             <br/>
-                            <div className="row-five-title">
-                                <p className="title-area-new">No formato ABNT</p><br/>
-                                <p className="title-area">No formato ABNT</p><br/>
-                                <p className="title-area ta-new">Ano</p><br/>
-                            </div>
-                            <div className="row-five-input">
-                                <textarea></textarea>
-                                <p className="title-area-new">Ano</p>
-                                <input type="text"/>
-                            </div>
+                            {
+                                values.publicacao.map((publicacao, index) => {
+                                    return (
+                                        <div key={`Publicacao ${index}`}>
+                                        <p className="title-area">Titulo</p>
+                                            <input type="text" placeholder="Referência" value= {publicacao.referencia} onChange={e => setProperty(values.publicacao, 'publicacao', index, 'referencia', e.target.value)} name="referencia" required ></input>
+                                            <br/>
+                                            <p className="title-area">Ano da Publicação</p><br/>
+                                            <input type="number" placeholder="Digite o ano da publicação" value= {publicacao.ano} onChange={e => setProperty(values.publicacao, 'publicacao', index, 'ano', e.target.value)} name="Publicacao-year" required ></input>
+                                            <button type="button" onClick={addNewPublication}>Adicionar publicação</button>
+                                        </div>
+                                    );
+                                })
+                            
+                            }
+                            {/*<NewPublicacoes onChange = {onChange}/>*/}
+                            
                         </div>
                         <div className="row-six">
-                            <div className="row-six-title">
-                                <p className="rt-left">Projetos</p>
-                                <p className="rt-right">+Projeto</p>
-                            </div>
-                            <br/>
-                            <hr className="line"/>
-                            <br/>
-                            <div className="row-six-title">
-                                <p className="title-area">Titulo</p><br/>
-                                <p className="title-area">Ano</p><br/>
-                            </div>
-                            <div className="row-six-input">
-                                <input type="text" className="rsi-left" />
-                                <input type="text" className="rsi-right" />
-                            </div>
-                            <br/>
-                            <p className="title-area" >Descrição (max. 300 caracteres</p>
-                            <br/>
-                            <textarea className="row-six-textarea" maxLength={300}></textarea>
+                            <h1>Projetos</h1>
+                            {
+                                values.projeto.map((projeto, index) => {
+                                    return (
+                                        <div key={`Projeto ${index}`}>
+                                            <p >Titulo</p>
+                                            <input type="text" placeholder="Digite o título" value= {projeto.titulo} onChange={e => setProperty(values.projeto, 'projeto', index, 'titulo', e.target.value)} required ></input>
+
+                                            <p className="title-area">Ano da Publicação</p><br/>
+                                            <input type="number" placeholder="Digite o ano" value= {projeto.ano} onChange={e => setProperty(values.projeto, 'projeto', index, 'ano', e.target.value)} required ></input>
+
+                                            <textarea maxLength={300} value={projeto.descricao} onChange={e => setProperty(values.projeto, 'projeto', index, 'descricao', e.target.value)}></textarea>
+                                            <button type="button" onClick={addNewProject}>Adicionar projeto</button>
+                                        </div>
+                                    );
+                                })
+                            
+                            }
+                            {/*<NewProjetos />*/}
                         </div>
                         <button className="row-six-btn" type="submit">Enviar</button>
 

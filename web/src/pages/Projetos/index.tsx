@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import {gsap} from 'gsap';
 import PageDefault from '../DefaultPage';
 import './styles.css';
-import ProjetoImg from './img/projeto.png'
+import ProjetoImg from '../../assets/images/Projeto/projeto.svg';
 import imgLeft from './img/imgleft.png';
 import imgLeft1 from './img/imgright-left1.png';
 import imgLeft2 from './img/imgright-left2.png';
@@ -31,17 +31,13 @@ export default function Projeto() {
     },)
 
     return (
-        <PageDefault>
+        <PageDefault
+            imageSrc={ProjetoImg}
+            imageAlt="Imagem Projeto"
+            title="Veja alguns de nossos projetos!"
+            description="Buscamos te deixar bem interado sobre o assunto, aqui você pode acompanhar o que estamos fazendo ..."
+        >
             <div>        
-                <div className="projeto" >
-                    <div className="projeto-top" >
-                        <div className="projeto-text" ref={Animation} >
-                            <h1>Veja alguns de nossos projetos!</h1><br/>
-                            <p>Buscamos te deixar bem interado sobre o assunto, aqui você pode acompanhar o que estamos fazendo ...</p>
-                        </div><br/>
-                        <img alt="projeto imagem" className="img-projeto" src={ProjetoImg} ref={Animation2}/>
-                    </div>
-                </div>
                 <div className="projetos-lineTop">
                     <hr/>
                     <input type="text" placeholder="pesquisar"/>

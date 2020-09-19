@@ -12,7 +12,7 @@ import Noticias from './pages/Noticias';
 import Parceiros from './pages/Parceiros';
 import Pesquisadores from './pages/Pesquisadores';
 import Portifolio from './pages/Portifolio';
-import Projeto from './pages/Projeto';
+import Projetos from './pages/Projetos';
 import Publicacoes from './pages/Publicacoes';
 import Sobre from './pages/Sobre';
 import Criarconta from './pages/Criarconta';
@@ -36,7 +36,7 @@ function App() {
         <Route path='/parceiros' component={Parceiros}/>
         <Route path='/pesquisadores' component={Pesquisadores}/>
         <Route path='/portifolio' component={Portifolio}/>
-        <Route path='/projeto' component={Projeto}/>
+        <Route path='/projetos' component={Projetos}/>
         <Route path='/publicacoes' component={Publicacoes}/>
         <Route path='/sobre' component={Sobre}/>
         <Route path='/criarconta' component={Criarconta}/>
