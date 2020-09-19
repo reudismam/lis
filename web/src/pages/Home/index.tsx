@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import PageDefault from '../DefaultPage';
-import './styles.css';
 import HomeImg from '../../assets/images/Home/home.svg';
 import Projetos from '../../components/Projetos';
 import VideoDestaque from '../../components/VideoDestaque';
