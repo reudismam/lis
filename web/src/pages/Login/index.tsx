@@ -39,7 +39,7 @@ export default function Login() {
             title="Faça login"
             description="Deixe seu feedback para melhorarmos cada vez mais!"
         >
-            <div>
+            <div className="login-page">
                 <div className="container">
                     <div className="left">
                         <h1>Seja bem vindo ao LIS</h1>
