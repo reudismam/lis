@@ -4,7 +4,6 @@ import Footer from '../../components/Footer/Container';
 import { BannerProps } from '../../components/Header/Banner';
 import Container from '../../components/Container';
 
-
 const DefaultPage: React.FC<BannerProps> = (props) => {
     return (
         <>

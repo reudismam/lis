@@ -6,6 +6,7 @@ import HomeImg from '../../assets/images/Home/home.svg';
 import btnProjeto from './img/btn-projeto.png';
 import img1 from './img/img1.png';
 import img2 from './img/img2.png';
+import Projetos from '../../components/Projetos';
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
             buttonLink="/projetos"
             buttonText="Projetos"
         >
+            <Projetos />
             <div>            
                 <p className="text-home">Confira nossas últimas notícias</p>
                 <div className="home-grid">
