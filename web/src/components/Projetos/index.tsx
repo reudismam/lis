@@ -18,7 +18,7 @@ const ProjetoName = styled.h2`
     font-weight: normal;
 `
 const Description = styled.p`
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--color-descriptoins);
     height: 150px;
     overflow: hidden;
