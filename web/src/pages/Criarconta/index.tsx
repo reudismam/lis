@@ -25,18 +25,18 @@ export default function Criarconta() {
     const [values, setValues] = useState(initialValue)
     const history = useHistory();
 
-    const [imagePreviewUrl, setImagePreviewUrl] = useState<any>();
-
     function onChange(ev: any){
         ev.preventDefault();
         const {name, value} = ev.target;
         setValues({ ...values, [name]: value });
-        let reader = new FileReader();
-        let file = ev.target.files[0];
-        reader.onloadend = () => {
-            setValues({...values, [name]: reader.result});
+        if (ev.target.files) {
+            let reader = new FileReader();
+            let file = ev.target.files[0];
+            reader.onloadend = () => {
+                setValues({...values, [name]: reader.result});
+            }
+            reader.readAsDataURL(file);
         }
-        reader.readAsDataURL(file);
     }
     
 
