@@ -22,12 +22,23 @@ const discenteCard = ({ discente }) => (
             }
         </ul>
         <hr/>
-        <h2>Publicacoes</h2>
+        <h2>Publicacoes</h2> 
         <ul>
             {
                 discente.publicacao.map((publicacao) => {
                     return (
                         <li>{publicacao.referencia}</li>
+                    );
+                })
+            }
+        </ul>
+        <hr/>
+        <h2>Projetos</h2> 
+        <ul>
+            {
+                discente.projeto.map((projeto) => {
+                    return (
+                        <li>{projeto.titulo}</li>
                     );
                 })
             }
