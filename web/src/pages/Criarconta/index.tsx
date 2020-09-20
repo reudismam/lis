@@ -266,7 +266,6 @@ export default function Criarconta() {
                         <div className="row-five">
                             <div className="row-five-title">
                                 <p className="rt-left">Publicações</p>
-                                <p className="rt-right">+Publicação</p>
                             </div>
                             <br/>
                             <hr className="line"/>

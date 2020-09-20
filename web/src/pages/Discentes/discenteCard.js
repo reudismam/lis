@@ -27,7 +27,7 @@ const discenteCard = ({ discente }) => (
             {
                 discente.publicacao.map((publicacao) => {
                     return (
-                        <li>{publicacao.titulo}</li>
+                        <li>{publicacao.referencia}</li>
                     );
                 })
             }
