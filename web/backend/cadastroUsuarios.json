@@ -29,6 +29,32 @@
           "areaInteresse": "Engenharia da Computação"
         }
       ]
+    },
+    {
+      "nome": "Emanuel",
+      "sobrenome": "Bruno",
+      "uploadImage": "",
+      "email": "emanuelbruno2018vasc@gmail.com",
+      "telefone": "",
+      "biografia": "",
+      "posicao": "discente",
+      "areaInteresse": "",
+      "whatsapp": "134543224",
+      "bio": "wdewefqq",
+      "id": 1
+    },
+    {
+      "nome": "fgfbrgefw",
+      "sobrenome": "fwgreff",
+      "uploadImage": "",
+      "email": "frerrgte",
+      "telefone": "",
+      "biografia": "",
+      "posicao": "discente",
+      "areaInteresse": "",
+      "whatsapp": "3456432324543",
+      "bio": "ffweregerfefer",
+      "id": 2
     }
   ]
 }

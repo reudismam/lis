@@ -24,7 +24,7 @@ export default function Criarconta() {
     const [values, setValues] = useState(initialValue)
     const history = useHistory();
 
-    const [imagePreviewUrl, setImagePreviewUrl] = useState<any>();
+    //const [imagePreviewUrl, setImagePreviewUrl] = useState<any>();
 
     function onChange(ev: any){
         ev.preventDefault();
