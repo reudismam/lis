@@ -28,7 +28,30 @@
         {
           "areaInteresse": "Engenharia da Computação"
         }
+      ],
+      "Publicacoes": [
+        {
+          "item-pub": "teste"
+        }
+      ],
+      "Projetos": [
+        {
+          "item-projeto": "teste"
+        }
       ]
+    },
+    {
+      "nome": "Renan Santana",
+      "sobrenome": "Nascimento",
+      "uploadImage": "C:\\fakepath\\Captura de Tela (17).png",
+      "email": "Renan.nascimento.santana@hotmail.com",
+      "telefone": "",
+      "biografia": "",
+      "posicao": "discente",
+      "areaInteresse": "",
+      "whatsapp": "777777",
+      "bio": "AFAWG",
+      "id": 1
     }
   ]
 }

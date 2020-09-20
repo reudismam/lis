@@ -9,6 +9,9 @@ import NewPublicacoes from './newPublicacoes.js';
 import NewProjetos from './newProjetos.js'
 
 
+
+
+
 const initialValue = {
     nome: '',
     sobrenome: '',
@@ -17,7 +20,8 @@ const initialValue = {
     telefone: '',
     biografia: '',
     posicao: '',
-    areaInteresse: ''
+    interesse: [  
+    ]
 }
 
 export default function Criarconta() {
@@ -31,12 +35,15 @@ export default function Criarconta() {
         const {name, value} = ev.target;
         setValues({ ...values, [name]: value });
         
+        /*
         let reader = new FileReader();
         let file = ev.target.files[0];
         reader.onloadend = () => {
             setValues({...values, [name]: reader.result});
         }
         reader.readAsDataURL(file);
+        */
+
     }
     
     function onSubmit(ev: any){
