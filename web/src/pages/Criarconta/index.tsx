@@ -20,6 +20,8 @@ const initialValue = {
     telefone: '',
     biografia: '',
     posicao: '',
+    funcao: '',
+    titulacao: '',
     areaInteresse: [
         ''
     ],
@@ -205,6 +207,7 @@ export default function Criarconta() {
                             </div>
                             <br/>
                         </div>
+                        
                         <div className="row-three">
                             <label className="title-area" htmlFor="biografia" >Bio (max 300 caracteres)</label><br/>
                             <textarea 
@@ -216,34 +219,60 @@ export default function Criarconta() {
                             </textarea>
                         </div>
                         <br/><br/><br/>
-                        <div className="align-selected">
-                        <p className="rt-left">Selecione a opção para descrever sua posição atual</p>
-                            <h1>Você escolheu: {values.posicao}</h1>
-                            <br/>
-                        <div className="div-input-class">
-                            <label className="input-class">
-                                <input 
-                                    type="radio" 
-                                    id="discente" 
-                                    value="discente" 
-                                    name="posicao" 
-                                    checked={values.posicao === 'discente'}
-                                    onChange = {onChange}  />
-                            </label>
-                            <span>discente</span>
-                            <label className="input-class">
-                                <input 
-                                    type="radio" 
-                                    id="docente" 
-                                    value="docente" 
-                                    name="posicao" 
-                                    checked={values.posicao === 'docente'}
-                                    onChange = {onChange}  />
-                            </label>
-                            <span>docente</span>
-                            </div>
-                        </div>
 
+
+
+                    <div className="menu-options" style={{display: "flex",
+                                                            justifyContent: "space-around"}}>
+                        <div className="menu-categoria">
+                            <p className="rt-left">Categoria</p>
+                            <h5>Você escolheu: {values.posicao}</h5>
+                            <select id="posicao" name="posicao" onChange = {onChange}>
+                                <option 
+                                    value="discente" 
+                                    id="discente"
+                                    >Discente</option>
+                                <option value="docente" 
+                                    id="docente" 
+                                    >Docente</option>
+                            </select>
+                        </div>
+                        <br/><br/><br/>
+                        
+                        <div className="menu-funcao">
+                            <p className="rt-left">Função</p>
+                            <h5>Você escolheu: {values.funcao}</h5>
+                            <select id="funcao" name="funcao" onChange = {onChange}>
+                                <option 
+                                    value="membro" 
+                                    id="membro"
+                                    >Membro</option>
+                                <option value="lider" 
+                                    id="lider" 
+                                    >Lider</option>
+                            </select>
+                        </div>
+                        <br/><br/><br/>
+                        
+                        <div className="menu-titulacao">
+                            <p className="rt-left">Titulação</p>
+                            <h5>Você escolheu: {values.titulacao}</h5>
+                            <select id="titulacao" name="titulacao" onChange = {onChange}>
+                                <option 
+                                    value="graduado" 
+                                    id="graduado"
+                                    >Graduado</option>
+                                <option value="mestre" 
+                                    id="mestre" 
+                                    >Mestre</option>
+                                <option value="doutor" 
+                                    id="doutor" 
+                                    >Doutor</option>
+                            </select>
+                        </div>
+                    </div>
+                        <br/><br/><br/>
+                        
                         <div className="row-four">
                             <div className="row-four-title">
 

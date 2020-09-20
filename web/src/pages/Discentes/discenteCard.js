@@ -1,5 +1,8 @@
-import React from 'react';
-
+import React, {useState, useEffect, useRef, FormEvent} from 'react';
+import { useHistory} from 'react-router-dom';
+import axios from 'axios';
+import PageDefault from '../DefaultPage';
+import CriarContaImg from '../../assets/images/CriarConta/criarConta.svg';
 
 const discenteCard = ({ discente }) => (
     <div className="discente-card">
@@ -10,6 +13,8 @@ const discenteCard = ({ discente }) => (
         <h3>Telefone: {discente.telefone}</h3>
         <h3>Biografia: {discente.biografia}</h3>
         <h3>Posição: {discente.posicao}</h3>
+        <h5>Função: {discente.funcao}</h5>
+        <h6>Titulação: {discente.titulacao}</h6>
         <br/>
         <h2>Interesse</h2>
         <ul>
@@ -21,7 +26,9 @@ const discenteCard = ({ discente }) => (
                 })
             }
         </ul>
+        <button id="pesquisador-page">Página do Pesquisador</button>
         <hr/>
+        {/* 
         <h2>Publicacoes</h2> 
         <ul>
             {
@@ -45,6 +52,7 @@ const discenteCard = ({ discente }) => (
         </ul>
         <hr/>
         <br/><br/>
+        */}
     </div>
 )
 

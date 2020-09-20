@@ -43,45 +43,6 @@
         }
       ],
       "id": 1
-    },
-    {
-      "nome": "Renan Santana",
-      "sobrenome": "Nascimento",
-      "uploadImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABXklEQVRIie2Uv07DMBCHP7G2wMAKKx1AojDwT2WnYudtEM9QSh+CqhIzAyo8Ql+hLRsgtVOYwuAzuFF8cUIykZ90cqzz3efzOYZataAFTIDYYxNgtwzQK/DizMcK1Nq4DLBVA7gNgFq7kZjcugLmOUBZNgO6IeCZkiQCesCJVNWQ7z7wpcRNQ8C+4DlwoMS1WT2pc6DjzAuBIwe6A4yApdgj5sYDHPJbeQe4+Cu450A/Uvyf4gO49+Sw8vY8LehYfCOPPwaGsuY0A+zteVpQU3xLBbyQNesB4J/5WtoOciqoj0llgfdkfFbWPMm4X2QDkH5Md+JrYS5S0v8ObMuagSdHMn8QOML8p2Bu7xDT0wXw4ECP8D8khcD2AWmnBTjQNyW+MDiWavrAGeamN+V7oFQaDNbe6qJm/9tNDdwtGT4FLiX3tQauSlusFlS5NjCVJk8xU1X2XFWVPa/1D/QNHOhDL0y7PJ4AAAAASUVORK5CYII=",
-      "email": "Renan.nascimento.santana@hotmail.com",
-      "telefone": "1126805589",
-      "biografia": "qwqwq",
-      "posicao": "discente",
-      "areaInteresse": [
-        "qwqwqw",
-        "qwqwqwq",
-        "adada"
-      ],
-      "publicacao": [
-        {
-          "titulo": "",
-          "ano": "12121",
-          "referencia": "qwqwq"
-        },
-        {
-          "titulo": "",
-          "ano": "1212",
-          "referencia": "teste"
-        }
-      ],
-      "projeto": [
-        {
-          "titulo": "12121",
-          "ano": "12121",
-          "descricao": "21211112"
-        },
-        {
-          "titulo": "asdawf",
-          "ano": "31312",
-          "descricao": "vasbe\\be\\s"
-        }
-      ],
-      "id": 2
     }
   ]
 }
