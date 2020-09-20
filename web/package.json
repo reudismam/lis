@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^5.1.5",
     "@types/react-text-mask": "^5.4.6",
@@ -16,14 +15,16 @@
     "axios": "^0.20.0",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
-    "gsap": "^3.5.0",
+    "gsap": "^3.5.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-flip-move": "^3.0.4",
+    "react-icons": "^3.11.0",
     "react-prop-types": "^0.4.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
+    "react-scripts": "^3.4.3",
     "react-text-mask": "^5.4.3",
+    "styled-components": "^5.2.0",
     "typescript": "~3.7.2",
     "yarn": "^1.22.5"
   },
@@ -47,5 +48,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.49",
+    "@types/styled-components": "^5.1.3"
   }
 }

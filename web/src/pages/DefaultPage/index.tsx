@@ -1,17 +1,16 @@
 import React from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import Header from '../../components/Header/Container';
+import Footer from '../../components/Footer/Container';
+import { BannerProps } from '../../components/Header/Banner';
+import Container from '../../components/Container';
 
-import '../../assets/global.css';
-import './styles.css';
-
-const DefaultPage : React.FC = (props) => {
+const DefaultPage: React.FC<BannerProps> = (props) => {
     return (
         <>
-            <Header />
-                <main>
-                    {props.children}
-                </main>
+            <Header  {...props} />
+            <Container >
+                {props.children}
+            </Container>
             <Footer />
         </>
     );
