@@ -17,6 +17,7 @@ const initialValue = {
     sobrenome: '',
     uploadImage: '',
     email: '',
+    curso: '',
     telefone: '',
     biografia: '',
     posicao: '',
@@ -208,18 +209,19 @@ export default function Criarconta() {
                             <br/>
                         </div>
                         
-                        <div className="row-three">
-                            <label className="title-area" htmlFor="biografia" >Bio (max 300 caracteres)</label><br/>
-                            <textarea 
-                                maxLength={300} 
-                                name="biografia" 
-                                id="bio" 
-                                value={values.biografia}
-                                onChange={onChange}>
-                            </textarea>
-                        </div>
                         <br/><br/><br/>
-
+                    
+                        <div className="row-one-right">
+                                    <label htmlFor="curso" className="title-area">Curso</label>
+                                    <input 
+                                        type="text" 
+                                        id="curso" 
+                                        className="input-right-one" 
+                                        name="curso" 
+                                        value={values.curso}
+                                        onChange={onChange} 
+                                        required/>
+                        </div>
 
 
                     <div className="menu-options" style={{display: "flex",
@@ -271,6 +273,17 @@ export default function Criarconta() {
                             </select>
                         </div>
                     </div>
+
+                    <div className="row-three">
+                            <label className="title-area" htmlFor="biografia" >Bio (max 300 caracteres)</label><br/>
+                            <textarea 
+                                maxLength={300} 
+                                name="biografia" 
+                                id="bio" 
+                                value={values.biografia}
+                                onChange={onChange}>
+                            </textarea>
+                        </div>
                         <br/><br/><br/>
                         
                         <div className="row-four">

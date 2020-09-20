@@ -11,10 +11,13 @@ const discenteCard = ({ discente }) => (
         <h3>Sobrenome: {discente.sobrenome}</h3>
         <h3>Email: {discente.email}</h3>
         <h3>Telefone: {discente.telefone}</h3>
-        <h3>Biografia: {discente.biografia}</h3>
+
+        <h3>Curso: {discente.curso}</h3>
+        
         <h3>Posição: {discente.posicao}</h3>
         <h5>Função: {discente.funcao}</h5>
         <h6>Titulação: {discente.titulacao}</h6>
+        <h3>Biografia: {discente.biografia}</h3>
         <br/>
         <h2>Interesse</h2>
         <ul>
