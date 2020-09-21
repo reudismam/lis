@@ -8,10 +8,6 @@ import NewPublicacoes from './newPublicacoes.js';
 import NewProjetos from './newProjetos.js'
 import './styles.css';
 
-
-
-
-
 const initialValue = {
     nome: '',
     sobrenome: '',
@@ -59,10 +55,13 @@ export default function Criarconta() {
         }
     }
 
-    function addNewInterestArea() {
+    function addNewInterestArea(e: any) {
+        e.preventDefault()
         const areas = [...values.areaInteresse, '']
         setValues({...values, "areaInteresse": areas});
     }
+
+
 
     function addNewPublication() {
         setValues({...values, "publicacao": 
@@ -111,7 +110,6 @@ export default function Criarconta() {
     
     function onSubmit(ev: FormEvent){
         ev.preventDefault();
-        
         if(values.posicao === "discente"){
         axios.post('http://localhost:5000/discentes', values)
             .then((response) => {
@@ -137,7 +135,7 @@ export default function Criarconta() {
         title="Quase tudo pronto para se tornar um membro do grupo"
         description="Insira seus dados cadastrais nos campos abaixo"
     >
-            <form onSubmit = {onSubmit} encType="multipart/form-data">
+        <form onSubmit = {onSubmit} encType="multipart/form-data">
             <div className="criar-conta">
                 <div className="criar-conta-cad">
                     <div className="criar-conta-content">
@@ -211,7 +209,7 @@ export default function Criarconta() {
                         
                         <br/><br/><br/>
                     
-                        <div className="row-one-right">
+                        <div >
                                     <label htmlFor="curso" className="title-area">Curso</label>
                                     <input 
                                         type="text" 
@@ -225,7 +223,7 @@ export default function Criarconta() {
 
 
                     <div className="menu-options" style={{display: "flex",
-                                                            justifyContent: "space-around"}}>
+                                                        justifyContent: "space-around"}}>
                         <div className="menu-categoria">
                             <p className="rt-left">Categoria</p>
                             <h5>Você escolheu: {values.posicao}</h5>
@@ -296,8 +294,8 @@ export default function Criarconta() {
                                 values.areaInteresse.map((area, index) => {
                                     return (
                                         <div key={`area of interest ${index}`}>
-                                        <input type="text" placeholder="Digite uma área de interesse" value= {area} onChange={e => setAreaInteresse(index, '', e.target.value)} required ></input>
-                                        <button type="button" onClick={addNewInterestArea}>Adicionar</button>
+                                        <input type="text" id="area" placeholder="Digite uma área de interesse" value= {area} onChange={e => setAreaInteresse(index, '', e.target.value)} required ></input>
+                                        { area ? <button type="button" onClick={addNewInterestArea}>Adicionar mais</button> : <i><small>Digite algo</small></i>}
                                         </div>
                                     );
                                 })
