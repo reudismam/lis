@@ -319,7 +319,7 @@ export default function Criarconta() {
                                             <br/>
                                             <p className="title-area">Ano da Publicação</p><br/>
                                             <input type="number" placeholder="Digite o ano da publicação" value= {publicacao.ano} onChange={e => setProperty(values.publicacao, 'publicacao', index, 'ano', e.target.value)} name="Publicacao-year" required ></input>
-                                            {publicacao.referencia && publicacao.ano ? <button type="button" onClick={addNewPublication}>Adicionar nova publicação</button> : <div><br></br><i>Insira os dados nos campos</i></div>}
+                                            {publicacao.referencia && publicacao.ano ? <button type="button" onClick={addNewPublication}>Adicionar nova publicação</button> : <div><br/><i><small>Insira os dados nos campos acima</small></i></div>}
                                         </div>
                                     );
                                 })
@@ -339,7 +339,9 @@ export default function Criarconta() {
                                             <input type="number" placeholder="Digite o ano" value= {projeto.ano} onChange={e => setProperty(values.projeto, 'projeto', index, 'ano', e.target.value)} required ></input>
 
                                             <textarea maxLength={300} value={projeto.descricao} onChange={e => setProperty(values.projeto, 'projeto', index, 'descricao', e.target.value)}></textarea>
-                                            <button type="button" onClick={addNewProject}>Adicionar projeto</button>
+                                            {
+                                                projeto.descricao && projeto.titulo && projeto.ano ? <button type="button" onClick={addNewProject}>Adicionar outro projeto</button> : <i><small>Insira os dados em todos os campos</small></i>
+                                            }
                                         </div>
                                     );
                                 })
