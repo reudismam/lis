@@ -319,7 +319,7 @@ export default function Criarconta() {
                                             <br/>
                                             <p className="title-area">Ano da Publicação</p><br/>
                                             <input type="number" placeholder="Digite o ano da publicação" value= {publicacao.ano} onChange={e => setProperty(values.publicacao, 'publicacao', index, 'ano', e.target.value)} name="Publicacao-year" required ></input>
-                                            <button type="button" onClick={addNewPublication}>Adicionar publicação</button>
+                                            {publicacao.referencia && publicacao.ano ? <button type="button" onClick={addNewPublication}>Adicionar nova publicação</button> : <div><br></br><i>Insira os dados nos campos</i></div>}
                                         </div>
                                     );
                                 })
