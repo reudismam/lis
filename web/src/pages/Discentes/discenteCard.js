@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useRef, FormEvent} from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import Perfil from '../personalProfile/perfil' 
 const discenteCard = ({ discente }) => (
     <div className="discente-card">
         <img src={discente.uploadImage} style={{width: '100px', height: '100px'}} />
@@ -8,9 +7,7 @@ const discenteCard = ({ discente }) => (
         <h3>Sobrenome: {discente.sobrenome}</h3>
         <h3>Email: {discente.email}</h3>
         <h3>Telefone: {discente.telefone}</h3>
-
         <h3>Curso: {discente.curso}</h3>
-        
         <h3>Posição: {discente.posicao}</h3>
         <h5>Função: {discente.funcao}</h5>
         <h6>Titulação: {discente.titulacao}</h6>
@@ -27,7 +24,9 @@ const discenteCard = ({ discente }) => (
             }
         </ul>
         
-        <button>Pagina do pesquisador</button>
+
+        <button >
+            <Link to="/pesquisador">Pagina do pesquisador</Link></button>
         <hr/>
         {/* 
         <h2>Publicacoes</h2> 

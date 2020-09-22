@@ -16,7 +16,7 @@ import Projetos from './pages/Projetos';
 import Publicacoes from './pages/Publicacoes';
 import Sobre from './pages/Sobre';
 import Criarconta from './pages/Criarconta';
-import Perfil from './pages/personalProfile/perfil'
+import Pesquisador from './pages/Pesquisador';
 
 
 
@@ -31,6 +31,7 @@ function App() {
         <Route path='/contato' component={Contato}/>
         <Route path='/discentes' component={Discentes}/>
         <Route path='/docentes' component={Docentes}/>
+        <Route path='/pesquisador' component={Pesquisador}/>
         <Route path='/editais' component={Editais}/>
         <Route path='/login' component={Login}/>
         <Route path='/noticias' component={Noticias}/>
@@ -42,7 +43,6 @@ function App() {
         <Route path='/sobre' component={Sobre}/>
         <Route path='/criarconta' component={Criarconta}/>
         <Route path='*' component={Erro404} />
-        <Route path='/perfil' component={Perfil} />
       </Switch>
       </Suspense>
     </BrowserRouter>
