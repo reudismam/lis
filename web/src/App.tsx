@@ -16,6 +16,7 @@ import Projetos from './pages/Projetos';
 import Publicacoes from './pages/Publicacoes';
 import Sobre from './pages/Sobre';
 import Criarconta from './pages/Criarconta';
+import Pesquisador from './pages/Pesquisador';
 
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path='/contato' component={Contato}/>
         <Route path='/discentes' component={Discentes}/>
         <Route path='/docentes' component={Docentes}/>
+        <Route path='/pesquisador' component={Pesquisador}/>
         <Route path='/editais' component={Editais}/>
         <Route path='/login' component={Login}/>
         <Route path='/noticias' component={Noticias}/>
