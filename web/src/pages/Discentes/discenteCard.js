@@ -1,9 +1,6 @@
 import React, {useState, useEffect, useRef, FormEvent} from 'react';
-import { useHistory} from 'react-router-dom';
-import axios from 'axios';
-import PageDefault from '../DefaultPage';
-import CriarContaImg from '../../assets/images/CriarConta/criarConta.svg';
-
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Perfil from '../personalProfile/perfil' 
 const discenteCard = ({ discente }) => (
     <div className="discente-card">
         <img src={discente.uploadImage} style={{width: '100px', height: '100px'}} />
@@ -29,7 +26,8 @@ const discenteCard = ({ discente }) => (
                 })
             }
         </ul>
-        <button id="pesquisador-page">Página do Pesquisador</button>
+        
+        <button>Pagina do pesquisador</button>
         <hr/>
         {/* 
         <h2>Publicacoes</h2> 

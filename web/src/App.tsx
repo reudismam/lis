@@ -16,6 +16,7 @@ import Projetos from './pages/Projetos';
 import Publicacoes from './pages/Publicacoes';
 import Sobre from './pages/Sobre';
 import Criarconta from './pages/Criarconta';
+import Perfil from './pages/personalProfile/perfil'
 
 
 
@@ -41,6 +42,7 @@ function App() {
         <Route path='/sobre' component={Sobre}/>
         <Route path='/criarconta' component={Criarconta}/>
         <Route path='*' component={Erro404} />
+        <Route path='/perfil' component={Perfil} />
       </Switch>
       </Suspense>
     </BrowserRouter>

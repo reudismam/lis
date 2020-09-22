@@ -43,36 +43,6 @@
         }
       ],
       "id": 1
-    },
-    {
-      "nome": "RENAN SANTANA",
-      "sobrenome": "NASCIMENTO",
-      "uploadImage": "",
-      "email": "renan.nascimento.santana@hotmail.com",
-      "curso": "Tecnologia",
-      "telefone": "11947064498",
-      "biografia": "teste",
-      "posicao": "discente",
-      "funcao": "lider",
-      "titulacao": "",
-      "areaInteresse": [
-        "ti"
-      ],
-      "publicacao": [
-        {
-          "titulo": "",
-          "ano": "2121",
-          "referencia": "qeqw"
-        }
-      ],
-      "projeto": [
-        {
-          "titulo": "sadas",
-          "ano": "2",
-          "descricao": "sasf"
-        }
-      ],
-      "id": 2
     }
   ]
 }

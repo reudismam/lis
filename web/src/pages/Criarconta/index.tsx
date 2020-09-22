@@ -315,10 +315,10 @@ export default function Criarconta() {
                                     return (
                                         <div key={`Publicacao ${index}`}>
                                         <p className="title-area">Titulo</p>
-                                            <input type="text" placeholder="Referência" value= {publicacao.referencia} onChange={e => setProperty(values.publicacao, 'publicacao', index, 'referencia', e.target.value)} name="referencia" required ></input>
+                                            <input type="text" placeholder="Referência" value= {publicacao.referencia} onChange={e => setProperty(values.publicacao, 'publicacao', index, 'referencia', e.target.value)} name="referencia" ></input>
                                             <br/>
                                             <p className="title-area">Ano da Publicação</p><br/>
-                                            <input type="number" placeholder="Digite o ano da publicação" value= {publicacao.ano} onChange={e => setProperty(values.publicacao, 'publicacao', index, 'ano', e.target.value)} name="Publicacao-year" required ></input>
+                                            <input type="number" placeholder="Digite o ano da publicação" value= {publicacao.ano} onChange={e => setProperty(values.publicacao, 'publicacao', index, 'ano', e.target.value)} name="Publicacao-year" ></input>
                                             {publicacao.referencia && publicacao.ano ? <button type="button" onClick={addNewPublication}>Adicionar nova publicação</button> : <div><br/><i><small>Insira os dados nos campos acima</small></i></div>}
                                         </div>
                                     );
@@ -333,10 +333,10 @@ export default function Criarconta() {
                                     return (
                                         <div key={`Projeto ${index}`}>
                                             <p >Titulo</p>
-                                            <input type="text" placeholder="Digite o título" value= {projeto.titulo} onChange={e => setProperty(values.projeto, 'projeto', index, 'titulo', e.target.value)} required ></input>
+                                            <input type="text" placeholder="Digite o título" value= {projeto.titulo} onChange={e => setProperty(values.projeto, 'projeto', index, 'titulo', e.target.value)} ></input>
 
                                             <p className="title-area">Ano da Publicação</p><br/>
-                                            <input type="number" placeholder="Digite o ano" value= {projeto.ano} onChange={e => setProperty(values.projeto, 'projeto', index, 'ano', e.target.value)} required ></input>
+                                            <input type="number" placeholder="Digite o ano" value= {projeto.ano} onChange={e => setProperty(values.projeto, 'projeto', index, 'ano', e.target.value)} ></input>
 
                                             <textarea maxLength={300} value={projeto.descricao} onChange={e => setProperty(values.projeto, 'projeto', index, 'descricao', e.target.value)}></textarea>
                                             {
