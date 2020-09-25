@@ -138,6 +138,8 @@
 .values-column:hover{
     background: #F0F0F7;
 }
+
+
 @media (max-width: 450px){
     .about-top{
         padding: 20px 20px;

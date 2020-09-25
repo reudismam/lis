@@ -1,23 +1,16 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import DiscenteCard from './../Discentes/discenteCard'
+import Profile from '../Criarconta/index'
 
-export default function Pesquisador(){
+const Pesquisador = () => {
 
-    const [discent, setDiscent] = useState([])
-    useEffect(() => {
-        axios.get('http://localhost:5000/discentes') //Limitando quantidade de itens ta tela ?_limit=5'
-        .then((response) => {
-            setDiscent(response.data)
-        });
-    },[]);
-
-    return(
-        <>
-        <h1>Pesquisador</h1>
-            {discent.map(( discente, index) => (
-                <DiscenteCard key={index} discente = {discente} />
-            ))}
-            </>
-    );
+    return (
+        <div>
+            <h1>teste</h1>
+            <Profile  />
+        </div>
+    )
 }
+
+export default Pesquisador;

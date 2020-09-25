@@ -43,7 +43,6 @@ export default function Discente() {
             title="Aqui estão os discentes"
             description="Nossa lista de discentes comprometidos com a inovação"
         >
-            <h1 >Página de Discentes</h1>
             {discent.map(( discente, index) => (
                 <DiscenteCard key={index} discente = {discente} />
             ))}

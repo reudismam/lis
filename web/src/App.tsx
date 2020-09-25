@@ -1,5 +1,11 @@
 import React, {Suspense} from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import { 
+  BrowserRouter as Router, 
+  Switch, 
+  Route
+ } from 'react-router-dom';
+
 import Concluido from './pages/Concluido';
 import Contato from './pages/Contato';
 import Home from './pages/Home';
@@ -23,7 +29,7 @@ import Pesquisador from './pages/Pesquisador';
 function App() { 
 
   return (
-    <BrowserRouter>
+    <Router>
       <Suspense fallback = {<div> <h1>Ola</h1>{/*Aqui vai o efeito de Carregando */} </div>}> 
       <Switch>
         <Route path="/" component={Home} exact />
@@ -31,7 +37,7 @@ function App() {
         <Route path='/contato' component={Contato}/>
         <Route path='/discentes' component={Discentes}/>
         <Route path='/docentes' component={Docentes}/>
-        <Route path='/pesquisador' component={Pesquisador}/>
+        <Route path='/pesquisador/:id' component={Pesquisador}/>
         <Route path='/editais' component={Editais}/>
         <Route path='/login' component={Login}/>
         <Route path='/noticias' component={Noticias}/>
@@ -45,7 +51,7 @@ function App() {
         <Route path='*' component={Erro404} />
       </Switch>
       </Suspense>
-    </BrowserRouter>
+    </Router>
   );
 }
 

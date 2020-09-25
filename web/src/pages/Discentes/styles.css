@@ -1,145 +1,163 @@
-.discentes{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.discentes-top{
+.geral{
     height: 100%;
+    width: 100%;
+    min-height: 100%;
+}
+
+.discente-card{
+    box-shadow: 2px 2px 13px rgb(187, 187, 187),
+                -2px -2px 12px rgb(241, 241, 241);
+    border-radius: 10px;
+    margin: 50px 50px;
+    padding: 50px;
+    height: 500px;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    background: var(--color-container);
-    padding: 20px 50px;
 }
 
-.discentes .discentes-text {
-    text-rendering: optimizeLegibility;
-    color: var(--color-container-textosec);
-}
-
-.img-discentes{
-    width: 500px;
-    padding: 15px;
-}
-.discentes-container{
-    width: 100%;
-    height: 100%;
-    padding: 30px 120px;
-    flex-direction: column;
-    align-items: center;
-}
-.discentes-container h3{
-    color: var(--color-h3);
-}
-.discentes-container p{
-    font-size: 16px;
-    color: var(--color-descriptoins);
-}
-.discentes-link{
-    text-decoration: none;
-    color: var(--color-h3);
-}
-.discentes-perfil{
-    width: 100%;
-    height: 100%;
-    padding: 30px;
-    margin-bottom: 50px;
-    border: 1px solid #ddd;
-    flex-direction: column;
-    align-items: center;
-}
-.discentes-infoTop{
-    margin-bottom: 20px;
-    align-items: center;
+.top{
     display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
-.discentes-infoTop img{
-    width: 140px;
-    height: 140px;
-    margin-right: 20px;
-    border-radius: 360px;
+
+#image{
+    width: 120px;
+    height: 120px;
+    box-shadow: 5px 5px 0px black;
 }
-.discentes-descricao{
-    padding: 0 50px;    
+.nome_sobrenome_curso{
+    margin: 20px;
 }
-.discentes-descricao h3{
-    margin-top: 30px;
+
+#nome_completo{
+    font-size: 25px;
+    font-weight: bold;
+    color: #0C3197;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
     margin-bottom: 15px;
 }
-.discentes-descricao p{
-    margin-bottom: 5px;
+
+#curso{
+    font-size: 18px;
+    font-style: italic;
+    color: #3b3b3b;
+    letter-spacing: 0.5px;
+    text-decoration: underline;
 }
-.discentes-sobre{
-    max-height: 200px;
-    overflow-y: auto;
+
+.biografia{
+    width: 100%;
+    box-sizing: border-box;
 }
-.discentes-areas div{
-    max-height: 150px;
-    overflow-y: auto;
+
+#bio{
+    font-size: 17px;
+    color: #555555;
+    text-align: justify;
 }
-.discentes-btn button{
-    width: 200px;
-    height: 40px;
-    border-radius: 8px;
+
+#interesse{
+    font-size: 23px;
+    font-weight: bold;
+    color: #0C3197;
+    text-rendering: optimizeLegibility;
+    margin-bottom: 15px;
+}
+
+.area_interesse ul{
+    list-style: none;
+}
+
+.area_interesse ul li{
+    font-size: 15px;
+    color: #555555;
+    margin-bottom: 3px;
+}
+
+.pesquisador{
+    display: flex;
+    margin-top: 30px;
+    justify-content: flex-end;
+}
+
+#btn-pesq{
+    width: 185px;
+    height: 53px;
     border: none;
-    margin-left:75%;
-    color: var(--color-botao-texto);
-    background-color: var(--color-pagina-botao);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background:#0C3197;
+    float: right;
+    right: 0;
+    cursor: pointer;
+    transition: 0.1s;
 }
-@media (max-width: 400px){
-    .discentes-top{
-        flex-direction: column;
-        padding: 20px 20px;
+
+#btn-pesq:hover{
+    background: #fff;
+    border: 2px solid #0C3197;
+}
+
+#btn-pesq:hover #btn_link{
+    color:  #0C3197;
+    font-weight: bold;
+}
+
+#btn_link{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*RESPONSIVIDADE 360px*/
+@media (max-width: 360px){
+    .discente-card{
+        margin: 0px 2px;
+        padding: 20px;
+        height: 100%;
     }
-    .discentes-top .img-discentes{
-        padding-top: 50px;
-        width: 280px;
-    }
-    .discentes-container{
-        padding: 0px;
-    }
-    .discentes-infoTop{
+
+    .top{
+        display: flex;
         align-items: center;
-        text-align: center;
         flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
     }
-    .discentes-descricao{
-        padding: 30px 0;
+
+    .nome_sobrenome_curso{
+        margin: 0px;
+        margin-top: 25px;
     }
-    .discentes-sobre{
-        max-height: 200px;
-        overflow-y: scroll;
+
+    #bio{
+        font-size: 19px;
     }
-    .discentes-areas div{
-        max-height: 150px;
-        overflow-y: scroll;
+
+    .area_interesse ul li{
+        font-size: 19px;
     }
-    .discentes-btn button{
-        margin-left: 12%;
+
+    .pesquisador{
+        margin-top: 10px;
+        justify-content: center;
     }
-}
-@media (min-width:401px) and (max-width: 900px){
-    .discentes-top{
-        padding: 20px 20px;
-    }
-    .discentes-container{
-        padding: 30px 40px;
-    }
-    .discentes-top .img-discentes{
-        padding-top: 20px;
-        width: 280px;
-    }
-    .discentes-sobre{
-        max-height: 200px;
-        overflow-y: scroll;
-    }
-    .discentes-areas div{
-        max-height: 150px;
-        overflow-y: scroll;
-    }
-    .discentes-btn button{
-        margin-left: 70%;
+
+    #btn-pesq{
+        width: 100%;
     }
 }

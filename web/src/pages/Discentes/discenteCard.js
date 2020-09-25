@@ -1,33 +1,50 @@
 import React, {useState, useEffect, useRef, FormEvent} from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import './styles.css';
+
 const discenteCard = ({ discente }) => (
+<div className="geral">
     <div className="discente-card">
-        <img src={discente.uploadImage} style={{width: '100px', height: '100px'}} />
-        <h3>Nome: {discente.nome} </h3>
-        <h3>Sobrenome: {discente.sobrenome}</h3>
+        <div className="top">
+            <img src={discente.uploadImage} id="image" alt="Foto de perfil" />
+            <div className="nome_sobrenome_curso">
+                <p id="nome_completo">{discente.nome + ' ' + discente.sobrenome} </p>
+                <p id="curso">Curso: {discente.curso}</p>
+            </div>
+        </div>
+        <br/>
+        {/* 
         <h3>Email: {discente.email}</h3>
         <h3>Telefone: {discente.telefone}</h3>
-        <h3>Curso: {discente.curso}</h3>
+       
         <h3>Posição: {discente.posicao}</h3>
         <h5>Função: {discente.funcao}</h5>
         <h6>Titulação: {discente.titulacao}</h6>
-        <h3>Biografia: {discente.biografia}</h3>
-        <br/>
-        <h2>Interesse</h2>
-        <ul>
-            {
-                discente.areaInteresse.map((area) => {
-                    return (
-                        <li>{area}</li>
-                    );
-                })
-            }
-        </ul>
-        
+        */}
 
-        <button >
-            <Link to="/pesquisador">Pagina do pesquisador</Link></button>
-        <hr/>
+        <div className="biografia">
+            <p id="bio">{discente.biografia}</p>
+        </div>
+        <br/><br/>
+        <div className="area_interesse">
+            <p id="interesse">Áreas de interesse</p>
+            <ul>
+                {
+                    discente.areaInteresse.map((area) => {
+                        return (
+                            <li>{area}</li>
+                        );
+                    })
+                }
+            </ul>
+        </div><br/>
+        <hr style={{border: '1px solid rgb(230, 230, 230)'}} />
+        <div className="pesquisador">
+            <button id="btn-pesq">
+                <Link to="/pesquisador"><p id="btn_link">Pagina do pesquisador</p></Link>
+            </button>
+        </div>
+        
         {/* 
         <h2>Publicacoes</h2> 
         <ul>
@@ -54,6 +71,7 @@ const discenteCard = ({ discente }) => (
         <br/><br/>
         */}
     </div>
+</div>
 )
 
 
