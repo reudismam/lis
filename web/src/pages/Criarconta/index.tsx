@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef, FormEvent} from 'react';
-import { useHistory} from 'react-router-dom';
+import { Link, useHistory} from 'react-router-dom';
 import axios from 'axios';
 import PageDefault from '../DefaultPage';
 import CriarContaImg from '../../assets/images/CriarConta/criarConta.svg';
@@ -382,7 +382,7 @@ export default function Criarconta(  ) {
                                 })
                             }
                         </div>
-                        <button className="btn-send" type="submit" onClick={VerificarClique}>Enviar</button>
+                        <Link to="/concluido" className="btn-send" type="submit" onClick={VerificarClique}>Enviar</Link>
                     </div>
                 </div>
             </div>

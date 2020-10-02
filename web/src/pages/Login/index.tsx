@@ -4,10 +4,6 @@ import PageDefault from '../DefaultPage';
 import LoginImg from '../../assets/images/Login/login.svg';
 import { AiOutlineGlobal, AiOutlineMail } from 'react-icons/ai';
 import { GoLocation } from 'react-icons/go';
-import login from './img/login.png';
-import group from './img/Group.png';
-import mail from './img/mail.png';
-import local from './img/local.png';
 import ig from './img/ig.png';
 import tt from './img/tt.png';
 import fb from './img/fb.png';
@@ -35,10 +31,13 @@ const Left = styled.div`
     flex-direction: column;
     justify-content: center;
     @media(min-width: 768px){
-        height: 300px;
+        height: 350px;
         align-items: initial;
         border-right: 1px solid var(--blue1);
-        padding: 10px;
+        padding: 0px;
+    }
+    @media(min-width: 1000px){
+        padding-left: 60px;
     }
 `
 const Title = styled.h1`
@@ -113,6 +112,7 @@ const Right = styled.div`
     }
     @media(min-width: 768px){
         padding: 50px;
+        height: 500px;
     }
 `
 const TitleInput = styled.p`
@@ -131,24 +131,42 @@ const Input = styled.input`
     }
 `
 const Button = styled(Link)`
+    width: 100%;
+    height: 36px;
     text-decoration: none;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-botao-texto);
-    width: 100%;
-    height: 45px;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     
     @media(min-width: 768px){
         min-width: 300px;
         max-width: 400px;
         margin-right: auto;
+        height: 50px;
+        font-size: 1.5rem;
     }
 `
+const Icons = styled.div`
+    width: 60%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    @media(min-width: 1000px){
+        width: 50%;
+    }
+`
+const Icons2 = styled.div`
+    width: 80%;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+`
 export default function Login() {
-    
+
     return (
         <PageDefault
             imageSrc={LoginImg}
@@ -156,44 +174,54 @@ export default function Login() {
             title="Faça login"
             description="Deixe seu feedback para melhorarmos cada vez mais!"
         >
-        <LoginContainer>
-            <Left>
-                <Title>Seja bem vindo ao LIS</Title>
-                <Social>
-                    <Item>
+            <LoginContainer>
+                <Left>
+                    <Title>Seja bem vindo ao LIS</Title>
+                    <Social>
+                        <Item>
+                            <AiOutlineGlobal /> <p>sitelisexample.com.br</p>
+                        </Item>
+                        <Item>
+                            <AiOutlineMail /> <a href="mailto: sitelisexample@.com.br">sitelisexample@.com.br</a>
+                        </Item>
+                        <Item>
+                            <GoLocation /> <p>Endereço: xxxxxx-xxxxx, 00000000</p>
+                        </Item>
+                        <Icons>
+                            <img src={ig} alt="instagram" />
+                            <img src={tt} alt="twitter" />
+                            <img src={fb} alt="facebook" />
+                            <img src={ln} alt="linkedin" />
+                        </Icons>
+                    </Social>
+                </Left>
+                <Right>
+                    <TitleInput>Nome de usuário</TitleInput>
+                    <Input type="email"></Input>
+                    <TitleInput>Senha</TitleInput>
+                    <Input type="password"></Input>
+                    <Button to="/" className="login-input">Login</Button>
+                    <Button to="/" className="login-google">Entrar com o google</Button>
+                    <Button to="/" className="login-facebook">Entrar com o Facebook</Button>
+                </Right>
+                <Social2>
+                    <Icons2>
+                        <img src={ig} alt="instagram" />
+                        <img src={tt} alt="twitter" />
+                        <img src={fb} alt="facebook" />
+                        <img src={ln} alt="linkedin" />
+                    </Icons2>
+                    <Item2>
                         <AiOutlineGlobal /> <p>sitelisexample.com.br</p>
-                    </Item>
-                    <Item>
+                    </Item2>
+                    <Item2>
                         <AiOutlineMail /> <a href="mailto: sitelisexample@.com.br">sitelisexample@.com.br</a>
-                    </Item>
-                    <Item>
+                    </Item2>
+                    <Item2>
                         <GoLocation /> <p>Endereço: xxxxxx-xxxxx, 00000000</p>
-                    </Item>
-                    
-                </Social>
-            </Left>
-            <Right>
-                <TitleInput>Nome de usuário</TitleInput>
-                <Input type="email"></Input>
-                <TitleInput>Senha</TitleInput>
-                <Input type="password"></Input>
-                <Button to="/" className="login-input">Login</Button>
-                <Button to="/" className="login-google">Entrar com o google</Button>
-                <Button to="/" className="login-facebook">Entrar com o Facebook</Button>
-            </Right>
-            <Social2>
-                <Item2>
-                    <AiOutlineGlobal /> <p>sitelisexample.com.br</p>
-                </Item2>
-                <Item2>
-                    <AiOutlineMail /> <a href="mailto: sitelisexample@.com.br">sitelisexample@.com.br</a>
-                </Item2>
-                <Item2>
-                    <GoLocation /> <p>Endereço: xxxxxx-xxxxx, 00000000</p>
-                </Item2>
-                
-            </Social2>
-        </LoginContainer>
+                    </Item2>
+                </Social2>
+            </LoginContainer>
         </PageDefault>
     );
 }
