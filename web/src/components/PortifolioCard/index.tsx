@@ -10,6 +10,7 @@ const Card = styled.article`
     box-shadow: 3px 4px 5px -2px rgba(84,84,84,0.56);
     margin-bottom: 30px;
     border-radius: 8px;
+    
     @media(min-width: 768px){    
         width: 100%;
     }
