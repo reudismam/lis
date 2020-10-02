@@ -28,7 +28,7 @@ const Title = styled.h1`
 `
 
 const Description = styled.h2`
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: normal;
     margin: 10px 0;
 `
