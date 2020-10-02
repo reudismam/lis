@@ -38,7 +38,7 @@ const Description = styled.div`
 `
 const Info = styled.p`
     color: var(--color-descriptions);
-    height: 160px;
+    height: 156px;
     overflow: hidden;
 `
 export default function VideoDestaque(){

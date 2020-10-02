@@ -1,34 +1,81 @@
-import React, { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
+import React from 'react';
+import styled from 'styled-components';
 import PageDefault from '../DefaultPage';
-import './styles.css';
+import Portifolios from '../../components/Portifolios';
+import PortifolioPost from '../../components/PortifolioPost';
 import PortfolioImg from '../../assets/images/Portifolio/portfolio.svg';
+import { AiOutlineSearch } from 'react-icons/ai';
 import imgItem from './img/item.png';
 import btn1 from './img/btn1.png';
 import btn2 from './img/btn2.png';
+const PortifolioContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+const Search = styled.div`
+    width:100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    hr{
+        width: calc(100% - 210px);
+        border: 1px solid #D0CDE1;
+    }
+    input{
+        border-radius: 8px;
+        border: 2px solid var(--blue1);
+        background-color: rgba(240, 240, 247, 0.25);
+    }
+    .search-icon {
+        position: absolute;
+        font-size: 1.6rem;
+        top: 20px;
+        right: 15px;
+        cursor: pointer;
+        color: var(--blue1);
+    }
+    @media(min-width:768px){
+        hr{
+            width: calc(100% - 310px);
+        }
+        input{
+            width: 300px;
+        }
+    }
+    @media(min-width:1280px){
+        hr{
+            width: calc(100% - 360px);
+        }
+        input{
+            width: 350px;
+        }
+    }
+`
+const Line = styled.div`
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    hr{
+        width: calc(100% - 140px);
+        border: 1px solid #D0CDE1;
+    }
+    h2{
+        width: 130px;
+        font-size: 1.2rem;
+        color: var(--color-pagina-textoazul);
+    }
+`
 
 export default function Portifolio() {
-
-    const Animation = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation.current, {
-            x: -30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    })
-
-    const Animation2 = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation2.current, {
-            x: 30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    })
-
     return (
         <PageDefault
             imageSrc={PortfolioImg}
@@ -36,83 +83,19 @@ export default function Portifolio() {
             title="Portifólio"
             description="Criações que nos orgulham"
         >
-            <div>
-                <div className="line-topo">
+            <PortifolioContainer>
+                <Search>
                     <hr />
                     <input type="text" placeholder="pesquisar" />
-                </div>
-                <div className="boxL">
-                    <div className="img">
-                        <img src={imgItem} alt='some value' />
-                    </div>
-                    <div className="item">
-                        <div className="boxtop">
-                            <h4 className="h4">Lorem Ipsum dolor</h4> <p className="epoch">00/00/2020 - 3 semanas atrás</p>
-                        </div>
-                        <div className="conteudo">
-                            <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
-                            <br />
-                            <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
-                        </div>
-                        <button className="button">Acesse</button>
-                    </div>
-                </div>
-                <div className="line-center">
+                    <AiOutlineSearch className="search-icon" />
+                </Search>
+                <PortifolioPost />
+                <Line>
                     <hr />
-                    <p>Semana passada</p>
-                </div>
-                <div className="grid-container">
-                    <div className="grid">
-                        <div className="grid-item">
-                            <img src={imgItem} alt='some value' />
-                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4>
-                            <div className="grid-post">
-                                <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
-                            </div>
-                            <div className="grid-bottom">
-                                <button className="button-grid">Acesse</button><p className="grid-epoch">00/00/2020 - 3 semanas atrás</p>
-                            </div>
-                        </div>
-                        <div className="grid-item">
-                            <img src={imgItem} alt='some value' />
-                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4>
-                            <div className="grid-post">
-                                <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
-                            </div>
-                            <div className="grid-bottom">
-                                <button className="button-grid">Acesse</button><p className="grid-epoch">00/00/2020 - 3 semanas atrás</p>
-                            </div>
-                        </div>
-                        <div className="grid-item">
-                            <img src={imgItem} alt='some value' />
-                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4>
-                            <div className="grid-post">
-                                <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
-                            </div>
-                            <div className="grid-bottom">
-                                <button className="button-grid">Acesse</button><p className="grid-epoch">00/00/2020 - 3 semanas atrás</p>
-                            </div>
-                        </div>
-                        <div className="grid-item">
-                            <img src={imgItem} alt='some value' />
-                            <h4 className="grid-h4 h4">Lorem Ipsum dolor</h4>
-                            <div className="grid-post">
-                                <p className="post">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorentesque </p>
-                            </div>
-                            <div className="grid-bottom">
-                                <button className="button-grid">Acesse</button><p className="grid-epoch">00/00/2020 - 3 semanas atrás</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="btn-navigation">
-                    <button className="btn-page btn-selected">1</button>
-                    <button className="btn-page">2</button>
-                    <button className="btn-page">3</button>
-                    <button className="btn-page" ><img src={btn1} alt='some value' /></button>
-                    <button className="btn-page"><img src={btn2} alt='some value' /></button>
-                </div>
-            </div>
+                    <h2>Semana passada</h2>
+                </Line>
+                <Portifolios />
+            </PortifolioContainer>
         </PageDefault>
     );
 }
