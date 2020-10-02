@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
+import {gsap} from 'gsap';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { BannerProps } from '../Banner';
@@ -50,8 +51,19 @@ const Button = styled(Link)`
 `
 
 const Message: React.FC<BannerProps> = (props) => {
+    
+    const Animation = useRef(null)
+    useEffect(() => {
+        gsap.from(Animation.current, {
+            x: 30,
+            duration: 0.6,
+            opacity: 0,
+            ease: "none",
+        })
+    },)
+
     return(
-        <MessageContainer>
+        <MessageContainer ref={Animation} >
             <Title>
                 {props.title} 
             </Title>

@@ -1,5 +1,4 @@
-import React, {useRef, useEffect} from 'react';
-import {gsap} from 'gsap';
+import React from 'react';
 import PageDefault from '../DefaultPage';
 import ParceirosImg from '../../assets/images/Parceiros/parceiros.svg';
 import UFERSA from './img/ufersa.png';
@@ -11,26 +10,7 @@ import './styles.css';
 
 export default function Parceiros() {
 
-    const Animation = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation.current, {
-            x: -30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    },)
-
-    const Animation2 = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation2.current, {
-            x: 30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    },)
-
+   
     return (
         <PageDefault
             imageSrc={ParceirosImg}

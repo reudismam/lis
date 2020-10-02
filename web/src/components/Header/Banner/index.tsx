@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useRef, useEffect}  from 'react';
+import {gsap} from 'gsap';
 import styled from 'styled-components';
 import BannerImg from '../BannerImg';
 import BannerMessage, {MessageContainer} from '../BannerMessage';
@@ -37,10 +38,23 @@ export interface BannerProps{
 }
 
 const Banner: React.FC<BannerProps> = (props) => {
+    const Animation = useRef(null)
+    useEffect(() => {
+        gsap.from(Animation.current, {
+            x: -30,
+            duration: 0.6,
+            opacity: 0,
+            ease: "none",
+        })
+    },)
+
+    
+
     return(
         <BannerContainer>
             {props.imageSrc &&
             <BannerImg 
+                ref={Animation}
                 src={props.imageSrc}
                 alt={props.imageAlt}
             />
