@@ -21,8 +21,8 @@ import Portifolio from './pages/Portifolio';
 import Projetos from './pages/Projetos';
 import Publicacoes from './pages/Publicacoes';
 import Sobre from './pages/Sobre';
-import Criarconta from './pages/Criarconta';
-import Pesquisador from './pages/Pesquisador';
+import Criarconta from './pages/Criarconta/index';
+import Pesquisador from './pages/Pesquisador/index';
 
 
 

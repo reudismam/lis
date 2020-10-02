@@ -44,7 +44,6 @@ export default function Docente() {
             title="Esses são os docentes"
             description="Nossa lista de docentes comprometidos com a inovação"
         >
-            <h1 >Página de Docentes</h1>
             {docent.map(( docente, index) => (
                 <DocenteCard key={index} docente = {docente} />
             ))}

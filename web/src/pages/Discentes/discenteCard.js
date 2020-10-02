@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, FormEvent} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import './styles.css';
 
@@ -6,10 +6,10 @@ const discenteCard = ({ discente }) => (
 <div className="geral">
     <div className="discente-card">
         <div className="top">
-            <img src={discente.uploadImage} id="image" alt="Foto de perfil" />
+            <img src={discente.uploadImage} id="image" alt="Foto de perfil"  value={discente.uploadImage}/>
             <div className="nome_sobrenome_curso">
-                <p id="nome_completo">{discente.nome + ' ' + discente.sobrenome} </p>
-                <p id="curso">Curso: {discente.curso}</p>
+                <p id="nome_completo" value={discente.nome + discente.sobrenome}>{discente.nome + ' ' + discente.sobrenome}</p>
+                <p id="curso" value={discente.curso}>Curso: {discente.curso}</p>
             </div>
         </div>
         <br/>
@@ -23,7 +23,7 @@ const discenteCard = ({ discente }) => (
         */}
 
         <div className="biografia">
-            <p id="bio">{discente.biografia}</p>
+            <p id="bio" value={discente.biografia}>{discente.biografia}</p>
         </div>
         <br/><br/>
         <div className="area_interesse">
@@ -32,7 +32,7 @@ const discenteCard = ({ discente }) => (
                 {
                     discente.areaInteresse.map((area) => {
                         return (
-                            <li>{area}</li>
+                            <li value={discente.areaInteresse.area}>{area}</li>
                         );
                     })
                 }
@@ -41,7 +41,7 @@ const discenteCard = ({ discente }) => (
         <hr style={{border: '1px solid rgb(230, 230, 230)'}} />
         <div className="pesquisador">
             <button id="btn-pesq">
-                <Link to="/pesquisador"><p id="btn_link">Pagina do pesquisador</p></Link>
+                <Link to={`/pesquisador/${discente.id}`}><p id="btn_link">Pagina do pesquisador</p></Link>
             </button>
         </div>
         

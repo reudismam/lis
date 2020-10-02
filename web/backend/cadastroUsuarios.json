@@ -30,16 +30,18 @@
         }
       ],
       "id": 1
-    },
+    }
+  ],
+  "discentes": [
     {
-      "nome": "robson ruan santana",
-      "sobrenome": "nascimento",
+      "nome": "Renan Santana",
+      "sobrenome": "Nascimento",
       "uploadImage": "",
       "email": "Renan.nascimento.santana@hotmail.com",
-      "curso": "zx",
-      "telefone": "8433178512",
+      "curso": "dd",
+      "telefone": "1126805589",
       "biografia": "",
-      "posicao": "docente",
+      "posicao": "discente",
       "funcao": "",
       "titulacao": "",
       "areaInteresse": [
@@ -60,123 +62,6 @@
         }
       ],
       "id": 2
-    }
-  ],
-  "discentes": [
-    {
-      "nome": "Reudismam",
-      "sobrenome": "de Sousa",
-      "uploadImage": "",
-      "email": "reudismam@gmail.com",
-      "telefone": "0000000000",
-      "biografia": "Universidade Federal Rural do Semi-Árido Universidade Federal Rural do Semi-Árido Universidade Federal Rural do Semi-Árido Universidade Federal Rural do Semi-Árido Universidade Federal Rural do Semi-Árido",
-      "posicao": "discente",
-      "areaInteresse": [
-        "Engenharia de Software",
-        "Programação"
-      ],
-      "publicacao": [
-        {
-          "titulo": "",
-          "ano": "2020",
-          "referencia": "Pré-Algoritmos"
-        },
-        {
-          "titulo": "",
-          "ano": "2020",
-          "referencia": "Projeto Olímpico"
-        },
-        {
-          "titulo": "",
-          "ano": "2020",
-          "referencia": "Imersão BTI"
-        }
-      ],
-      "projeto": [
-        {
-          "titulo": "Pré-Algoritmos",
-          "ano": "2020",
-          "descricao": "Projeto"
-        },
-        {
-          "titulo": "Formando Campeões",
-          "ano": "2020",
-          "descricao": "Curso"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "nome": "Renan Santana",
-      "sobrenome": "Nascimento",
-      "uploadImage": "",
-      "email": "Renan.nascimento.santana@hotmail.com",
-      "curso": "BTI",
-      "telefone": "1126805589",
-      "biografia": "asas",
-      "posicao": "discente",
-      "funcao": "lider",
-      "titulacao": "doutor",
-      "areaInteresse": [
-        "asas",
-        "asasasasas"
-      ],
-      "publicacao": [
-        {
-          "titulo": "",
-          "ano": "12121",
-          "referencia": "qwqwq"
-        },
-        {
-          "titulo": "",
-          "ano": "121",
-          "referencia": "1212ad"
-        }
-      ],
-      "projeto": [
-        {
-          "titulo": "adada",
-          "ano": "1212",
-          "descricao": "asfafwaf"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "nome": "RENAN SANTANA",
-      "sobrenome": "NASCIMENTO",
-      "uploadImage": "",
-      "email": "renan.nascimento.santana@hotmail.com",
-      "curso": "zx",
-      "telefone": "11947064498",
-      "biografia": "",
-      "posicao": "discente",
-      "funcao": "membro",
-      "titulacao": "graduado",
-      "areaInteresse": [
-        "text",
-        ""
-      ],
-      "publicacao": [
-        {
-          "titulo": "",
-          "ano": "1231312123123",
-          "referencia": "asdafas"
-        },
-        {
-          "titulo": "",
-          "ano": "",
-          "referencia": ""
-        }
-      ],
-      "projeto": [
-        {
-          "titulo": "213123",
-          "ano": "21312",
-          "descricao": "23"
-        }
-      ],
-      "id": 3
     }
   ]
 }
