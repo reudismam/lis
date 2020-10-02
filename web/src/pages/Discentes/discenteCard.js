@@ -1,23 +1,58 @@
-import React from 'react';
-
+import React, {useState, useEffect, useRef, FormEvent} from 'react';
+import { useHistory} from 'react-router-dom';
+import axios from 'axios';
+import PageDefault from '../DefaultPage';
+import CriarContaImg from '../../assets/images/CriarConta/criarConta.svg';
 
 const discenteCard = ({ discente }) => (
     <div className="discente-card">
-        <img src={discente.uploadImage} />
+        <img src={discente.uploadImage} style={{width: '100px', height: '100px'}} />
         <h3>Nome: {discente.nome} </h3>
         <h3>Sobrenome: {discente.sobrenome}</h3>
         <h3>Email: {discente.email}</h3>
-        <h3>Telefone: {discente.whatsapp}</h3>
-        <h3>Biografia: {discente.bio}</h3>
+        <h3>Telefone: {discente.telefone}</h3>
+        <h3>Biografia: {discente.biografia}</h3>
         <h3>Posição: {discente.posicao}</h3>
+        <h5>Função: {discente.funcao}</h5>
+        <h6>Titulação: {discente.titulacao}</h6>
         <br/>
         <h2>Interesse</h2>
-        <li value="areaInteresse" name="areaInteresse" >{discente.areInteresse}</li>
-            {/*{ discente.map((item, index) => 
-                <li key={index} name="areaInteresse" >{areaInteresse}</li>)
-            }*/}
+        <ul>
+            {
+                discente.areaInteresse.map((area) => {
+                    return (
+                        <li>{area}</li>
+                    );
+                })
+            }
+        </ul>
+        <button id="pesquisador-page">Página do Pesquisador</button>
+        <hr/>
+        {/* 
+        <h2>Publicacoes</h2> 
+        <ul>
+            {
+                discente.publicacao.map((publicacao) => {
+                    return (
+                        <li>{publicacao.referencia}</li>
+                    );
+                })
+            }
+        </ul>
+        <hr/>
+        <h2>Projetos</h2> 
+        <ul>
+            {
+                discente.projeto.map((projeto) => {
+                    return (
+                        <li>{projeto.titulo}</li>
+                    );
+                })
+            }
+        </ul>
         <hr/>
         <br/><br/>
+        */}
     </div>
 )
 

@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { Link } from 'react-router-dom';
 import PageDefault from '../DefaultPage';
-import './styles.css';
 import ContatoImg from '../../assets/images/Contato/contato.svg';
 import group from './img/Group.png';
 import mail from './img/mail.png';
@@ -11,6 +10,8 @@ import ig from './img/ig.png';
 import tt from './img/tt.png';
 import fb from './img/fb.png';
 import ln from './img/ln.png';
+import './styles.css';
+
 export default function Contato() {
 
     const Animation = useRef(null)

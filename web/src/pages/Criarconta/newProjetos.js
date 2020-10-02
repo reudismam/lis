@@ -91,13 +91,13 @@ class NewProjetos extends React.Component {
     return (
       <div className="App">
           <form onSubmit={this.addItem}>
-          <p >Titulo</p>
+          <p className="title-area">Titulo da Publicação</p>
             <input type="text" placeholder="Digite o título" value= {this.state.currentItem.title} onChange={this.handleInputText} required ></input>
-
-            <p className="title-area">Ano da Publicação</p><br/>
+            <br/><br/>
+            <p className="title-area">Ano da Publicação</p>
             <input type="number" placeholder="Digite o ano" value= {this.state.currentItem.year} onChange={this.handleInputDate} required ></input>
-
-            <textarea maxLength={300} value= {this.state.currentItem.text} onChange={this.handleInputTitle}></textarea>
+            <br/><br/>
+            <textarea maxLength={300} style={{width: '800px', height: '300px'}} value= {this.state.currentItem.text} onChange={this.handleInputTitle}></textarea>
             <button type="submit"> + </button>
           </form>
           <div className="App">
