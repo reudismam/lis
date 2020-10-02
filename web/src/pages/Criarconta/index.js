@@ -1,12 +1,12 @@
-import React, {useState, useEffect, useRef, FormEvent} from 'react';
-import { Link, useHistory} from 'react-router-dom';
+import React, {useState, useEffect,  FormEvent} from 'react';
+import { useHistory} from 'react-router-dom';
 import axios from 'axios';
 import PageDefault from '../DefaultPage';
 import CriarContaImg from '../../assets/images/CriarConta/criarConta.svg';
 import { BiCheck } from "react-icons/bi";
 import { BiDuplicate } from "react-icons/bi";
 import { FaCamera } from "react-icons/fa";
-import { FaRegThumbsUp } from "react-icons/fa";
+
 import './styles.css';
 
 const initialValue = {
@@ -39,25 +39,24 @@ const initialValue = {
     ]
 }
 
-export default function Criarconta(  ) {
+export default function Criarconta( { id } ) {
     const [values, setValues] = useState(initialValue)
     const history = useHistory();
 
-    //const [imagePreviewUrl, setImagePreviewUrl] = useState<any>();
-
-    function onChange(ev: any){
+    function onChange(ev){
         const {name, value} = ev.target;
         setValues({ ...values, [name]: value });
-        
-        /*let reader = new FileReader();
-        let file = ev.target.files[0];
-        reader.onloadend = () => {
-            setValues({...values, [name]: reader.result});
+        if (ev.target.files) {
+            let reader = new FileReader();
+            let file = ev.target.files[0];
+            reader.onloadend = () => {
+                setValues({...values, [name]: reader.result});
+            }
+            reader.readAsDataURL(file);
         }
-        reader.readAsDataURL(file);*/
     }
 
-    function addNewInterestArea(e: any) {
+    function addNewInterestArea(e) {
         e.preventDefault()
         const areas = [...values.areaInteresse, '']
         setValues({...values, "areaInteresse": areas});
@@ -73,7 +72,16 @@ export default function Criarconta(  ) {
     }
     */
 
+    /*
+   function deleteItem(value) {
+    const areasAtualizadas = values.areaInteresse.filter(e =>
+        e !== value
+    )
+    setValues({...values, "areaInteresse": areasAtualizadas});
+}
+*/
 
+   
     function addNewPublication() {
         setValues({...values, "publicacao": 
             [
@@ -98,8 +106,7 @@ export default function Criarconta(  ) {
             ]});
     }
     
-
-    function setAreaInteresse(position: number, field: string, value: string) {
+    function setAreaInteresse(position, field, value) {
         const areasAtualizadas = values.areaInteresse.map((area, index) => {
             if(index === position) {
                 return value;
@@ -109,7 +116,7 @@ export default function Criarconta(  ) {
         setValues({...values, "areaInteresse": areasAtualizadas});
     }
 
-    function setProperty(list: any [], property: string, position: number, field: string, value: string) {
+    function setProperty(list, property, position, field, value) {
         const updatedList = list.map((item, index) => {
             if(index === position) {
                 return {...item, [field]: value};
@@ -120,8 +127,9 @@ export default function Criarconta(  ) {
     }
 
     
-    function onSubmit(ev: FormEvent){
+    function onSubmit(ev){
         ev.preventDefault();
+        
         if(values.posicao === "discente"){
         axios.post('http://localhost:5000/discentes', values)
             .then((response) => {
@@ -139,7 +147,7 @@ export default function Criarconta(  ) {
 
         
         
-        function VerificarClique(e: any) {
+        function VerificarClique(e) {
             e.preventDefault();
             if(values.nome && values.sobrenome && values.email && values.telefone && values.posicao && values.curso !== ''){
                 alert('Conta criada com Sucesso')
@@ -326,7 +334,7 @@ export default function Criarconta(  ) {
                                         <div key={`area of interest ${index}`}>
                                         
                                         <input type="text" id="area" value= {area} onChange={e => setAreaInteresse(index, '', e.target.value)} required style = {area.length !== 0 ? {border: '1px solid #21C25E'} : {border: ''}}></input>
-                                        { area ? <abbr title="Adicionar outro interesse"><button id="btn" type="button" onClick={addNewInterestArea}><BiDuplicate/></button></abbr> : null}
+                                        { area ? <abbr title="Adicionar outro interesse"><button id="btn" type="button" onClick= {addNewInterestArea}><BiDuplicate/></button></abbr> : null}
                                         </div>
                                     );
                                 })
@@ -383,7 +391,7 @@ export default function Criarconta(  ) {
                                 })
                             }
                         </div>
-                        <Link to="/concluido" className="btn-send" type="submit" onClick={VerificarClique}>Enviar</Link>
+                        <button className="btn-send" type="submit" onClick={VerificarClique}>Enviar</button>
                     </div>
                 </div>
             </div>

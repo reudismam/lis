@@ -71,7 +71,7 @@
     background: #F0F0F7;
     box-sizing: border-box;
     min-width: 270px;
-    width: 580px;
+    width: 480px;
     height: 100%;
     border-radius: 13px;
 }
@@ -138,6 +138,8 @@
 .values-column:hover{
     background: #F0F0F7;
 }
+
+
 @media (max-width: 450px){
     .about-top{
         padding: 20px 20px;

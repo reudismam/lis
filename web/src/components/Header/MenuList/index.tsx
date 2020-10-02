@@ -8,10 +8,10 @@ const MenuList = styled.ul`
     li{
         margin-bottom: 1rem;
         font-size: 1.3rem;
-        color: var( --color-descriptoins);
+        color: var( --color-descriptions);
     }
     .MenuLink{
-        color: var( --color-descriptoins);
+        color: var( --color-descriptions);
         text-decoration: none;
     }
 
