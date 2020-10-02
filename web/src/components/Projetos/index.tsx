@@ -13,13 +13,13 @@ const ProjetList = styled.section`
     }
 `
 const ProjetoName = styled.h2`
-    color: var(--color-descriptoins);
+    color: var(--color-descriptions);
     margin: 10px 0;
     font-weight: normal;
 `
 const Description = styled.p`
     font-size: 1.2rem;
-    color: var(--color-descriptoins);
+    color: var(--color-descriptions);
     height: 150px;
     overflow: hidden;
 `

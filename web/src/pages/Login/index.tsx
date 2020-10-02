@@ -8,7 +8,6 @@ import ig from './img/ig.png';
 import tt from './img/tt.png';
 import fb from './img/fb.png';
 import ln from './img/ln.png';
-import './styles.css';
 import { Link } from 'react-router-dom';
 
 const LoginContainer = styled.div`

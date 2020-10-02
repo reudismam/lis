@@ -54,7 +54,7 @@ const Pesquisador = styled.div`
 `
 const Description = styled.p`
     padding: 10px;
-    color: var(--color-descriptoins);
+    color: var(--color-descriptions);
 
     @media(min-width:1280px){
         font-size: 1.2rem;

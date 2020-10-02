@@ -23,7 +23,7 @@ const Content = styled.section`
     align-items: center;
     
     ${FooterData} {
-        border-bottom: 1px solid var(--color-descriptoins);
+        border-bottom: 1px solid var(--color-descriptions);
     }
     
     @media(min-width: 768px) {
@@ -73,7 +73,7 @@ const Link = styled.a`
     margin-left: 2px;
     
     :hover {
-        color: var(--color-descriptoins);
+        color: var(--color-descriptions);
     }
 `
 const Icon = styled.span`
@@ -86,7 +86,7 @@ const Email = styled.a`
     text-decoration: none;
     
     :hover {
-        color: var(--color-descriptoins);
+        color: var(--color-descriptions);
     }
 `
 const Direitos = styled.p`

@@ -18,7 +18,7 @@ const  Video = styled.iframe`
     }
 `
 const Title = styled.h2`
-    color: var(--color-descriptoins);
+    color: var(--color-descriptions);
     font-size: 1.6rem;
     font-weight: normal;
     margin-bottom: 20px;
@@ -37,7 +37,7 @@ const Description = styled.div`
     }
 `
 const Info = styled.p`
-    color: var(--color-descriptoins);
+    color: var(--color-descriptions);
     height: 160px;
     overflow: hidden;
 `
