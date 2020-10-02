@@ -177,9 +177,9 @@ export default function Login() {
                 <Input type="email"></Input>
                 <TitleInput>Senha</TitleInput>
                 <Input type="password"></Input>
-                <Button to="/home" className="login-input">Login</Button>
-                <Button to="/home" className="login-google">Entrar com o google</Button>
-                <Button to="/home" className="login-facebook">Entrar com o Facebook</Button>
+                <Button to="/" className="login-input">Login</Button>
+                <Button to="/" className="login-google">Entrar com o google</Button>
+                <Button to="/" className="login-facebook">Entrar com o Facebook</Button>
             </Right>
             <Social2>
                 <Item2>
