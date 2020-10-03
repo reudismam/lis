@@ -3,13 +3,13 @@ import { gsap } from 'gsap';
 import { Link } from 'react-router-dom';
 import PageDefault from '../DefaultPage';
 import ContatoImg from '../../assets/images/Contato/contato.svg';
-import group from './img/Group.png';
-import mail from './img/mail.png';
-import local from './img/local.png';
-import ig from './img/ig.png';
-import tt from './img/tt.png';
-import fb from './img/fb.png';
-import ln from './img/ln.png';
+import group from '../../assets/images/Contato/Group.png';
+import mail from '../../assets/images/Contato/mail.png';
+import local from '../../assets/images/Contato/local.png';
+import ig from '../../assets/images/Contato/ig.png';
+import tt from '../../assets/images/Contato/tt.png';
+import fb from '../../assets/images/Contato/fb.png';
+import ln from '../../assets/images/Contato/ln.png';
 import './styles.css';
 
 export default function Contato() {
