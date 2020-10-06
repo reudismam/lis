@@ -42,6 +42,10 @@ const Left = styled.div`
 const Title = styled.h1`
     font-size: 2rem;
     color: var(--blue1);
+    @media(max-width: 768px){
+        margin-top: 20px;
+        text-align: center;
+    }
 `
 const Social = styled.div`
     margin-top: 40px;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import {PORTIFOLIO} from '../../Data/portifolios';
-import Card from '../PortifolioCard';
+import { EDITAIS } from '../../Data/editais';
+import Card from '../EditaisCard';
 
 const ProjetList = styled.section`
     margin-top: 20px;
@@ -18,7 +18,7 @@ const ProjetList = styled.section`
         grid-gap: 50px 100px;
     }
 `
-const PortifolioName = styled.h2`
+const EditaisName = styled.h2`
     color: var(--color-h3);
     margin: 10px 0;
     padding-left: 10px;
@@ -43,7 +43,7 @@ const Image = styled.img`
         height: 200px;
     }
 `
-const PortifolioBottom = styled.div`
+const EditaisBottom = styled.div`
     padding: 0 10px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -84,28 +84,28 @@ export default function Portifolios(){
     return(
         <ProjetList>
             {
-                PORTIFOLIO.filter(p => p.featured == true).map((portifolio) => {
+                EDITAIS.filter(p => p.featured == true).map((editais) => {
                     return(
-                        <Card key={portifolio.name}>
-                            <Image src={require(`../../assets/${portifolio.image}`)} alt={portifolio.name} />
-                            <PortifolioName>
-                                {portifolio.name}
-                            </PortifolioName>
+                        <Card key={editais.name}>
+                            <Image src={require(`../../assets/${editais.image}`)} alt={editais.name} />
+                            <EditaisName>
+                                {editais.name}
+                            </EditaisName>
                             <Description>
-                                {portifolio.description}
+                                {editais.description}
                             </Description>
-                            <PortifolioBottom>
+                            <EditaisBottom>
                                 <Button to="">Acesse</Button>
                                 <Info>
                                     <Date>
-                                        {portifolio.date} 
+                                        {editais.date} 
                                     </Date>
                                     <p>-</p>
                                     <Epoch>
-                                        {portifolio.epoch}
+                                        {editais.epoch}
                                     </Epoch>
                                 </Info>
-                            </PortifolioBottom>
+                            </EditaisBottom>
                         </Card>
                     );
                 })

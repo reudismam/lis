@@ -35,6 +35,7 @@ const Content = styled.section`
     }
 `
 const Info = styled.div`
+    width: 100%;
     @media(min-width: 768px) {
         display: flex;
         justify-content: space-between;
@@ -48,12 +49,15 @@ const Lista = styled.ul`
     text-align: center;
     list-style: none;
     font-size: 1rem;
-    width: 350px;
+    
     li{
         line-height: 1.6;
     }
     @media(min-width: 768px){
         text-align: left;
+        word-wrap:  normal;
+        min-width: 200px;
+        max-width: 300px;
     }
     
 `

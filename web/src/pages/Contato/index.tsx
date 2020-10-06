@@ -1,5 +1,4 @@
-import React, { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../DefaultPage';
 import ContatoImg from '../../assets/images/Contato/contato.svg';
@@ -11,6 +10,8 @@ import tt from '../../assets/images/Contato/tt.png';
 import fb from '../../assets/images/Contato/fb.png';
 import ln from '../../assets/images/Contato/ln.png';
 import styled from 'styled-components';
+import { GoLocation } from 'react-icons/go';
+import { AiOutlineGlobal, AiOutlineMail } from 'react-icons/ai';
 
 const Contatos = styled.div`
     height: 100%;
@@ -29,27 +30,26 @@ const ContatosContainer = styled.div`
     flex-direction: row;
     font: roboto;
     padding: 30px 40px;
-    @media (max-width: 400px){
+    @media (max-width: 589px){
         margin: 30px 10px;
         padding: 10px;
         flex-direction: column;
     }
-    @media (min-width:401px) and (max-width:900px){
+    @media (min-width:401px) {
         margin: 30px 10px;
         padding: 10px;
     }
 `
-const ContatoLeft = styled.div`
-    width: 50%;
+const ContatoDiv = styled.div`
+    width: 100%;
     color: var(--color-pagina-textoazulclaro);
-    padding: 30px 50px;
     flex-direction: column;
     @media (max-width: 400px){
-        width: 100%;
         padding: 10px;
     }
-    @media (min-width:401px) and (max-width:900px){
-        padding: 10px;
+    @media (min-width:589px){
+        width: 50%;
+        padding: 30px;
     }
 `
 const ContatoTitulo = styled.h2`
@@ -84,12 +84,12 @@ const ContatoLis = styled.div`
 const ParagraphContatoLis = styled.div`
     text-align: justify;
     font-size: 10pt;
-    padding: 30px 50% 30px 0;
-    @media (max-width: 400px){
-        padding: 10px 20px;
+    margin: 15px 0;
+    @media (min-width:589px) and (max-width: 999px) {
+        padding: 30px 20% 30px 0;
     }
-    @media (min-width:401px) and (max-width:900px){
-        padding: 30px 10% 30px 0;
+    @media (min-width:1000px) {
+        padding: 30px 60% 30px 0;
     }
 
 `
@@ -112,32 +112,22 @@ const EnderecosItem = styled.div`
         margin-bottom: 10px;
     }
 `
-const ImageEnderecoContato = styled.img`
-    max-height: 30px;
-`
 const ParagraphEnderecoContato = styled.p`
-font-weight: bold;
-color: var(--color-pagina-textoazul);
+    font-weight: bold;
+    color: var(--color-pagina-textoazul);
 `
 const SocialeContato = styled.div`
-    width: 315px;
+    width: 60%;
     height: 30;
-    margin: 0 237px 0 84px;
     display: flex;
     justify-content: space-between;
-    @media (max-width: 400px){
-        width: 100%;
-        margin: 0;
-        padding: 0 40px;
-    }
-    @media (min-width:401px) and (max-width:900px){
-        margin: 0;
-        padding: 0 40px;
+    @media (min-width:589px){
+
     }
 `
 const ContatoLine = styled.div`
     width: 1px;
-    @media (max-width: 400px){
+    @media (max-width: 589px){
         width: 100%;
     }
 `
@@ -146,56 +136,51 @@ const LMid = styled.hr`
     width: 1px;
     height: 88%;
     border: 1px solid #2BB3EB;
-    @media (max-width: 400px){
+    @media (max-width: 589px){
         margin-top: 20px;
         margin-left: 30px;
         width: 75%;
         height: 1px;
     }
 `
-const ContatoRight = styled.div`
-    width: 50%;
-    padding: 40px 50px;
-    @media (max-width: 400px){
-        width: 100%;
-        padding: 30px 20px;
-    }
-    @media (min-width:401px) and (max-width:900px){
-        width: 100%;
-        padding: 10px 20px;
-    }
-`
 const ContatoMsg = styled.div`
     color: var(--color-pagina-texto);
     margin-bottom: 50px;
+    @media(min-width: 590px){
+        margin-top: 35px;
+        margin-bottom: 15px;
+    }
 `
 const GetContatos = styled.div`
     padding-bottom: 30px;
+    p{
+        margin-bottom: 5px;
+    }
 `
 const CampoTextoContato = styled.input`
     width: 100%;
-    height: 56px;
     border-radius: 8px;
     border: 1px solid #E6E6F0;
-    padding: auto;
+    padding: 5px;
     font-size: 20px;
     color: #424242;
     background-color: #E6E6F0;
     @media (max-width: 400px){
-        height: 50px;
+        height: 45px;
     }
-    @media (min-width:401px) and (max-width:900px){
+    @media (min-width:401px){
         height: 50px;
     }
 `
 const CampoTextoAreaContato = styled.textarea`
-    font-size: 18px;
-    color: #424242;
-    font: roboto;
     min-width: 100%;
     max-width: 100%;
     min-height: 300px;
     max-height: 300px;
+    padding: 5px;
+    font-size: 18px;
+    color: #424242;
+    font: roboto;
     border-radius: 8x;
     border: 1px solid #E6E6F0;
     background-color: #E6E6F0;
@@ -212,29 +197,12 @@ const BtnContato = styled.button`
     color: var(--color-botao-texto);
     background-color: var(--color-pagina-botao);
 `
+const ContatoIcon = styled.div`
+    font-size: 1.4rem;
+    margin-right: 5px;
+`
 
 export default function Contato() {
-
-    const Animation = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation.current, {
-            x: -30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    })
-
-    const Animation2 = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation2.current, {
-            x: 30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    })
-
     return (
         <PageDefault
             imageSrc={ContatoImg}
@@ -245,7 +213,7 @@ export default function Contato() {
             <Contatos>
                 <ContatosPage>
                     <ContatosContainer>
-                        <ContatoLeft>
+                        <ContatoDiv>
                             <ContatoInfoTop>
                                 <ContatoTitulo>Entre em contato conosco!</ContatoTitulo>
                                 <ParagraphContainer>
@@ -271,25 +239,25 @@ export default function Contato() {
                             </ContatoLis>
                             <EnderecosContato>
                                 <EnderecosItem>
-                                    <div>
-                                        <ImageEnderecoContato src={group} alt="" />
-                                    </div>
+                                    <ContatoIcon>
+                                        <AiOutlineGlobal />
+                                    </ContatoIcon>
                                     <div>
                                         <ParagraphEnderecoContato>sitelisexample.com.br</ParagraphEnderecoContato>
                                     </div>
                                 </EnderecosItem>
                                 <EnderecosItem>
-                                    <div>
-                                        <ImageEnderecoContato src={mail} alt="" />
-                                    </div>
+                                    <ContatoIcon>
+                                        <AiOutlineMail />
+                                    </ContatoIcon>
                                     <div>
                                         <ParagraphEnderecoContato>sitelisexample@.com.br</ParagraphEnderecoContato>
                                     </div>
                                 </EnderecosItem>
                                 <EnderecosItem>
-                                    <div>
-                                        <ImageEnderecoContato src={local} alt="" />
-                                    </div>
+                                    <ContatoIcon>
+                                        <GoLocation />
+                                    </ContatoIcon>
                                     <div>
                                         <ParagraphEnderecoContato>Endereço: xxxxxx-xxxxx, 00000000</ParagraphEnderecoContato>
                                     </div>
@@ -301,13 +269,13 @@ export default function Contato() {
                                 <Link to=""><img src={fb} alt="" /></Link>
                                 <Link to=""><img src={ln} alt="" /></Link>
                             </SocialeContato>
-                        </ContatoLeft>
+                        </ContatoDiv>
                         <ContatoLine>
                             <LMid />
                         </ContatoLine>
-                        <ContatoRight>
+                        <ContatoDiv>
                             <ContatoMsg>
-                                <h2>Ou envie uma mensagem</h2>    
+                                <h2>Ou envie uma mensagem</h2>
                             </ContatoMsg>
                             <GetContatos>
                                 <p>Nome</p>
@@ -323,7 +291,7 @@ export default function Contato() {
                                 <BtnContato> Enviar
                                 </BtnContato>
                             </GetContatos>
-                        </ContatoRight>
+                        </ContatoDiv>
                     </ContatosContainer>
                 </ContatosPage>
             </Contatos>

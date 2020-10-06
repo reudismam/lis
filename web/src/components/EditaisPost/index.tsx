@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { PORTIFOLIO } from '../../Data/portifolios';
-import Card, { CardTop } from '../PortifolioCard';
+import { EDITAIS } from '../../Data/editais';
+import { CardTop } from '../EditaisCard';
 
 const ProjetList = styled.section`
     margin-top: 20px;
@@ -17,7 +17,6 @@ const Content = styled.div`
         flex-direction: column;
         align-items: initial;
     }
-
 `
 const PostName = styled.h2`
     color: var(--color-h3);
@@ -57,7 +56,6 @@ const Image = styled.img`
         width: 60%;
         height: 100%;
         border-radius: 8px 0 0 8px;
-
     }
 `
 const PostBottom = styled.div`
@@ -111,7 +109,7 @@ export default function Portifolios() {
     return (
         <ProjetList>
             {
-                PORTIFOLIO.filter(p => p.post == true).map((post) => {
+                EDITAIS.filter(p => p.post == true).map((post) => {
                     return (
                         <CardTop key={post.name}>
                             <Image src={require(`../../assets/${post.image}`)} alt={post.name} />
