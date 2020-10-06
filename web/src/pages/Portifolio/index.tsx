@@ -5,9 +5,7 @@ import Portifolios from '../../components/Portifolios';
 import PortifolioPost from '../../components/PortifolioPost';
 import PortfolioImg from '../../assets/images/Portifolio/portfolio.svg';
 import { AiOutlineSearch } from 'react-icons/ai';
-import imgItem from './img/item.png';
-import btn1 from './img/btn1.png';
-import btn2 from './img/btn2.png';
+
 const PortifolioContainer = styled.div`
     display: flex;
     flex-direction: column;

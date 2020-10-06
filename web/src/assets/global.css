@@ -18,7 +18,7 @@
     /*Cor tag h3*/
     --color-h3: #0C3197;
     /*Cor das páginas brancas*/
-    --color-pagina: #F0F0F7;
+    --color-pagina: #FFFFFF;
     /*Cor das palavras nas paginas brancas*/
     --color-pagina-texto: #9C98A6;
     /*Cor dos botões padrões nas paginas brancas*/
@@ -78,5 +78,6 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     /*align-items: center;*/
 }

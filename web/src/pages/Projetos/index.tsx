@@ -1,35 +1,65 @@
-import React, {useRef, useEffect} from 'react';
-import {gsap} from 'gsap';
+import React from 'react';
+import styled from 'styled-components';
 import PageDefault from '../DefaultPage';
+import ProjetosPage from '../../components/ProjetosPage';
 import './styles.css';
 import ProjetoImg from '../../assets/images/Projeto/projeto.svg';
 import imgLeft from './img/imgleft.png';
 import imgLeft1 from './img/imgright-left1.png';
 import imgLeft2 from './img/imgright-left2.png';
 import imgRight from './img/imgright-right.png';
+import { AiOutlineSearch } from 'react-icons/ai';
 
+const ProjetosContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+const Search = styled.div`
+    width:100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    hr{
+        width: calc(100% - 210px);
+        border: 1px solid #D0CDE1;
+    }
+    input{
+        border-radius: 8px;
+        border: 2px solid var(--blue1);
+        background-color: rgba(240, 240, 247, 0.25);
+    }
+    .search-icon {
+        position: absolute;
+        font-size: 1.6rem;
+        top: 20px;
+        right: 15px;
+        cursor: pointer;
+        color: var(--blue1);
+    }
+    @media(min-width:768px){
+        hr{
+            width: calc(100% - 310px);
+        }
+        input{
+            width: 300px;
+        }
+    }
+    @media(min-width:1280px){
+        hr{
+            width: calc(100% - 360px);
+        }
+        input{
+            width: 350px;
+        }
+    }
+`
 export default function Projeto() {
-
-    const Animation = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation.current, {
-            x: -30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    },)
-
-    const Animation2 = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation2.current, {
-            x: 30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    },)
-
     return (
         <PageDefault
             imageSrc={ProjetoImg}
@@ -37,67 +67,14 @@ export default function Projeto() {
             title="Veja alguns de nossos projetos!"
             description="Buscamos te deixar bem interado sobre o assunto, aqui você pode acompanhar o que estamos fazendo ..."
         >
-            <div>        
-                <div className="projetos-lineTop">
-                    <hr/>
-                    <input type="text" placeholder="pesquisar"/>
-                </div>
-                <div className="projetos-container">
-                    <div className="projetos-post">
-                        <div className="projetos-imgContainer" >
-                            <div className="projetos-leftImg" >
-                                <img src={imgLeft} alt="" />
-                            </div>
-                            <div className="projetos-rightImgs" >
-                                <div className="rightImgs-left" >
-                                    <img src={imgLeft1} alt="" className="imagem1"/>
-                                    <img src={imgLeft2} alt="" className="imagem2"/>
-                                </div>
-                                <div className="rightImgs-right" >
-                                    <img src={imgRight} alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="projetos-descricao" >
-                            <h3>Imersão Python</h3>
-                            <p>
-                            Descrição: As olimpíadas de programação são ferramentas importantes para motivação dos alunos para o aprendizado de 
-                            programação. Isso pode ser explicado pelo fato dessas competições serem, frequentemente, monitoradas por grandes empresas, 
-                            voltadas para o desenvolvimento Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                            dolore magna aliqua. Vitae aliquet nec ullamcorper sit. 
-                            </p>
-                            <button >Saiba mais</button>
-                        </div>
-                    </div>
-                    <div className="projetos-post">
-                        <div className="projetos-imgContainer" >
-                            <div className="projetos-leftImg" >
-                                <img src={imgLeft} alt="" />
-                            </div>
-                            <div className="projetos-rightImgs" >
-                                <div className="rightImgs-left" >
-                                    <img src={imgLeft1} alt="" className="imagem1"/>
-                                    <img src={imgLeft2} alt="" className="imagem2"/>
-                                </div>
-                                <div className="rightImgs-right" >
-                                    <img src={imgRight} alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="projetos-descricao" >
-                            <h3>Imersão Python</h3>
-                            <p>
-                            Descrição: As olimpíadas de programação são ferramentas importantes para motivação dos alunos para o aprendizado de 
-                            programação. Isso pode ser explicado pelo fato dessas competições serem, frequentemente, monitoradas por grandes empresas, 
-                            voltadas para o desenvolvimento Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                            dolore magna aliqua. Vitae aliquet nec ullamcorper sit. 
-                            </p>
-                            <button >Saiba mais</button>
-                        </div>
-                    </div>
-                    <button className="btn-bottom">Carregar mais</button>
-                </div>
-            </div>
+            <ProjetosContainer>
+                <Search>
+                    <hr />
+                    <input type="text" placeholder="pesquisar" />
+                    <AiOutlineSearch className="search-icon" />
+                </Search>
+                <ProjetosPage />
+            </ProjetosContainer>
         </PageDefault>
     );
 }
