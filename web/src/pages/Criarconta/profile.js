@@ -88,7 +88,7 @@ export default function Criarconta( { id } ) {
                     <br/><br/><br/>
 
                         <div id="row-three">
-                            {values.biografia.length == 0 ? <div className="bio-vazia">
+                            {values.biografia.length === 0 ? <div className="bio-vazia">
                                                                 <h3>{values.nome} não escreveu nenhuma biografia!</h3>
                                                             </div> : <div className="bio-cheia">
                                                                                                     <h2>BIOGRAFIA</h2>
@@ -100,7 +100,7 @@ export default function Criarconta( { id } ) {
                         <br/><br/><br/>
                         
                         <div className="row-four">
-                        {values.areaInteresse == 0 ? <div className="vazia"><h3>{values.nome} não possui nenhuma área de interesse!</h3></div> : 
+                        {values.areaInteresse === 0 ? <div className="vazia"><h3>{values.nome} não possui nenhuma área de interesse!</h3></div> : 
                             
                                 values.areaInteresse.map((area, index) => {
                                     return (
@@ -114,7 +114,7 @@ export default function Criarconta( { id } ) {
 
                         <div className="row-five">
                             {
-                                values.publicacao == 0 ? <div className="vazio"><h3>{values.nome} não possui nenhuma Publicação!</h3></div> :
+                                values.publicacao === 0 ? <div className="vazio"><h3>{values.nome} não possui nenhuma Publicação!</h3></div> :
 
                                 values.publicacao.map((publicacao, index) => {
                                     return (
@@ -136,7 +136,7 @@ export default function Criarconta( { id } ) {
                         <hr/>
                         <div className="row-six">
                             {
-                                values.projeto == 0 ? <div className="vazio"><h3>{values.nome} não possui nenhum Projeto!</h3></div> :
+                                values.projeto === 0 ? <div className="vazio"><h3>{values.nome} não possui nenhum Projeto!</h3></div> :
                                 values.projeto.map((projeto, index) => {
                                     return (
                                         

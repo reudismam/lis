@@ -6,7 +6,7 @@ const docenteCard = ({ docente }) => (
 <div className="geral">
     <div className="discente-card">
         <div className="top">
-            <img src={docente.uploadImage} id="image" alt="Foto de perfil" />
+            <img src={`../../assets/images/${docente.uploadImage}`} id="image" alt="Foto de perfil" />
             <div className="nome_sobrenome_curso">
                 <p id="nome_completo">{docente.nome + ' ' + docente.sobrenome} </p>
                 <p id="curso">Curso: {docente.curso}</p>

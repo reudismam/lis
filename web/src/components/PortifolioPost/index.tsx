@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { PORTIFOLIO } from '../../Data/portifolios';
-import Card, { CardTop } from '../PortifolioCard';
+import { CardTop } from '../PortifolioCard';
 
 const ProjetList = styled.section`
     margin-top: 20px;
@@ -111,7 +111,7 @@ export default function Portifolios() {
     return (
         <ProjetList>
             {
-                PORTIFOLIO.filter(p => p.post == true).map((post) => {
+                PORTIFOLIO.filter(p => p.post === true).map((post) => {
                     return (
                         <CardTop key={post.name}>
                             <Image src={require(`../../assets/${post.image}`)} alt={post.name} />

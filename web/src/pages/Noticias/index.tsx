@@ -1,34 +1,82 @@
-import React, { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
+import React from 'react';
 import PageDefault from '../DefaultPage';
-import './styles.css';
+import NoticiaPost from '../../components/NoticiaPost';
+import NoticiasGrid from '../../components/NoticiasGrid';
 import NoticiaImg from '../../assets/images/Noticias/noticia.svg';
-import imgNews1 from './img/imgNews1.png';
-import imgNews2 from './img/imgNews2.png';
-import imgNews3 from './img/imgNews3.png';
+import styled from 'styled-components';
+import { AiOutlineSearch } from 'react-icons/ai';
 
+const NoticiasContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+const Search = styled.div`
+    width:100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    hr{
+        width: calc(100% - 230px);
+        border: 1px solid #D0CDE1;
+    }
+    input{
+        font-size: 1.2rem;
+        border-radius: 8px;
+        border: 2px solid var(--blue1);
+        background-color: rgba(240, 240, 247, 0.25);
+    }
+    .search-icon {
+        position: absolute;
+        font-size: 1.6rem;
+        top: 20px;
+        right: 15px;
+        cursor: pointer;
+        color: var(--blue1);
+    }
+    @media(min-width:768px){
+        hr{
+            width: calc(100% - 310px);
+        }
+        input{
+            font-size: 1.4rem;
+            width: 300px;
+        }
+    }
+    @media(min-width:1280px){
+        hr{
+            width: calc(100% - 360px);
+        }
+        input{
+            width: 350px;
+        }
+    }
+`
+const Line = styled.div`
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    hr{
+        width: calc(100% - 140px);
+        border: 1px solid #D0CDE1;
+    }
+    h2{
+        width: 130px;
+        font-size: 1.2rem;
+        color: var(--color-pagina-textoazul);
+    }
+`
 export default function Noticias() {
-
-    const Animation = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation.current, {
-            x: -30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    })
-
-    const Animation2 = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation2.current, {
-            x: 30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    })
-
     return (
         <PageDefault
             imageSrc={NoticiaImg}
@@ -36,61 +84,19 @@ export default function Noticias() {
             title="Acompanhe notícias da Universidade mais recentes"
             description="Buscamos de deixar bem informado com as notícias mais importantes atualizadas!"
         >
-            <div className="noticias-container">
-                <div className="noticias-lineTop">
+            <NoticiasContainer>
+                <Search>
                     <hr />
                     <input type="text" placeholder="pesquisar" />
-                </div>
-                <div className="noticias-post">
-                    <div>
-                        <p><strong>O que faz uma desenvolvedora Front-end</strong></p>
-                        <iframe title="video"
-                            src="https://www.youtube.com/embed/VnT7pT6zCcA">
-                        </iframe>
-                    </div>
-                    <div className="noticias-postRight">
-                        <div>
-                            <p>
-                                Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut pharetra sit amet aliquam id diam maecenas ultricies. Euismod quis viverra nibh cras pulvinar mattis. Amet nulla facilisi morbi tempus iaculis. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Dictumst quisque sagittis purus sit amet volutpat. Tellus at urna condimentum mattis pellentesque id nibh tortor. Eros in cursus turpis massa tincidunt dui ut. Habitant morbi tristique senectus et netus. Habitant morbi tristique senectus et netus et malesuada fames. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Nunc consequat interdum varius sit amet. Leo vel orci porta non pulvinar neque laoreet. Viverra adipiscing at in tellus. At erat pellentesque adipiscing commodo elit at imperdiet. Orci sagittis eu volutpat odio facilisis mauris sit amet massa.
-                            </p>
-                        </div>
-                        <div>
-                            <button>Acesse</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="noticias-centerInfo">
-                    <p><strong>Semana passada</strong></p>
+                    <AiOutlineSearch className="search-icon" />
+                </Search>
+                <NoticiaPost />
+                <Line>
                     <hr />
-                </div>
-                <div className="noticias-grid">
-                    <div className="grid-item-note">
-                        <h3 className="cardnt-1">Muito obrigado, diz UFERSA</h3>
-                        <img className="img1" src={imgNews1} alt='some value' />
-                        <p className="cardnc-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Etiam sit amet</p>
-                        <button className="bn-card">Acesse</button>
-                    </div>
-                    <div className="grid-item-note">
-                        <h3 className="cardnt-1">Cuidado nas ruas, alerta LIS</h3>
-                        <img className="img1" src={imgNews2} alt='some value' />
-                        <p className="cardnc-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Etiam sit ametLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Etiam sit amet</p>
-                        <button className="bn-card">Acesse</button>
-                    </div>
-                    <div className="grid-item-note">
-                        <h3 className="cardnt-1">Estruturas criadas por software</h3>
-                        <img className="img1" src={imgNews3} alt='some value' />
-                        <p className="cardnc-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Etiam sit amet</p>
-                        <button className="bn-card">Acesse</button>
-                    </div>
-                    <div className="grid-item-note">
-                        <h3 className="cardnt-1">Cuidado nas ruas, alerta LIS</h3>
-                        <img className="img1" src={imgNews2} alt='some value' />
-                        <p className="cardnc-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Etiam sit amet</p>
-                        <button className="bn-card">Acesse</button>
-                    </div>
-                </div>
-                <button className="noticias-btn">Carregar mais</button>
-            </div>
+                    <h2>Semana passada</h2>
+                </Line>
+                <NoticiasGrid />
+            </NoticiasContainer>
         </PageDefault>
     );
 }

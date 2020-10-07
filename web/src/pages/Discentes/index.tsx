@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { gsap } from 'gsap';
+import React, { useEffect, useState } from 'react';
+
 import PageDefault from '../DefaultPage';
 import DiscenteCard from './discenteCard'
 import DiscentesImg from '../../assets/images/Discentes/discentes.svg';
@@ -17,25 +17,6 @@ export default function Discente() {
         });
     },[]);
 
-    const Animation = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation.current, {
-            x: -30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    })
-
-    const Animation2 = useRef(null)
-    useEffect(() => {
-        gsap.from(Animation2.current, {
-            x: 30,
-            duration: 0.6,
-            opacity: 0,
-            ease: "none",
-        })
-    })
     return (
         <PageDefault
             imageSrc={DiscentesImg}

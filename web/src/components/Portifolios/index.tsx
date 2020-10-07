@@ -84,7 +84,7 @@ export default function Portifolios(){
     return(
         <ProjetList>
             {
-                PORTIFOLIO.filter(p => p.featured == true).map((portifolio) => {
+                PORTIFOLIO.filter(p => p.featured === true).map((portifolio) => {
                     return(
                         <Card key={portifolio.name}>
                             <Image src={require(`../../assets/${portifolio.image}`)} alt={portifolio.name} />

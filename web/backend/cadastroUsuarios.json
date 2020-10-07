@@ -3,6 +3,37 @@
     {
       "nome": "Renan Santana",
       "sobrenome": "Nascimento",
+      "uploadImage": "formando-campeoes.png",
+      "email": "Renan.nascimento.santana@hotmail.com",
+      "curso": "BTI",
+      "telefone": "1126805589",
+      "biografia": "teste",
+      "posicao": "docente",
+      "funcao": "lider",
+      "titulacao": "mestre",
+      "areaInteresse": [
+        "software",
+        "computação"
+      ],
+      "publicacao": [
+        {
+          "titulo": "",
+          "ano": "2020",
+          "referencia": "a"
+        }
+      ],
+      "projeto": [
+        {
+          "titulo": "Futebol",
+          "ano": "2020",
+          "descricao": "testeteste"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "nome": "Renan Santana",
+      "sobrenome": "Nascimento",
       "uploadImage": "",
       "email": "Renan.nascimento.santana@hotmail.com",
       "curso": "BTI",
@@ -87,6 +118,41 @@
       "whatsapp": "3456432324543",
       "bio": "ffweregerfefer",
       "id": 2
+    },
+    {
+      "nome": "Fernando",
+      "sobrenome": "Dutra",
+      "uploadImage": "",
+      "email": "fernandodr999@gmail.com",
+      "curso": "TI",
+      "telefone": "99999999",
+      "biografia": "Pronto pra dar o gás",
+      "posicao": "discente",
+      "funcao": "membro",
+      "titulacao": "graduado",
+      "areaInteresse": [
+        "Web "
+      ],
+      "publicacao": [
+        {
+          "titulo": "",
+          "ano": "",
+          "referencia": ""
+        }
+      ],
+      "projeto": [
+        {
+          "titulo": "LIS",
+          "ano": "2019",
+          "descricao": "nenhuma"
+        },
+        {
+          "titulo": "LIS-LAB",
+          "ano": "2020",
+          "descricao": "Nenhuma de novo"
+        }
+      ],
+      "id": 3
     }
   ]
 }

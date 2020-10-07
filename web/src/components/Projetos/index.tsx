@@ -30,7 +30,7 @@ export default function Projetos(){
     return(
         <ProjetList>
             {
-                PROJETOS.filter(p => p.featured == true).map((projeto) => {
+                PROJETOS.filter(p => p.featured === true).map((projeto) => {
                     return(
                         <Card key={projeto.name}>
                             <Image src={require(`../../assets/${projeto.image}`)} alt={projeto.name} />

@@ -21,10 +21,11 @@ const Search = styled.div`
     align-items: center;
     justify-content: space-between;
     hr{
-        width: calc(100% - 210px);
+        width: calc(100% - 230px);
         border: 1px solid #D0CDE1;
     }
     input{
+        font-size: 1.2rem;
         border-radius: 8px;
         border: 2px solid var(--blue1);
         background-color: rgba(240, 240, 247, 0.25);
@@ -42,6 +43,7 @@ const Search = styled.div`
             width: calc(100% - 310px);
         }
         input{
+            font-size: 1.4rem;
             width: 300px;
         }
     }

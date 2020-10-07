@@ -117,7 +117,7 @@ export default function Projetos(){
     return(
         <ProjetList>
             {
-                PROJETOS.filter(p => p.featured == true).map((projetos) => {
+                PROJETOS.filter(p => p.featured === true).map((projetos) => {
                     return(
                         <CardProjeto key={projetos.name}>
                             <Imagens>

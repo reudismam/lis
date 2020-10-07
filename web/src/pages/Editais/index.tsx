@@ -4,10 +4,8 @@ import PageDefault from '../DefaultPage';
 import Portifolios from '../../components/Portifolios';
 import PortifolioPost from '../../components/PortifolioPost';
 import EditaisImg from '../../assets/images/Editais/editais.svg';
-import imgItem from './img/item.png';
-import btn1 from './img/btn1.png';
-import btn2 from './img/btn2.png';
 import { AiOutlineSearch } from 'react-icons/ai';
+
 const PortifolioContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -23,10 +21,11 @@ const Search = styled.div`
     align-items: center;
     justify-content: space-between;
     hr{
-        width: calc(100% - 210px);
+        width: calc(100% - 230px);
         border: 1px solid #D0CDE1;
     }
     input{
+        font-size: 1.2rem;
         border-radius: 8px;
         border: 2px solid var(--blue1);
         background-color: rgba(240, 240, 247, 0.25);
@@ -44,6 +43,7 @@ const Search = styled.div`
             width: calc(100% - 310px);
         }
         input{
+            font-size: 1.4rem;
             width: 300px;
         }
     }
