@@ -8,21 +8,26 @@ import {
 
 import Concluido from './pages/Concluido';
 import Contato from './pages/Contato';
-import Home from './pages/Home';
+import Criarconta from './pages/Criarconta/index';
 import Editais from './pages/Editais';
+import EditarPerfil from './pages/EditarPerfil';
+import Erro404 from './pages/Erro404';
 import Discentes from './pages/Discentes';
 import Docentes from './pages/Docentes';
-import Erro404 from './pages/Erro404';
+import FormEditais from './pages/FormEditais';
+import FormNoticias from './pages/FormNoticias';
+import FormPortfolio from './pages/FormPortfolio';
+import Home from './pages/Home';
 import Login from './pages/Login';
 import Noticias from './pages/Noticias';
 import Parceiros from './pages/Parceiros';
+import Perfil from './pages/Perfil';
+import Pesquisador from './pages/Pesquisador/index';
 import Pesquisadores from './pages/Pesquisadores';
 import Portifolio from './pages/Portifolio';
 import Projetos from './pages/Projetos';
 import Publicacoes from './pages/Publicacoes';
 import Sobre from './pages/Sobre';
-import Criarconta from './pages/Criarconta/index';
-import Pesquisador from './pages/Pesquisador/index';
 
 
 
@@ -39,9 +44,14 @@ function App() {
         <Route path='/docentes' component={Docentes}/>
         <Route path='/pesquisador/:id' component={Pesquisador}/>
         <Route path='/editais' component={Editais}/>
+        <Route path='/editarperfil' component={EditarPerfil}/>
+        <Route path='/formeditais' component={FormEditais}/>
+        <Route path='/formnoticias' component={FormNoticias}/>
+        <Route path='/formportfolio' component={FormPortfolio}/>
         <Route path='/login' component={Login}/>
         <Route path='/noticias' component={Noticias}/>
         <Route path='/parceiros' component={Parceiros}/>
+        <Route path='/perfil' component={Perfil}/>
         <Route path='/pesquisadores' component={Pesquisadores}/>
         <Route path='/portifolio' component={Portifolio}/>
         <Route path='/projetos' component={Projetos}/>

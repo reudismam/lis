@@ -13,8 +13,6 @@ const ProjetList = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
 `
 const ProjetoName = styled.h2`
     color: var(--color-descriptions);
@@ -70,7 +68,6 @@ const ImgLeft = styled.div`
     align-items: center;
     justify-content: space-between;
     @media(min-width: 768px){
-        background-color:
         width: 59%;
         height: 100%;
         padding-right: 2%;

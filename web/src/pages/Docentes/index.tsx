@@ -11,7 +11,7 @@ export default function Docente() {
 
     const [docent, setDocent] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:5000/docentes?_limit=5') //Limitando quantidade de itens ta tela
+        axios.get('http://localhost:5000/docentes?_limit=3') //Limitando quantidade de itens ta tela
         .then((response) => {
             setDocent(response.data)
         });

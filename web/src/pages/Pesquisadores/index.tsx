@@ -8,7 +8,7 @@ import Discentes from './img/discente.png';
 
 const PesquisadoresContainer = styled.div`
     width: 100%;
-    heigth: 100%;    
+    height: 100%;    
 `
 const Cards = styled.div`
     width: 100%;
