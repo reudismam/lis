@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PageDefault from '../DefaultPage';
-import Portifolios from '../../components/Portifolios';
-import PortifolioPost from '../../components/PortifolioPost';
 import EditaisImg from '../../assets/images/Editais/editais.svg';
-import { AiOutlineSearch } from 'react-icons/ai';
 
 const EditarPerfilContainer = styled.div`
     display: flex;
@@ -17,7 +14,7 @@ export default function EditarPerfil() {
     return (
         <PageDefault
             imageSrc={EditaisImg}
-            imageAlt="Imagem Editais"
+            imageAlt="Imagem de Editar Perfil"
             title="Editar Perfil"
             description="Descrição sobre a página"
         >

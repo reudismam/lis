@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PageDefault from '../DefaultPage';
-import Portifolios from '../../components/Portifolios';
-import PortifolioPost from '../../components/PortifolioPost';
 import EditaisImg from '../../assets/images/Editais/editais.svg';
-import { AiOutlineSearch } from 'react-icons/ai';
 
 const PerfilContainer = styled.div`
     display: flex;
@@ -17,7 +14,7 @@ export default function Portifolio() {
     return (
         <PageDefault
             imageSrc={EditaisImg}
-            imageAlt="Imagem do Perfil"
+            imageAlt="Imagem da página do Perfil"
             title="Perfil"
             description="Descrição Sobre a página"
         >

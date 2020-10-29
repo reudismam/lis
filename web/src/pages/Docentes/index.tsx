@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { gsap } from 'gsap';
+import React, { useEffect, useState } from 'react';
 import PageDefault from '../DefaultPage';
 import DocenteCard from './docenteCard'
 import DocentesImg from '../../assets/images/Docentes/docentes.svg';

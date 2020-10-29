@@ -14,7 +14,7 @@ export default function FormNoticias() {
     return (
         <PageDefault
             imageSrc={EditaisImg}
-            imageAlt="Imagem Noticias"
+            imageAlt="Imagem do Formulário para Noticias"
             title="Form Noticias"
             description="Descrição sobre a página"
         >
