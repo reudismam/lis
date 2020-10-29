@@ -66,7 +66,7 @@ export default function Menu() {
                     <li><Link to="/pesquisadores" className="MenuLink">Pesquisadores</Link></li>
                     <li><Link to="/publicacoes" className="MenuLink">Publicações</Link></li>
                     <li><Link to="/projetos" className="MenuLink">Projetos</Link></li>
-                    <li><Link to="/portifolio" className="MenuLink">Portfólio</Link></li>
+                    <li><Link to="/portfolio" className="MenuLink">Portfólio</Link></li>
                     <li><Link to="/noticias" className="MenuLink">Notícias</Link></li>
                     <li><Link to="/editais" className="MenuLink">Editais</Link></li>
                     <li><Link to="/parceiros" className="MenuLink">Parceiros</Link></li>

@@ -79,8 +79,8 @@ export default function Portifolio() {
     return (
         <PageDefault
             imageSrc={PortfolioImg}
-            imageAlt="Imagem Portifolio"
-            title="Portifólio"
+            imageAlt="Imagem Portfolio"
+            title="Portfólio"
             description="Criações que nos orgulham"
         >
             <PortifolioContainer>

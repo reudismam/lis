@@ -1,5 +1,4 @@
 import React, {Suspense} from 'react';
-
 import { 
   BrowserRouter as Router, 
   Switch, 
@@ -24,7 +23,7 @@ import Parceiros from './pages/Parceiros';
 import Perfil from './pages/Perfil';
 import Pesquisador from './pages/Pesquisador/index';
 import Pesquisadores from './pages/Pesquisadores';
-import Portifolio from './pages/Portifolio';
+import Portfolio from './pages/Portfolio';
 import Projetos from './pages/Projetos';
 import Publicacoes from './pages/Publicacoes';
 import Sobre from './pages/Sobre';
@@ -53,7 +52,7 @@ function App() {
         <Route path='/parceiros' component={Parceiros}/>
         <Route path='/perfil' component={Perfil}/>
         <Route path='/pesquisadores' component={Pesquisadores}/>
-        <Route path='/portifolio' component={Portifolio}/>
+        <Route path='/portfolio' component={Portfolio}/>
         <Route path='/projetos' component={Projetos}/>
         <Route path='/publicacoes' component={Publicacoes}/>
         <Route path='/sobre' component={Sobre}/>
