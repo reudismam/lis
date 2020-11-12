@@ -41,8 +41,9 @@ const Info = styled.div`
         justify-content: space-between;
     }
 `
-const Title = styled.h1`
-    font-size: 1.6rem;
+const Title = styled.h2`
+    font-size: 1.2rem;
+    font-weight: 300;
     margin-bottom: 10px;
 `
 const Lista = styled.ul`
@@ -85,6 +86,11 @@ const Icon = styled.span`
     color: var(--color-rodape-texto);
     margin-right: 10px;
 `
+const Icons = styled.span`
+    font-size: 2.5rem;
+    color: var(--color-rodape-texto);
+    margin-right: 15px;
+`
 const Email = styled.a`
     color: var(--color-rodape-texto);
     text-decoration: none;
@@ -105,12 +111,24 @@ export default function FooterContent() {
             <Info>
                 <FooterData>
                     <Title>
-                        Nossos Parceiros
+                        Laboratório de inovações em <i>Software</i>
                     </Title>
                     <Lista>
-                        <li>Universidade Federal Rural do Semi-Árido</li>
-                        <li>Bacharelado em Tecnologia da Informação</li>
-                        <li>Engenharia de <i>Software</i></li>
+                        <Link href="https://www.instagram.com/lis.ufersa">
+                            <Icons>
+                                <FiInstagram />
+                            </Icons>
+                        </Link>
+                        <Link href="https://www.twitter.com/lis_ufersa">
+                            <Icons>
+                                <FaTwitter />
+                            </Icons>
+                        </Link>
+                        <Link href="https://www.facebook.com/lis.ufersa">
+                            <Icons>
+                                <FaFacebookF />
+                            </Icons>
+                        </Link>
                     </Lista>
                 </FooterData>
                 <FooterData>
@@ -146,26 +164,6 @@ export default function FooterContent() {
                     </Lista>
                 </FooterData>
             </Info>
-            <SocialNetworks>
-                <li>
-                    <Icon>
-                        <FiInstagram />
-                    </Icon>
-                    <Link href="https://www.instagram.com/lis.ufersa">lis.ufersa</Link>
-                </li>
-                <li>
-                    <Icon>
-                        <FaTwitter />
-                    </Icon>
-                    <Link href="https://www.twitter.com/lis_ufersa">lis_ufersa</Link>
-                </li>
-                <li>
-                    <Icon>
-                        <FaFacebookF />
-                    </Icon>
-                    <Link href="https://www.facebook.com/lis.ufersa">/lis.ufersa</Link>
-                </li>
-            </SocialNetworks>
             <Direitos>
                 @todos os direitos reservados
             </Direitos>
